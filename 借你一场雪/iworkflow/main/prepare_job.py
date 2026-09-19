@@ -3,6 +3,15 @@ import argparse, copy, hashlib, json, math, re
 from pathlib import Path
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parent.parent
+def quality_rules():
+    import importlib.util
+    source=ROOT.parent/'.agents/skills/short-drama-agent/scripts/quality_gates.py'
+    if not source.is_file():raise RuntimeError('Quality rules skill script missing: '+str(source))
+    spec=importlib.util.spec_from_file_location('series_quality_gates',source)
+    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+    return module
+
+
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p,d):
     t=p.with_suffix(p.suffix+'.tmp');t.write_text(json.dumps(d,ensure_ascii=False,indent=2),encoding='utf-8');t.replace(p)
@@ -33,6 +42,7 @@ def digest(data):
     return hashlib.sha256(json.dumps(data,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode('utf-8')).hexdigest()
 
 def input_snapshot(manifest,key,graph,config,guide):
+    group=find_group(manifest,key)
     paths=[manifest['selected_outline'],manifest['script'],config['prompt'],
            'iworkflow/main/segments.json','iworkflow/main/profile.json',
            'iworkflow/main.ui.json','iworkflow/main/main.api.json']
@@ -40,10 +50,12 @@ def input_snapshot(manifest,key,graph,config,guide):
     if guide:paths.append(guide['file'])
     return {'revision':manifest['content_revision'],'requirements_sha256':digest(manifest['content_review']['requirements']),
             'files':{str(Path(p)):hashlib.sha256(local(p).read_bytes()).hexdigest() for p in paths},
+            'quality_plan_sha256':digest({'policy':quality_rules().VERSION,'dialogue':group.get('dialogue_plan'),'staging':group.get('action_plan',{}).get('staging'),'guard_sha256':hashlib.sha256((ROOT.parent/'.agents/skills/short-drama-agent/scripts/quality_gates.py').read_bytes()).hexdigest()}),
             'api_sha256':digest(graph)}
 
 def require_input_review(manifest,key,graph,config,guide):
     review=manifest.get('content_review',{}).get('input_reviews',{}).get(key,{})
+    quality_rules().require_input_quality(manifest,key,graph['16']['inputs']['prompt'],review)
     if review.get('status')!='passed' or any(review.get('checks',{}).get(k)!='passed' for k in ('script','references','prompt','api')):
         raise RuntimeError('Input content review is missing or incomplete')
     current=input_snapshot(manifest,key,graph,config,guide)
@@ -51,6 +63,7 @@ def require_input_review(manifest,key,graph,config,guide):
     return current
 
 def require_output_review(manifest,key):
+    quality_rules().require_output_quality(manifest,key,manifest.get('content_review',{}).get('output_reviews',{}).get(key,{}))
     group=find_group(manifest,key)
     review=manifest.get('content_review',{}).get('output_reviews',{}).get(key,{})
     if group.get('status')!='complete' or review.get('status')!='passed' or review.get('revision')!=manifest['content_revision']:

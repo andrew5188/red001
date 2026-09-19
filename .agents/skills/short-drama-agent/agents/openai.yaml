@@ -1,0 +1,6 @@
+interface:
+  display_name: "短剧制作 Agent"
+  short_description: "询问故事与清晰度，按显卡配置SelfLift与H3 latent放大，自建工作流制作有声短剧"
+  default_prompt: "使用 $short-drama-agent，人物固定采用半写实国风，先询问本次故事与清晰度要求，检测本地显卡，默认采用SelfLift＋H3 latent放大，必要时查询当前实现，自主构建适配的工作流完成有声短剧。"
+policy:
+  allow_implicit_invocation: true
