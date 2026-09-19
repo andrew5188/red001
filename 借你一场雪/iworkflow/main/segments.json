@@ -1,0 +1,152 @@
+{
+  "S01_G01": {
+    "prompt": "03_分场制作/S01/G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH01_沈知微_白底三视图_v2.png",
+        "source_path": "02_角色库/CH01_沈知微_白底三视图_v2.png",
+        "source_sha256": "28edb42ddf618be3668ad490084cda18e57e6f6a347b21a30fff1509401f7335",
+        "resize_width": 768
+      },
+      {
+        "image": "CH02_谢临川_白底三视图_v2.png",
+        "source_path": "02_角色库/CH02_谢临川_白底三视图_v2.png",
+        "source_sha256": "6f136d59863e60d66aeacb06dc3ca2338bff97609bd795b671b8bf32bc22a5d2",
+        "resize_width": 768
+      },
+      {
+        "image": "SC01_山亭_雪景无人母图_v2.png",
+        "source_path": "03_分场制作/S01/SC01_山亭_雪景无人母图_v2.png",
+        "source_sha256": "d55ca25b8e18d1a1373620684601417a5b22e3569c11fd4b6b88bcb760a8cc3d",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091931,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "cut",
+      "predecessor": null
+    },
+    "content_revision": 3
+  },
+  "S01_G02": {
+    "prompt": "03_分场制作/S01/G02_H3完整提示词_v4.txt",
+    "references": [
+      {
+        "image": "CH01_沈知微_白底三视图_v2.png",
+        "source_path": "02_角色库/CH01_沈知微_白底三视图_v2.png",
+        "source_sha256": "28edb42ddf618be3668ad490084cda18e57e6f6a347b21a30fff1509401f7335",
+        "resize_width": 768
+      },
+      {
+        "image": "CH02_谢临川_白底三视图_v2.png",
+        "source_path": "02_角色库/CH02_谢临川_白底三视图_v2.png",
+        "source_sha256": "6f136d59863e60d66aeacb06dc3ca2338bff97609bd795b671b8bf32bc22a5d2",
+        "resize_width": 768
+      },
+      {
+        "image": "SC01_山亭_雪景无人母图_v2.png",
+        "source_path": "03_分场制作/S01/SC01_山亭_雪景无人母图_v2.png",
+        "source_sha256": "d55ca25b8e18d1a1373620684601417a5b22e3569c11fd4b6b88bcb760a8cc3d",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091932,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S01_G01"
+    },
+    "content_revision": 3
+  },
+  "S01_G03": {
+    "prompt": "03_分场制作/S01/G03_H3完整提示词_v4.txt",
+    "references": [
+      {
+        "image": "CH01_沈知微_白底三视图_v2.png",
+        "source_path": "02_角色库/CH01_沈知微_白底三视图_v2.png",
+        "source_sha256": "28edb42ddf618be3668ad490084cda18e57e6f6a347b21a30fff1509401f7335",
+        "resize_width": 768
+      },
+      {
+        "image": "CH02_谢临川_白底三视图_v2.png",
+        "source_path": "02_角色库/CH02_谢临川_白底三视图_v2.png",
+        "source_sha256": "6f136d59863e60d66aeacb06dc3ca2338bff97609bd795b671b8bf32bc22a5d2",
+        "resize_width": 768
+      },
+      {
+        "image": "SC01_山亭_雪景无人母图_v2.png",
+        "source_path": "03_分场制作/S01/SC01_山亭_雪景无人母图_v2.png",
+        "source_sha256": "d55ca25b8e18d1a1373620684601417a5b22e3569c11fd4b6b88bcb760a8cc3d",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091933,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S01_G02"
+    },
+    "content_revision": 3
+  },
+  "S01_G04": {
+    "prompt": "03_分场制作/S01/G04_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH01_沈知微_白底三视图_v2.png",
+        "source_path": "02_角色库/CH01_沈知微_白底三视图_v2.png",
+        "source_sha256": "28edb42ddf618be3668ad490084cda18e57e6f6a347b21a30fff1509401f7335",
+        "resize_width": 768
+      },
+      {
+        "image": "CH02_谢临川_白底三视图_v2.png",
+        "source_path": "02_角色库/CH02_谢临川_白底三视图_v2.png",
+        "source_sha256": "6f136d59863e60d66aeacb06dc3ca2338bff97609bd795b671b8bf32bc22a5d2",
+        "resize_width": 768
+      },
+      {
+        "image": "SC01_山亭_雪景无人母图_v2.png",
+        "source_path": "03_分场制作/S01/SC01_山亭_雪景无人母图_v2.png",
+        "source_sha256": "d55ca25b8e18d1a1373620684601417a5b22e3569c11fd4b6b88bcb760a8cc3d",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091934,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S01_G03"
+    },
+    "content_revision": 3
+  },
+  "S01_G05": {
+    "prompt": "03_分场制作/S01/G05_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH01_沈知微_白底三视图_v2.png",
+        "source_path": "02_角色库/CH01_沈知微_白底三视图_v2.png",
+        "source_sha256": "28edb42ddf618be3668ad490084cda18e57e6f6a347b21a30fff1509401f7335",
+        "resize_width": 768
+      },
+      {
+        "image": "CH02_谢临川_白底三视图_v2.png",
+        "source_path": "02_角色库/CH02_谢临川_白底三视图_v2.png",
+        "source_sha256": "6f136d59863e60d66aeacb06dc3ca2338bff97609bd795b671b8bf32bc22a5d2",
+        "resize_width": 768
+      },
+      {
+        "image": "SC01_山亭_雪景无人母图_v2.png",
+        "source_path": "03_分场制作/S01/SC01_山亭_雪景无人母图_v2.png",
+        "source_sha256": "d55ca25b8e18d1a1373620684601417a5b22e3569c11fd4b6b88bcb760a8cc3d",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091935,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S01_G04"
+    },
+    "content_revision": 3
+  }
+}

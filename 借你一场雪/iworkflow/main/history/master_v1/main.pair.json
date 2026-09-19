@@ -1,0 +1,8 @@
+{
+  "api_sha256": "795f1bd8b86eb1b8c72dfef6584a32a7ccf0ba236a5a215ee52b985c15b6fe98",
+  "ui_sha256": "21d80d4ab1b1f6be2d8237cfb2af6d2c2c11abaa1ed7ae4a32ebe6621fc3e5ed",
+  "template_version": 1,
+  "validation": "first/continuation payload tests, predecessor and edit guards passed; no rendering",
+  "frontend": "passed: actual ComfyUI import",
+  "submitted": false
+}

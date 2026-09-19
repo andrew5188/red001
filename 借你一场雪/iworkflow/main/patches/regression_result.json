@@ -1,0 +1,9 @@
+{
+  "baseline_cond_rows_vs_mask": [
+    2093,
+    1380
+  ],
+  "fixed_cases": 64,
+  "passed": true,
+  "scope": "Native H3 layout and row assignments on CPU; full render still pending"
+}

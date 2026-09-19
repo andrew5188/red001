@@ -1,0 +1,730 @@
+{
+  "schema_version": 1,
+  "title": "借你一场雪",
+  "root": "D:\\ai\\series\\借你一场雪",
+  "created_at": "2026-09-19T09:11:34.024213+08:00",
+  "phase": "awaiting_segment_audio_review",
+  "production_authorized": true,
+  "selected_outline": "00_故事大纲/选定大纲_v2.md",
+  "script": "01_完整剧本/完整剧本_v3.md",
+  "settings": {
+    "group_seconds": 10,
+    "max_group_seconds": 10,
+    "aspect_ratio": "16:9",
+    "max_retries_per_group": 2,
+    "audio": {
+      "enabled": true,
+      "dialogue": true,
+      "ambience": true,
+      "sound_effects": true,
+      "background_music": true,
+      "music_style": "M01: guqin and bamboo flute, instrumental, tender, 68 BPM",
+      "instrumental_by_default": true,
+      "dialogue_priority": true
+    },
+    "workflow_template": null,
+    "comfy_base_url": "http://127.0.0.1:8188",
+    "total_seconds": 50,
+    "subtitles": false,
+    "rendering": {
+      "workflow_directory": "iworkflow",
+      "workflow_strategy": "agent_built_reusable_master",
+      "default_route": "selflift_h3_latent_upscale",
+      "selection_source": "user_skill_default",
+      "target_resolution": "720p",
+      "selection_status": "first_snow_clip_technical_visual_pass_audio_pending",
+      "workflow_paths": [
+        "iworkflow/main.ui.json",
+        "iworkflow/main/main.api.json"
+      ],
+      "target_width": 1280,
+      "target_height": 720,
+      "hardware_snapshot": {
+        "system": {
+          "os": "win32",
+          "ram_total": 34270773248,
+          "ram_free": 23773786112,
+          "comfyui_version": "0.34.0",
+          "required_frontend_version": "1.51.9",
+          "installed_templates_version": "0.11.55",
+          "required_templates_version": "0.11.55",
+          "comfy_package_versions": [
+            {
+              "name": "comfyui-frontend-package",
+              "installed": "1.51.9",
+              "required": "1.51.9"
+            },
+            {
+              "name": "comfyui-workflow-templates",
+              "installed": "0.11.55",
+              "required": "0.11.55"
+            },
+            {
+              "name": "comfyui-embedded-docs",
+              "installed": "0.5.10",
+              "required": "0.5.10"
+            },
+            {
+              "name": "comfy-kitchen",
+              "installed": "0.2.31",
+              "required": "0.2.31"
+            },
+            {
+              "name": "comfy-aimdo",
+              "installed": "0.5.2",
+              "required": "0.5.2"
+            }
+          ],
+          "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+          "pytorch_version": "2.14.0+cu130",
+          "embedded_python": true,
+          "deploy_environment": "local-portable",
+          "argv": [
+            "ComfyUI\\main.py",
+            "--windows-standalone-build",
+            "--enable-manager",
+            "--cuda-device",
+            "all"
+          ]
+        },
+        "devices": [
+          {
+            "name": "cuda:0 NVIDIA GeForce RTX 3060 : cudaMallocAsync",
+            "type": "cuda",
+            "index": 0,
+            "vram_total": 12884246528,
+            "vram_free": 11796480000,
+            "torch_vram_total": 0,
+            "torch_vram_free": 0
+          }
+        ]
+      },
+      "editable_workflow": "iworkflow/main.ui.json",
+      "editable_api": "iworkflow/main/main.api.json",
+      "ui_frontend_check": "passed: generic master imported; no missing node/media errors",
+      "runtime_observation": {
+        "low_resolution_seconds": 218.758,
+        "latent_transition_seconds": 35.649,
+        "high_resolution_status": "previous trial interrupted by user",
+        "first_job_submitted_at": "2026-09-19T10:16:56+08:00",
+        "device_vram_used_mib": 11812,
+        "first_high_resolution_step_seconds": 1101.426
+      },
+      "performance_validated": false,
+      "workflow_support_directory": "iworkflow/main",
+      "workflow_layout": "single_master_with_segment_parameters_and_run_records",
+      "builder_script": "iworkflow/main/prepare_job.py",
+      "merge_script": "iworkflow/main/merge_videos.py",
+      "segment_parameters": "iworkflow/main/segments.json",
+      "execution_records": "iworkflow/main/runs",
+      "profile": "iworkflow/main/profile.json",
+      "preview_script": "iworkflow/main/sync_preview.py",
+      "submission_script": "iworkflow/main/job.py",
+      "generic_scope": "H3 Ref2VA: 1-9 images; configurable even output dimensions and 4-15s at native 24fps; arbitrary scene/clip count",
+      "benchmark_results": [
+        {
+          "prompt_id": "72772929-e46e-400e-8a4d-88bd7c323732",
+          "variant": "highres_tiling_enabled",
+          "low_resolution_seconds": 212.278,
+          "status": "completed",
+          "latent_transition_seconds": 37.349,
+          "highres_tiles": 8,
+          "estimated_workspace_fits": false,
+          "total_seconds": 1413.827,
+          "high_resolution_seconds": 840.451,
+          "technical_pass": true,
+          "visual_review": "sampled_frames_pass",
+          "audio_content_review": "unverified"
+        },
+        {
+          "prompt_id": "9ad15ade-b0c8-43dd-a1c4-43b2d406b834",
+          "content_revision": 3,
+          "variant": "highres_tiling_enabled",
+          "total_seconds": 1392.166,
+          "high_resolution_seconds": 813.681,
+          "latent_transition_seconds": 34.222,
+          "status": "completed",
+          "technical_pass": true,
+          "visual_review": "sampled_frames_pass_with_continuity_adjustment",
+          "audio_content_review": "pending_user_listening"
+        },
+        {
+          "prompt_id": "ca6d9a5e-0633-48b3-b198-6cbb38c716bc",
+          "content_revision": 3,
+          "group": "S01_G02",
+          "variant": "highres_tiling_with_guide_condition_fix",
+          "total_seconds": 1462.475,
+          "high_resolution_seconds": 871.306,
+          "latent_transition_seconds": 39.456,
+          "status": "completed",
+          "technical_pass": true,
+          "visual_review": "sampled_frames_and_opening_continuity_pass",
+          "audio_content_review": "pending_user_listening"
+        }
+      ],
+      "runtime_fix": "Native H3 tiling row regression passed 64 cases; G02 complete full render succeeded with actual guide plus three reference images."
+    },
+    "visual_style": {
+      "status": "selected",
+      "description": "半写实国风角色设定：略理想化五官、真实布料质感、低饱和灰蓝色、柔和光线。",
+      "reference_paths": [
+        "00_故事大纲/风格参考/用户风格参考_v1.png"
+      ],
+      "reference_scope": "character_rendering_only; not identity, costume, background or layout",
+      "selection_source": "user_explicit_choice",
+      "pending_details": [],
+      "selected_style": "semi_realistic_guofeng",
+      "display_name": "半写实国风"
+    },
+    "generation": {
+      "seconds_per_video": 10,
+      "sequential": true,
+      "prompt_skill": "h3-prompt-writing",
+      "auto_merge": true,
+      "final_output_directory": "04_全片输出"
+    },
+    "visual_requirements": {
+      "snow_scene_visible": true,
+      "source": "user correction: wants visible snow scenery rather than snow dialogue",
+      "status": "aligned in script v3, prompts v3 and environment v2; output verification pending"
+    }
+  },
+  "characters": [
+    {
+      "id": "CH01",
+      "name": "沈知微",
+      "age": 18,
+      "version": 2,
+      "path": "02_角色库/CH01_沈知微_白底三视图_v2.png",
+      "reference_slot": 0,
+      "status": "complete",
+      "visual_check": "Viewed generated v2: semi-realistic guofeng, consistent front/back/side, white background, full body and feet."
+    },
+    {
+      "id": "CH02",
+      "name": "谢临川",
+      "age": 30,
+      "version": 2,
+      "path": "02_角色库/CH02_谢临川_白底三视图_v2.png",
+      "reference_slot": 1,
+      "status": "complete",
+      "visual_check": "Viewed generated v2: semi-realistic guofeng, consistent front/back/side, white background, full body and feet."
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S01",
+      "status": "ready",
+      "environment": {
+        "path": "03_分场制作/S01/SC01_山亭_雪景无人母图_v2.png",
+        "version": 2,
+        "reference_slot": 2,
+        "status": "complete",
+        "visual_check": "Viewed generated plate: visible snow-covered roof/rails/pine/mountains and snow across foreground/midground/background; empty terrace; old geography and upper-left warm light preserved."
+      },
+      "workflow": "iworkflow/main/main.api.json",
+      "groups": [
+        {
+          "id": "G01",
+          "duration_seconds": 10,
+          "status": "complete",
+          "retries": 0,
+          "continuity_from_previous": false,
+          "dependencies": [
+            "CH01:v2",
+            "CH02:v2",
+            "SC01:v2"
+          ],
+          "workflow": "iworkflow/main/main.api.json",
+          "prompt": "03_分场制作/S01/G01_H3完整提示词_v3.txt",
+          "parameter_key": "S01_G01",
+          "content_revision": 3,
+          "prompt_id": "9ad15ade-b0c8-43dd-a1c4-43b2d406b834",
+          "execution_record": "iworkflow\\main\\runs\\S01\\G01\\revision_03\\attempt_01",
+          "output": "03_分场制作\\S01\\G01\\revision_03\\attempt_01\\attempt_01_00001_.mp4",
+          "continuity_guide": "03_分场制作\\S01\\G01\\revision_03\\attempt_01\\S01_G01_attempt_01_end_00001_.png",
+          "review": "03_分场制作\\S01\\G01\\revision_03\\attempt_01\\review\\check.json",
+          "visual_review": "Viewed 21 samples at 0.5s intervals plus native 0/5/9.96s frames: snow-covered eaves, railing, pine and mountain ridges persist; visible flakes and snow dusting; two consistent adult guofeng characters, woman left/man right, clear raised left palm and gentle expressions. Small action timing deviation: man touches her left wrist with his right fingers near the ending, earlier than planned. Adapt next segment to this actual contact instead of repeating the reach.",
+          "audio_content_review": "User listened and confirmed expected female dialogue, quiet score and wind, without extraneous dialogue.",
+          "actual_end_state": "Medium two-shot; woman left has anatomical left palm up between them; man right lightly rests right fingers on top of her left wrist; both look down toward her palm. Their hands already touch. Snow-covered setting and fine snow flecks persist.",
+          "guide_input_name": "S01_G01_attempt_01_end_00001_.png"
+        },
+        {
+          "id": "G02",
+          "duration_seconds": 10,
+          "status": "awaiting_audio_review",
+          "retries": 1,
+          "continuity_from_previous": true,
+          "dependencies": [
+            "CH01:v2",
+            "CH02:v2",
+            "SC01:v2",
+            "G01:r3"
+          ],
+          "prompt": "03_分场制作/S01/G02_H3完整提示词_v4.txt",
+          "workflow": "iworkflow/main/main.api.json",
+          "parameter_key": "S01_G02",
+          "content_revision": 3,
+          "continuity_note": "Adjusted from G01 actual end state: right fingers already touching left wrist; transition into palm support.",
+          "prompt_id": "ca6d9a5e-0633-48b3-b198-6cbb38c716bc",
+          "execution_record": "iworkflow\\main\\runs\\S01\\G02\\revision_03\\attempt_02",
+          "output": "03_分场制作\\S01\\G02\\revision_03\\attempt_02\\attempt_02_00001_.mp4",
+          "continuity_guide": "03_分场制作\\S01\\G02\\revision_03\\attempt_02\\S01_G02_attempt_02_end_00001_.png",
+          "review": "03_分场制作\\S01\\G02\\revision_03\\attempt_02\\review\\check.json",
+          "visual_review": "Reviewed 21 samples plus native opening/mid/end frames. Opening matches G01 real ending; adult identities/costumes and left-right staging remain consistent. Snow-covered pavilion/rail/pine/mountains persist. Wrist contact develops into gentle support, with both male hands near/cradling her left wrist at the ending; her left fingers are lightly curled and both look toward each other. Adapt G03 by gradually reopening her palm without repeating the previous reach or dropping an already supporting hand.",
+          "audio_content_review": "Technical audio checks pass; awaiting user listening confirmation of male reply and sound bed.",
+          "actual_end_state": "Woman left/man right in closer medium two-shot, facing each other. Her anatomical left hand is supported near waist/lower-chest height; fingers gently curled, with his hands cradling her wrist/palm. His free hand is no longer clearly lowered. Both smile; snowy setting unchanged."
+        },
+        {
+          "id": "G03",
+          "duration_seconds": 10,
+          "status": "draft",
+          "retries": 0,
+          "continuity_from_previous": true,
+          "dependencies": [
+            "CH01:v2",
+            "CH02:v2",
+            "SC01:v2",
+            "G02:r3"
+          ],
+          "prompt": "03_分场制作/S01/G03_H3完整提示词_v4.txt",
+          "workflow": "iworkflow/main/main.api.json",
+          "parameter_key": "S01_G03",
+          "content_revision": 3,
+          "continuity_note": "Drafted against G02 attempt_02 actual end: existing hand cradle, gently curled left fingers and mutual gaze. Input/API review still pending; do not submit before G02 audio acceptance."
+        },
+        {
+          "id": "G04",
+          "duration_seconds": 10,
+          "status": "draft",
+          "retries": 0,
+          "continuity_from_previous": true,
+          "dependencies": [
+            "CH01:v2",
+            "CH02:v2",
+            "SC01:v2",
+            "G03:r3"
+          ],
+          "prompt": "03_分场制作/S01/G04_H3完整提示词_v3.txt",
+          "workflow": "iworkflow/main/main.api.json",
+          "parameter_key": "S01_G04",
+          "content_revision": 3
+        },
+        {
+          "id": "G05",
+          "duration_seconds": 10,
+          "status": "draft",
+          "retries": 0,
+          "continuity_from_previous": true,
+          "dependencies": [
+            "CH01:v2",
+            "CH02:v2",
+            "SC01:v2",
+            "G04:r3"
+          ],
+          "prompt": "03_分场制作/S01/G05_H3完整提示词_v3.txt",
+          "workflow": "iworkflow/main/main.api.json",
+          "parameter_key": "S01_G05",
+          "content_revision": 3
+        }
+      ],
+      "music_theme": "M01"
+    }
+  ],
+  "jobs": [
+    {
+      "stem": "S01_G01_v1",
+      "group": "G01",
+      "prompt_id": "a5d4be90-9db6-484b-a3f3-75d2bebd8fa3",
+      "status": "interrupted",
+      "created_at": "2026-09-19T10:16:56.170325+08:00",
+      "last_check_at": "2026-09-19T10:46:57.293547+08:00",
+      "status_note": "User requested termination to inspect workflow. ComfyUI confirmed Processing interrupted; running and pending queues empty."
+    },
+    {
+      "scene": "S01",
+      "group": "G01",
+      "attempt": 2,
+      "prompt_id": "72772929-e46e-400e-8a4d-88bd7c323732",
+      "status": "success",
+      "record_directory": "iworkflow\\main\\runs\\S01\\G01\\attempt_02"
+    },
+    {
+      "scene": "S01",
+      "group": "G02",
+      "attempt": 1,
+      "prompt_id": "1fe540d3-6adc-4392-bd4a-5394af0286ba",
+      "status": "stopped_unverified",
+      "record_directory": "iworkflow\\main\\runs\\S01\\G02\\attempt_01",
+      "status_note": "Server log reports Stopped server at 11:52:55; HTTP unavailable. Interruption request connection closed; no completed second-clip output verified."
+    },
+    {
+      "content_revision": 3,
+      "scene": "S01",
+      "group": "G01",
+      "attempt": 1,
+      "prompt_id": "9ad15ade-b0c8-43dd-a1c4-43b2d406b834",
+      "status": "success",
+      "record_directory": "iworkflow\\main\\runs\\S01\\G01\\revision_03\\attempt_01"
+    },
+    {
+      "content_revision": 3,
+      "scene": "S01",
+      "group": "G02",
+      "attempt": 1,
+      "prompt_id": "23e29c00-0cd5-4dc0-baf5-60ec4ede8408",
+      "status": "error",
+      "record_directory": "iworkflow\\main\\runs\\S01\\G02\\revision_03\\attempt_01"
+    },
+    {
+      "content_revision": 3,
+      "scene": "S01",
+      "group": "G02",
+      "attempt": 2,
+      "prompt_id": "ca6d9a5e-0633-48b3-b198-6cbb38c716bc",
+      "status": "success",
+      "record_directory": "iworkflow\\main\\runs\\S01\\G02\\revision_03\\attempt_02"
+    }
+  ],
+  "final_output": null,
+  "unresolved_issues": [
+    "G02声音内容待用户试听；G03尚未提交。"
+  ],
+  "maintenance": {
+    "at": "2026-09-19T10:54:56.690196+08:00",
+    "deleted_obsolete_files": 24,
+    "freed_mib": 20.52,
+    "scope": "Only obsolete and duplicate files in this project; current assets, prompts and rebuilt workflow retained."
+  },
+  "content_review": {
+    "status": "awaiting_audio_review",
+    "reason": "G02 render, snow visuals and first-frame continuity pass; user listening confirmation pending.",
+    "shot_plan": "01_完整剧本/完整剧本_v3.md",
+    "requirements": [
+      {
+        "id": "VIS_SNOW",
+        "modality": "visual",
+        "source": "用户：雪的场景，而不是雪的台词",
+        "scope": [
+          "S01_G01",
+          "S01_G02",
+          "S01_G03",
+          "S01_G04",
+          "S01_G05"
+        ],
+        "criterion": "开场即有可见覆雪环境，各段均维持飘雪与积雪；以剧本v3逐镜头条件为准。"
+      },
+      {
+        "id": "VIS_CAST",
+        "modality": "visual",
+        "source": "用户：18岁女主、约30岁男主、固定半写实国风",
+        "scope": "all",
+        "criterion": "一男一女成年形象，与现有角色库v2一致，无重复人物。"
+      },
+      {
+        "id": "VIS_ACTION",
+        "modality": "visual",
+        "source": "Agent依据已选仙侠爱情、甜蜜治愈故事推导",
+        "scope": "all",
+        "criterion": "接雪、托手、凝雪晶、雪晶散开、相视轻握的次序可读。"
+      },
+      {
+        "id": "CONTINUITY",
+        "modality": "visual_audio",
+        "source": "用户：每段10秒，注意衔接",
+        "scope": "all",
+        "criterion": "沿用已验收的真实前段尾帧；站位、动作、天气、光线与声音连贯。"
+      },
+      {
+        "id": "AUD_STORY",
+        "modality": "audio",
+        "source": "用户既定有声流程；对白内容见剧本v3",
+        "scope": "all",
+        "criterion": "对应中文对白、柔风与衣料/晶体音效、轻古琴竹笛配乐存在且不盖对白，无额外旁白。"
+      }
+    ],
+    "input_reviews": {
+      "S01_G01": {
+        "status": "passed",
+        "checked_at": "2026-09-19T12:28:10.679272+08:00",
+        "checks": {
+          "script": "passed",
+          "references": "passed",
+          "prompt": "passed",
+          "api": "passed"
+        },
+        "snapshot": {
+          "revision": 3,
+          "requirements_sha256": "9d4d52b572cec407adb388c1e01c10988175fcc5e016f9756284f422b2ce9b72",
+          "files": {
+            "00_故事大纲\\选定大纲_v2.md": "94d9cbbaab3f2587d2d17a908769eac109d85a9cb99dac6c026d774a4f9eed3f",
+            "01_完整剧本\\完整剧本_v3.md": "e449363fbf6c4246af988869fea7c04f8b2fb0b16a78a859559d53862f5285a4",
+            "03_分场制作\\S01\\G01_H3完整提示词_v3.txt": "9a29c568be94152c7bae7fa1bd76b2f7c37a393783133c059f6b3154099abd60",
+            "iworkflow\\main\\segments.json": "8cd31d09dbad80e6394f5992106fd97327572ba03a3b7b0d816aafa03d67018b",
+            "iworkflow\\main\\profile.json": "b0d37995e041f0923f60313a3f625508b05ad1487e490e8d3bbcaba4828bc320",
+            "iworkflow\\main.ui.json": "d889373bf4f8e76412c52b5dd2ff33379c6ad76080e5b923c052ccab5e62f005",
+            "iworkflow\\main\\main.api.json": "5ed18846b52d852eec62a0d258b17056a5dbc86ea86b9d4799cac0e60d540568",
+            "02_角色库\\CH01_沈知微_白底三视图_v2.png": "28edb42ddf618be3668ad490084cda18e57e6f6a347b21a30fff1509401f7335",
+            "02_角色库\\CH02_谢临川_白底三视图_v2.png": "6f136d59863e60d66aeacb06dc3ca2338bff97609bd795b671b8bf32bc22a5d2",
+            "03_分场制作\\S01\\SC01_山亭_雪景无人母图_v2.png": "d55ca25b8e18d1a1373620684601417a5b22e3569c11fd4b6b88bcb760a8cc3d"
+          },
+          "api_sha256": "6e17132610f632f51f1d547d006f0bb8d690bd570508a5c19cfe1f6ab5debfd5"
+        },
+        "evidence": [
+          "剧本v3与中文镜头清单：开场即雪景；接雪动作与台词匹配，不再以造雪失败推迟雪景。",
+          "已查看角色库v2与场景母图v2：角色一致，屋檐/石栏/松枝/远山/地面覆雪，画面中存在飘雪；上传前后SHA256一致。",
+          "实际G01 Prompt v3已逐句核对：首帧雪景、持续前中后景落雪；无旧版禁止下雪、保留裸地或先下雨措辞。六字段、标签、对白及387词详细描述均符合本地H3官方格式。",
+          "绑定API的Prompt与v3文件字节对应；Picture1/2为角色、Picture3为雪景v2，首段关闭17/18旧引导；SelfLift与H3提升器相连，视频封装接入音频，最终裁切1280x720、240帧。"
+        ]
+      },
+      "S01_G02": {
+        "status": "passed",
+        "checked_at": "2026-09-19T13:08:57.052018+08:00",
+        "checks": {
+          "script": "passed",
+          "references": "passed",
+          "prompt": "passed",
+          "api": "passed"
+        },
+        "snapshot": {
+          "revision": 3,
+          "requirements_sha256": "9d4d52b572cec407adb388c1e01c10988175fcc5e016f9756284f422b2ce9b72",
+          "files": {
+            "00_故事大纲\\选定大纲_v2.md": "94d9cbbaab3f2587d2d17a908769eac109d85a9cb99dac6c026d774a4f9eed3f",
+            "01_完整剧本\\完整剧本_v3.md": "e449363fbf6c4246af988869fea7c04f8b2fb0b16a78a859559d53862f5285a4",
+            "03_分场制作\\S01\\G02_H3完整提示词_v4.txt": "eac1fc769de6501feb4968e5cbda59788fcf4fc283859ed8ae5e7913f96585df",
+            "iworkflow\\main\\segments.json": "1d57df41d577f8a2530e2f258dead68eca147ccad7964aa15efcc033bd7d25a6",
+            "iworkflow\\main\\profile.json": "703aaf40f279a85119516306fc9c72bf73eec404328e86ab4dd7cd0f0c50ec80",
+            "iworkflow\\main.ui.json": "e9302c305426244da8fcd64fd09fc63f0b47d2504d588f1c07efe80cfccb5aec",
+            "iworkflow\\main\\main.api.json": "42129c31c3df68a13040471e110d5b044e7e9f6c3631b84e80707e021b910c54",
+            "02_角色库\\CH01_沈知微_白底三视图_v2.png": "28edb42ddf618be3668ad490084cda18e57e6f6a347b21a30fff1509401f7335",
+            "02_角色库\\CH02_谢临川_白底三视图_v2.png": "6f136d59863e60d66aeacb06dc3ca2338bff97609bd795b671b8bf32bc22a5d2",
+            "03_分场制作\\S01\\SC01_山亭_雪景无人母图_v2.png": "d55ca25b8e18d1a1373620684601417a5b22e3569c11fd4b6b88bcb760a8cc3d",
+            "03_分场制作\\S01\\G01\\revision_03\\attempt_01\\S01_G01_attempt_01_end_00001_.png": "f0363736bf746779357c76606b0a8b774c358b2599e7b8ccb6c4cb3fa5a3a9b5"
+          },
+          "api_sha256": "dda5df5e0f35f494ba8500a5864d83746551349b63f87495c24f7a71d075072e"
+        },
+        "evidence": [
+          "延续剧本v3托手与男主回复情节；依据已验收G01实际末尾轻触左腕状态调整起点，动作与故事一致。",
+          "人物v2与雪景v2参考源及上传映射未变；实际末帧已查看，女左男右、既有接触与雪景均明确；引导上传字节一致。",
+          "G02 Prompt v4已完整核对：不重复伸手，接触转为托手，男主只说“好，我陪你.”，全段持续雪景与飘雪；六字段与Picture1..3一致。",
+          "实际API节点18将已验收G01末帧接入frame_idx=0，节点22正向条件来自18；图像、Prompt、10秒音视频封装均已核对。",
+          "重试2：故事、Prompt、参考图、种子、末帧均不变；仅运行条件列表修复后的SelfLift，高分辨率分块继续开启。输出前缀对应attempt_02，指纹重新核对。"
+        ]
+      }
+    },
+    "output_reviews": {
+      "S01_G01": {
+        "status": "passed",
+        "revision": 3,
+        "checked_at": "2026-09-19T12:54:15.798976+08:00",
+        "checks": {
+          "technical": "passed",
+          "visual": "passed",
+          "audio": "passed",
+          "continuity": "passed"
+        },
+        "files": {
+          "03_分场制作\\S01\\G01\\revision_03\\attempt_01\\attempt_01_00001_.mp4": "0162a793195ea23696af6d7e5741d1a9c33dee559c9e8c023d8f0d9b656708f5",
+          "03_分场制作\\S01\\G01\\revision_03\\attempt_01\\S01_G01_attempt_01_end_00001_.png": "f0363736bf746779357c76606b0a8b774c358b2599e7b8ccb6c4cb3fa5a3a9b5"
+        },
+        "evidence": "03_分场制作\\S01\\G01\\revision_03\\attempt_01\\review\\check.json",
+        "continuity_adjustment": "Start G02 from existing light wrist contact; transition into palm support, do not repeat a full reach from hands-down.",
+        "audio_evidence": {
+          "source": "user listening confirmation",
+          "answer": "声音符合，可以继续",
+          "at": "2026-09-19T12:55:43.619447+08:00"
+        }
+      },
+      "S01_G02": {
+        "status": "pending",
+        "revision": 3,
+        "checked_at": "2026-09-19T13:35:37.913454+08:00",
+        "checks": {
+          "technical": "passed",
+          "visual": "passed",
+          "audio": "pending",
+          "continuity": "passed"
+        },
+        "files": {
+          "03_分场制作\\S01\\G02\\revision_03\\attempt_02\\attempt_02_00001_.mp4": "097f1a36799a27c2a66547078b95ee69497366eea92fbb476e4a7c01d060fce4",
+          "03_分场制作\\S01\\G02\\revision_03\\attempt_02\\S01_G02_attempt_02_end_00001_.png": "177378d36807b2f183aa1877775e5ba0e22c8c4feb9f7c0aace1b189d678dd27"
+        },
+        "evidence": "03_分场制作\\S01\\G02\\revision_03\\attempt_02\\review\\check.json",
+        "continuity_adjustment": "G03 must keep existing hand support and gently open her curled fingers; begin with their current mutual gaze."
+      }
+    }
+  },
+  "content_history": [
+    {
+      "revision": 2,
+      "selected_outline": "00_故事大纲/选定大纲_v1.md",
+      "script": "01_完整剧本/完整剧本_v2.md",
+      "scenes": [
+        {
+          "id": "S01",
+          "status": "stale",
+          "environment": {
+            "path": "03_分场制作/S01/SC01_山亭_无人母图_v1.png",
+            "version": 1,
+            "reference_slot": 2,
+            "visual_check": "No people/body parts/reflections; pavilion left, railing and pine right; stable lighting. One axis only, no reverse angle needed. Reviewed for fixed character style: environment remains compatible; style reference applies to character rendering only.",
+            "status": "stale",
+            "stale_reason": "Current mother image has no snow; inconsistent with requested snow scenery."
+          },
+          "workflow": "iworkflow/main/main.api.json",
+          "groups": [
+            {
+              "id": "G01",
+              "duration_seconds": 10,
+              "status": "stale",
+              "retries": 0,
+              "continuity_from_previous": false,
+              "dependencies": [
+                "CH01:v2",
+                "CH02:v2",
+                "SC01:v1"
+              ],
+              "workflow": "iworkflow/main/main.api.json",
+              "prompt": "03_分场制作/S01/G01_H3完整提示词_v2.txt",
+              "previous_prompt_id": "a5d4be90-9db6-484b-a3f3-75d2bebd8fa3",
+              "parameter_key": "S01_G01",
+              "prompt_id": "72772929-e46e-400e-8a4d-88bd7c323732",
+              "execution_record": "iworkflow\\main\\runs\\S01\\G01\\attempt_02",
+              "output": "03_分场制作\\S01\\G01\\attempt_02\\attempt_02_00001_.mp4",
+              "continuity_guide": "03_分场制作\\S01\\G01\\attempt_02\\S01_G01_attempt_02_end_00001_.png",
+              "review": "03_分场制作\\S01\\G01\\attempt_02\\review\\check.json",
+              "visual_review": "Sampled 0/2.5/5/7.5/9.96s: consistent two adult characters, female left/man right, stable terrace, coherent palm gesture and slow push-in; no obvious extra people or scene discontinuity.",
+              "audio_content_review": "Not listened/transcribed; technical audio presence, duration, level and clipping checks passed.",
+              "actual_end_state": "Medium two-shot; woman left, left palm raised between them, right hand lowered; man right facing her, no contact or snowfall visible. Preserve actual native end frame.",
+              "stale_reason": "Snow depiction audit failed; prompts must be revised before further generation.",
+              "invalidated_guide_input_name": "S01_G01_attempt_02_end_00001_.png"
+            },
+            {
+              "id": "G02",
+              "duration_seconds": 10,
+              "status": "stale",
+              "retries": 0,
+              "continuity_from_previous": true,
+              "dependencies": [
+                "CH01:v2",
+                "CH02:v2",
+                "SC01:v1",
+                "G01"
+              ],
+              "prompt": "03_分场制作/S01/G02_H3完整提示词_v2.txt",
+              "workflow": "iworkflow/main/main.api.json",
+              "parameter_key": "S01_G02",
+              "prompt_id": "1fe540d3-6adc-4392-bd4a-5394af0286ba",
+              "execution_record": "iworkflow\\main\\runs\\S01\\G02\\attempt_01",
+              "stale_reason": "Snow depiction audit failed; prompts must be revised before further generation."
+            },
+            {
+              "id": "G03",
+              "duration_seconds": 10,
+              "status": "stale",
+              "retries": 0,
+              "continuity_from_previous": true,
+              "dependencies": [
+                "CH01:v2",
+                "CH02:v2",
+                "SC01:v1",
+                "G02"
+              ],
+              "prompt": "03_分场制作/S01/G03_H3完整提示词_v2.txt",
+              "workflow": "iworkflow/main/main.api.json",
+              "parameter_key": "S01_G03",
+              "stale_reason": "Snow depiction audit failed; prompts must be revised before further generation."
+            },
+            {
+              "id": "G04",
+              "duration_seconds": 10,
+              "status": "stale",
+              "retries": 0,
+              "continuity_from_previous": true,
+              "dependencies": [
+                "CH01:v2",
+                "CH02:v2",
+                "SC01:v1",
+                "G03"
+              ],
+              "prompt": "03_分场制作/S01/G04_H3完整提示词_v2.txt",
+              "workflow": "iworkflow/main/main.api.json",
+              "parameter_key": "S01_G04",
+              "stale_reason": "Snow depiction audit failed; prompts must be revised before further generation."
+            },
+            {
+              "id": "G05",
+              "duration_seconds": 10,
+              "status": "stale",
+              "retries": 0,
+              "continuity_from_previous": true,
+              "dependencies": [
+                "CH01:v2",
+                "CH02:v2",
+                "SC01:v1",
+                "G04"
+              ],
+              "prompt": "03_分场制作/S01/G05_H3完整提示词_v2.txt",
+              "workflow": "iworkflow/main/main.api.json",
+              "parameter_key": "S01_G05",
+              "stale_reason": "Snow depiction audit failed; prompts must be revised before further generation."
+            }
+          ],
+          "music_theme": "M01"
+        }
+      ],
+      "content_review": {
+        "status": "blocked",
+        "reason": "Snow scenery audit failed. Revise script, environment references and prompts together, then complete content review before preparing or submitting any render.",
+        "requirements": [
+          {
+            "id": "VIS_SNOW",
+            "source": "用户要求雪的场景，而不是只在台词中说雪",
+            "modality": "visual",
+            "scope": [
+              "S01_G01",
+              "S01_G02",
+              "S01_G03",
+              "S01_G04",
+              "S01_G05"
+            ],
+            "criterion": "雪景由实际环境和画面呈现，不能用对白替代；逐镜头可观察条件在修订剧本时补齐。"
+          }
+        ],
+        "shot_plan": null,
+        "input_reviews": {
+          "S01_G01": {
+            "status": "stale",
+            "evidence": "03_分场制作/S01/雪景提示词审核.md"
+          },
+          "S01_G02": {
+            "status": "stale",
+            "evidence": "03_分场制作/S01/雪景提示词审核.md"
+          },
+          "S01_G03": {
+            "status": "stale",
+            "evidence": "03_分场制作/S01/雪景提示词审核.md"
+          },
+          "S01_G04": {
+            "status": "stale",
+            "evidence": "03_分场制作/S01/雪景提示词审核.md"
+          },
+          "S01_G05": {
+            "status": "stale",
+            "evidence": "03_分场制作/S01/雪景提示词审核.md"
+          }
+        },
+        "output_reviews": {
+          "S01_G01": {
+            "status": "failed",
+            "visual": "实际画面无所需雪景",
+            "audio": "pending",
+            "evidence": "03_分场制作/S01/雪景提示词审核.md"
+          }
+        }
+      }
+    }
+  ],
+  "content_revision": 3
+}

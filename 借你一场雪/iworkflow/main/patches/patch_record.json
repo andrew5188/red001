@@ -1,0 +1,9 @@
+{
+  "target": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui-SelfLift\\h3_tiling.py",
+  "before_sha256": "9ab139a147469831e893cdc594f37091fcb96c494528367eb88b786de5e004d7",
+  "after_sha256": "15dc484924ed2edb835929377738051c4b5fc259cab05b8a567e24ebc86eb3c2",
+  "reason": "Mixed guide+reference payload retained full guide cond rows while layout cropped the guide: 2093 rows vs 1380. Rebuild the list from cropped guides and unchanged references.",
+  "status": "verified_full_render",
+  "restart_verified_at": "2026-09-19T13:08:54.214008+08:00",
+  "validation_prompt_id": "ca6d9a5e-0633-48b3-b198-6cbb38c716bc"
+}

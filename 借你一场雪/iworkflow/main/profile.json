@@ -1,0 +1,69 @@
+{
+  "engine": "h3_ref2va",
+  "output": {
+    "width": 1280,
+    "height": 720,
+    "fps": 24,
+    "directory": "04_全片输出"
+  },
+  "comfy_output_prefix": "borrow_snow_20260919_r03",
+  "reference_slots": [
+    {
+      "load": "10",
+      "resize": "13"
+    },
+    {
+      "load": "11",
+      "resize": "14"
+    },
+    {
+      "load": "12",
+      "resize": "15"
+    },
+    {
+      "load": "40",
+      "resize": "50"
+    },
+    {
+      "load": "41",
+      "resize": "51"
+    },
+    {
+      "load": "42",
+      "resize": "52"
+    },
+    {
+      "load": "43",
+      "resize": "53"
+    },
+    {
+      "load": "44",
+      "resize": "54"
+    },
+    {
+      "load": "45",
+      "resize": "55"
+    }
+  ],
+  "sampler": {
+    "steps": 4,
+    "transition_step": 2,
+    "lowres_scale": 0.75,
+    "cfg": 1.0,
+    "rho": 0.0,
+    "highres_tiling": true
+  },
+  "limits": {
+    "max_references": 9,
+    "min_seconds": 4,
+    "max_seconds": 15
+  },
+  "notes": "Experimental highres tiling: full audio/references, first tile audio prediction retained. Must review video and sound.",
+  "runtime_fixes": [
+    {
+      "target": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui-SelfLift\\h3_tiling.py",
+      "sha256": "15dc484924ed2edb835929377738051c4b5fc259cab05b8a567e24ebc86eb3c2",
+      "record": "iworkflow/main/patches/patch_record.json"
+    }
+  ]
+}

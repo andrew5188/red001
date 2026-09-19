@@ -1,0 +1,27 @@
+subject_definitions:
+<Subject 1> is Shen Zhiwei, the single 18-year-old adult Chinese woman in <Picture 1>. Preserve her softly idealized face, almond eyes, long half-tied black hair with a small white jade hairpin, ivory cross-collar dress, pale-celadon outer robe and sash, and white cloth shoes. Her voice (S1) is clear adult female Mandarin, light, warm and naturally paced.
+<Subject 2> is Xie Linchuan, the single approximately 30-year-old adult Chinese man in <Picture 2>. Preserve his mature clean-shaven face, gentle eyes, long half-tied black hair and silver crown, white inner robe, gray-blue outer robe, dark gray-blue sash and dark boots. His voice (S2) is warm medium-low male Mandarin, calm and softly spoken.
+<Subject 3> is the visibly snowy mountain pavilion terrace in <Picture 3>: rear-left dark wooden pavilion with snow-covered eaves, snow-capped stone balustrade along rear and right, open terrace with a light settled snow layer, snow-laden pine at right and white distant mountain ridges. Preserve the gentle upper-left winter afternoon light and clear visibility. Falling snow is already present from the opening.
+Each character sheet represents three angles of ONE person, used only for identity, costume and the fixed semi-realistic guofeng rendering. Render exactly one woman and one man, mutually affectionate adult companions, in the environment. Do not reproduce the sheets, white background, panels or multiple copies. The environment plate is a spatial and weather reference, not an empty opening frame. No subtitles, written titles or narration.
+
+summary:
+[reference generation] The man answers while looking at the woman; they share a small smile and gentle handhold, then look out together over the snow-covered mountains.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - retain the character identity, costume, hair and semi-realistic rendering; natural snow dusting is part of the scene.
+<Subject 2> (appears in [Shot 1]): fully_preserved - retain the character identity, costume, hair and semi-realistic rendering; natural snow dusting is part of the scene.
+<Subject 3> (appears in [Shot 1]): fully_preserved - retain the snowy architecture, snow-covered pine and mountains, settled terrace snow and afternoon lighting. Keep visible gentle snowfall throughout.
+
+detailed_description:
+The target video concludes the same semi-realistic guofeng romance with soft winter light, natural adult proportions and restrained affectionate acting. This final ten-second passage resolves the fifty-second story within the established snowy landscape.
+[Shot 1] Begin from the actual preceding end frame, matching the position and gaze of <Subject 1>, the ivory-and-celadon-robed woman on frame left, and <Subject 2>, the gray-blue-robed man on frame right. Her anatomical LEFT hand is still supported by his anatomical RIGHT hand between them, and the small magical crystal has already dispersed. Do not recreate the crystal or replay its dispersal. <Subject 3> remains unmistakably snowy: the stone railing has white snow caps, the left pavilion roof carries settled snow, and pine boughs and distant ridges are white. Gentle flakes continue drifting past the couple at multiple depths from the first moment.
+During the first three seconds, she keeps her eyes on the snowfall while he looks at her face with an affectionate, restrained smile. Keep both faces visible in the established medium two-shot. Fine white flecks rest in their dark hair and on their shoulders without hiding the original costumes. The camera holds steady so that the man's eyeline is clear.
+Between seconds three and five, <Subject 2> (S2) responds in the same warm medium-low Mandarin voice, <d>[Chinese] 嗯，很好看.</d> He says this while looking at her rather than at the landscape, making the affectionate meaning apparent through his gaze. His mouth closes when the line ends. She notices his look, turns her eyes toward him and smiles shyly, without speaking or giving an exaggerated reaction.
+During seconds five through seven, their supported hands turn gently into a light, relaxed handhold. Keep all fingers distinct and avoid a complicated interlaced grip. She gives one small answering squeeze, and both gradually turn their gaze toward the snow beyond the railing. Their free hands remain lowered, and they stay on the same sides of the frame.
+During the final three seconds, the camera eases backward only slightly to reveal more of the snow-covered terrace and mountain ridges around them. The couple remains clearly visible, standing peacefully together. Snow continues falling through the last frame, with no fade to a snow-free landscape. The instrumental theme reaches a soft, warm resolution and fades gently with the mountain wind over the final second. End on the held snowy tableau without captions, titles, extra dialogue or a sudden black frame.
+
+overall_soundscape:
+Continuous soft mountain wind and distant pine rustle, with natural cloth movement during gestures. Snow falls quietly; no rain or storm sounds. Continue the existing ambience and fade it gently in the final second. Synchronized gesture sounds and any dialogue occur only at their described moments.
+
+non_diegetic_music:
+Continue a quiet instrumental guqin and airy bamboo-flute theme at approximately 68 BPM, warm and tender, sparse notes, no vocals or percussion. Keep it below dialogue and delicate gesture sounds. Resolve the phrase softly during the last three seconds and fade over the final second.

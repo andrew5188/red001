@@ -1,0 +1,128 @@
+{
+  "status": "success",
+  "content_revision": 3,
+  "content_snapshot": {
+    "revision": 3,
+    "requirements_sha256": "9d4d52b572cec407adb388c1e01c10988175fcc5e016f9756284f422b2ce9b72",
+    "files": {
+      "00_故事大纲\\选定大纲_v2.md": "94d9cbbaab3f2587d2d17a908769eac109d85a9cb99dac6c026d774a4f9eed3f",
+      "01_完整剧本\\完整剧本_v3.md": "e449363fbf6c4246af988869fea7c04f8b2fb0b16a78a859559d53862f5285a4",
+      "03_分场制作\\S01\\G01_H3完整提示词_v3.txt": "9a29c568be94152c7bae7fa1bd76b2f7c37a393783133c059f6b3154099abd60",
+      "iworkflow\\main\\segments.json": "8cd31d09dbad80e6394f5992106fd97327572ba03a3b7b0d816aafa03d67018b",
+      "iworkflow\\main\\profile.json": "b0d37995e041f0923f60313a3f625508b05ad1487e490e8d3bbcaba4828bc320",
+      "iworkflow\\main.ui.json": "d889373bf4f8e76412c52b5dd2ff33379c6ad76080e5b923c052ccab5e62f005",
+      "iworkflow\\main\\main.api.json": "5ed18846b52d852eec62a0d258b17056a5dbc86ea86b9d4799cac0e60d540568",
+      "02_角色库\\CH01_沈知微_白底三视图_v2.png": "28edb42ddf618be3668ad490084cda18e57e6f6a347b21a30fff1509401f7335",
+      "02_角色库\\CH02_谢临川_白底三视图_v2.png": "6f136d59863e60d66aeacb06dc3ca2338bff97609bd795b671b8bf32bc22a5d2",
+      "03_分场制作\\S01\\SC01_山亭_雪景无人母图_v2.png": "d55ca25b8e18d1a1373620684601417a5b22e3569c11fd4b6b88bcb760a8cc3d"
+    },
+    "api_sha256": "6e17132610f632f51f1d547d006f0bb8d690bd570508a5c19cfe1f6ab5debfd5"
+  },
+  "scene": "S01",
+  "group": "G01",
+  "attempt": 1,
+  "template": {
+    "api_sha256": "5ed18846b52d852eec62a0d258b17056a5dbc86ea86b9d4799cac0e60d540568",
+    "ui_sha256": "d889373bf4f8e76412c52b5dd2ff33379c6ad76080e5b923c052ccab5e62f005",
+    "preview_segment": "S01_G01",
+    "template_version": 2,
+    "submitted": false,
+    "frontend": "pending"
+  },
+  "inputs": {
+    "prompt": "03_分场制作/S01/G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH01_沈知微_白底三视图_v2.png",
+        "source_path": "02_角色库/CH01_沈知微_白底三视图_v2.png",
+        "source_sha256": "28edb42ddf618be3668ad490084cda18e57e6f6a347b21a30fff1509401f7335",
+        "resize_width": 768
+      },
+      {
+        "image": "CH02_谢临川_白底三视图_v2.png",
+        "source_path": "02_角色库/CH02_谢临川_白底三视图_v2.png",
+        "source_sha256": "6f136d59863e60d66aeacb06dc3ca2338bff97609bd795b671b8bf32bc22a5d2",
+        "resize_width": 768
+      },
+      {
+        "image": "SC01_山亭_雪景无人母图_v2.png",
+        "source_path": "03_分场制作/S01/SC01_山亭_雪景无人母图_v2.png",
+        "source_sha256": "d55ca25b8e18d1a1373620684601417a5b22e3569c11fd4b6b88bcb760a8cc3d",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091931,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "cut",
+      "predecessor": null
+    },
+    "content_revision": 3
+  },
+  "profile": {
+    "engine": "h3_ref2va",
+    "output": {
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "directory": "04_全片输出"
+    },
+    "comfy_output_prefix": "borrow_snow_20260919_r03",
+    "reference_slots": [
+      {
+        "load": "10",
+        "resize": "13"
+      },
+      {
+        "load": "11",
+        "resize": "14"
+      },
+      {
+        "load": "12",
+        "resize": "15"
+      },
+      {
+        "load": "40",
+        "resize": "50"
+      },
+      {
+        "load": "41",
+        "resize": "51"
+      },
+      {
+        "load": "42",
+        "resize": "52"
+      },
+      {
+        "load": "43",
+        "resize": "53"
+      },
+      {
+        "load": "44",
+        "resize": "54"
+      },
+      {
+        "load": "45",
+        "resize": "55"
+      }
+    ],
+    "sampler": {
+      "steps": 4,
+      "transition_step": 2,
+      "lowres_scale": 0.75,
+      "cfg": 1.0,
+      "rho": 0.0,
+      "highres_tiling": true
+    },
+    "limits": {
+      "max_references": 9,
+      "min_seconds": 4,
+      "max_seconds": 15
+    },
+    "notes": "Experimental highres tiling: full audio/references, first tile audio prediction retained. Must review video and sound."
+  },
+  "guide": null,
+  "prompt_id": "9ad15ade-b0c8-43dd-a1c4-43b2d406b834",
+  "outputs": [],
+  "submitted_at": "2026-09-19T12:28:13.336160+08:00"
+}

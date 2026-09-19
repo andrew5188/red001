@@ -1,0 +1,60 @@
+{
+  "system": {
+    "os": "win32",
+    "ram_total": 34270773248,
+    "ram_free": 9477402624,
+    "comfyui_version": "0.34.0",
+    "required_frontend_version": "1.51.9",
+    "installed_templates_version": "0.11.55",
+    "required_templates_version": "0.11.55",
+    "comfy_package_versions": [
+      {
+        "name": "comfyui-frontend-package",
+        "installed": "1.51.9",
+        "required": "1.51.9"
+      },
+      {
+        "name": "comfyui-workflow-templates",
+        "installed": "0.11.55",
+        "required": "0.11.55"
+      },
+      {
+        "name": "comfyui-embedded-docs",
+        "installed": "0.5.10",
+        "required": "0.5.10"
+      },
+      {
+        "name": "comfy-kitchen",
+        "installed": "0.2.31",
+        "required": "0.2.31"
+      },
+      {
+        "name": "comfy-aimdo",
+        "installed": "0.5.2",
+        "required": "0.5.2"
+      }
+    ],
+    "python_version": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+    "pytorch_version": "2.14.0+cu130",
+    "embedded_python": true,
+    "deploy_environment": "local-portable",
+    "argv": [
+      "ComfyUI\\main.py",
+      "--windows-standalone-build",
+      "--enable-manager",
+      "--cuda-device",
+      "all"
+    ]
+  },
+  "devices": [
+    {
+      "name": "cuda:0 NVIDIA GeForce RTX 3060 : cudaMallocAsync",
+      "type": "cuda",
+      "index": 0,
+      "vram_total": 12884246528,
+      "vram_free": 11025266200,
+      "torch_vram_total": 738197504,
+      "torch_vram_free": 31995416
+    }
+  ]
+}

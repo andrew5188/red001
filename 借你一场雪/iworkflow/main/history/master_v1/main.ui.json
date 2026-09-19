@@ -1,0 +1,2453 @@
+{
+  "last_node_id": 32,
+  "last_link_id": 39,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "title": "H3 reference model",
+      "pos": [
+        0,
+        80
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          },
+          "link": null
+        },
+        {
+          "name": "weight_dtype",
+          "type": "COMBO",
+          "widget": {
+            "name": "weight_dtype"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "H3\\minimax_h3_ref2va_pruned_w4a8_mixed.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "H3\\minimax_h3_ref2va_pruned_w4a8_mixed.safetensors",
+        "weight_dtype": "default"
+      }
+    },
+    {
+      "id": 2,
+      "type": "LoraLoaderModelOnly",
+      "title": "H3 4-step acceleration",
+      "pos": [
+        0,
+        420
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        },
+        {
+          "name": "lora_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "lora_name"
+          },
+          "link": null
+        },
+        {
+          "name": "strength_model",
+          "type": "FLOAT",
+          "widget": {
+            "name": "strength_model"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            2
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "H3\\minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+        1.0
+      ],
+      "widgets_values_named": {
+        "lora_name": "H3\\minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      }
+    },
+    {
+      "id": 3,
+      "type": "PathchSageAttentionKJ",
+      "title": "Sage attention",
+      "pos": [
+        0,
+        760
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 2
+        },
+        {
+          "name": "sage_attention",
+          "type": "COMBO",
+          "widget": {
+            "name": "sage_attention"
+          },
+          "link": null
+        },
+        {
+          "name": "allow_compile",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "allow_compile"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            3
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PathchSageAttentionKJ"
+      },
+      "widgets_values": [
+        "auto",
+        false
+      ],
+      "widgets_values_named": {
+        "sage_attention": "auto",
+        "allow_compile": false
+      }
+    },
+    {
+      "id": 4,
+      "type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+      "title": "Memory-efficient H3 attention",
+      "pos": [
+        0,
+        1100
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            4
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3MemoryEfficientSageAttentionPatch"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 5,
+      "type": "MiniMaxH3SigmaShift",
+      "title": "H3 video/audio schedules",
+      "pos": [
+        0,
+        1440
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 4
+        },
+        {
+          "name": "shift_video",
+          "type": "FLOAT",
+          "widget": {
+            "name": "shift_video"
+          },
+          "link": null
+        },
+        {
+          "name": "shift_audio",
+          "type": "FLOAT",
+          "widget": {
+            "name": "shift_audio"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            15,
+            16
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3SigmaShift"
+      },
+      "widgets_values": [
+        12.0,
+        3.0
+      ],
+      "widgets_values_named": {
+        "shift_video": 12.0,
+        "shift_audio": 3.0
+      }
+    },
+    {
+      "id": 6,
+      "type": "CLIPLoader",
+      "title": "H3 text encoder",
+      "pos": [
+        640,
+        80
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "clip_name"
+          },
+          "link": null
+        },
+        {
+          "name": "type",
+          "type": "COMBO",
+          "widget": {
+            "name": "type"
+          },
+          "link": null
+        },
+        {
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            8
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "Qwen3VL\\qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "minimax",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "Qwen3VL\\qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+        "type": "minimax",
+        "device": "default"
+      }
+    },
+    {
+      "id": 7,
+      "type": "VAELoader",
+      "title": "H3 video VAE",
+      "pos": [
+        640,
+        420
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            9,
+            19,
+            25,
+            38
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "H3\\minimax_h3_video_vae_fp16.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "H3\\minimax_h3_video_vae_fp16.safetensors"
+      }
+    },
+    {
+      "id": 8,
+      "type": "VAELoader",
+      "title": "H3 audio VAE",
+      "pos": [
+        640,
+        760
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "vae_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            10,
+            27
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "H3\\minimax_h3_audio_vae_fp32.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "H3\\minimax_h3_audio_vae_fp32.safetensors"
+      }
+    },
+    {
+      "id": 10,
+      "type": "LoadImage",
+      "title": "CH01 Shen Zhiwei",
+      "pos": [
+        1280,
+        80
+      ],
+      "size": [
+        580,
+        360
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            5
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "CH01_沈知微_白底三视图_v2.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "CH01_沈知微_白底三视图_v2.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 13,
+      "type": "ImageScale",
+      "title": "Bound reference token cost",
+      "pos": [
+        1280,
+        530
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 5
+        },
+        {
+          "name": "upscale_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "upscale_method"
+          },
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        },
+        {
+          "name": "crop",
+          "type": "COMBO",
+          "widget": {
+            "name": "crop"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "lanczos",
+        768,
+        512,
+        "disabled"
+      ],
+      "widgets_values_named": {
+        "upscale_method": "lanczos",
+        "width": 768,
+        "height": 512,
+        "crop": "disabled"
+      }
+    },
+    {
+      "id": 11,
+      "type": "LoadImage",
+      "title": "CH02 Xie Linchuan",
+      "pos": [
+        1280,
+        870
+      ],
+      "size": [
+        580,
+        360
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            6
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "CH02_谢临川_白底三视图_v2.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "CH02_谢临川_白底三视图_v2.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 14,
+      "type": "ImageScale",
+      "title": "Bound reference token cost",
+      "pos": [
+        1280,
+        1320
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 6
+        },
+        {
+          "name": "upscale_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "upscale_method"
+          },
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        },
+        {
+          "name": "crop",
+          "type": "COMBO",
+          "widget": {
+            "name": "crop"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            12
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "lanczos",
+        768,
+        512,
+        "disabled"
+      ],
+      "widgets_values_named": {
+        "upscale_method": "lanczos",
+        "width": 768,
+        "height": 512,
+        "crop": "disabled"
+      }
+    },
+    {
+      "id": 12,
+      "type": "LoadImage",
+      "title": "SC01 mountain pavilion",
+      "pos": [
+        1280,
+        1660
+      ],
+      "size": [
+        580,
+        360
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "SC01_山亭_无人母图_v1.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "SC01_山亭_无人母图_v1.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 15,
+      "type": "ImageScale",
+      "title": "Bound reference token cost",
+      "pos": [
+        1280,
+        2110
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 7
+        },
+        {
+          "name": "upscale_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "upscale_method"
+          },
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        },
+        {
+          "name": "crop",
+          "type": "COMBO",
+          "widget": {
+            "name": "crop"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            13
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "lanczos",
+        864,
+        486,
+        "disabled"
+      ],
+      "widgets_values_named": {
+        "upscale_method": "lanczos",
+        "width": 864,
+        "height": 486,
+        "crop": "disabled"
+      }
+    },
+    {
+      "id": 16,
+      "type": "MiniMaxH3ReferenceToVideo",
+      "title": "G01 official H3 prompt",
+      "pos": [
+        1920,
+        80
+      ],
+      "size": [
+        580,
+        820
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 8
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": null
+        },
+        {
+          "name": "ref_image_size",
+          "type": "COMBO",
+          "widget": {
+            "name": "ref_image_size"
+          },
+          "link": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 9
+        },
+        {
+          "name": "audio_vae",
+          "type": "VAE",
+          "link": 10
+        },
+        {
+          "name": "ref_images.ref_image_0",
+          "type": "IMAGE",
+          "link": 11
+        },
+        {
+          "name": "ref_images.ref_image_1",
+          "type": "IMAGE",
+          "link": 12
+        },
+        {
+          "name": "ref_images.ref_image_2",
+          "type": "IMAGE",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            14,
+            17,
+            36
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            20,
+            37
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3ReferenceToVideo"
+      },
+      "widgets_values": [
+        "subject_definitions:\n<Subject 1> is Shen Zhiwei, the single 18-year-old adult Chinese woman in <Picture 1>. Preserve her oval face, almond eyes, long half-tied black hair with a small white jade hairpin, pale ivory cross-collar dress, pale-celadon outer robe and sash, and white cloth shoes. Her voice (S1) is clear, youthful adult female Mandarin, light and warm with natural conversational pacing.\n<Subject 2> is Xie Linchuan, the single approximately 30-year-old Chinese man in <Picture 2>. Preserve his mature clean-shaven angular face, gentle eyes, long half-tied black hair with silver crown, moon-white inner robe, gray-blue outer robe, dark gray-blue sash and dark boots. His voice (S2) is warm medium-low male Mandarin, calm and softly spoken.\nEach character reference is three views of ONE person. Use the references only for identity and costume, never as a first frame, collage, white background or duplicated people. Exactly one woman and one man participate. They are mutually affectionate adult companions. Consistent semi-realistic guofeng character rendering, softly idealized natural facial features, smooth skin, detailed hair and fabric, natural adult proportions and restrained acting; no subtitles, titles or narration.\n\n<Subject 3> is the mountain pavilion terrace in <Picture 3>, used only as an environment reference. Preserve the rear-left dark wooden pavilion, broad pale-gray stone acting area, rear and right stone balustrade, distant right pine and layered blue-gray mountains. Gentle filtered winter afternoon sunlight comes from upper left behind the pavilion; do not change the time of day. The characters already occupy this setting at the opening; never start with the empty reference plate.\n\nsummary:\n[reference generation] The woman promises snow to her companion, but her small spell produces water beads; he watches kindly.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - preserve the identity, costume and hair from the character sheet.\n<Subject 2> (appears in [Shot 1]): fully_preserved - preserve the identity, costume and hair from the character sheet.\n<Subject 3> (appears in [Shot 1]): fully_preserved - preserve the terrace geography, architecture and afternoon lighting.\n\ndetailed_description:\nThe target video uses semi-realistic Chinese guofeng fantasy romance rendering, gentle winter afternoon light, modest gestures, and a landscape frame. This is the first ten seconds of one continuous fifty-second scene.\n[Shot 1] A medium-wide two-shot shows <Subject 1>, the young woman in ivory and pale celadon, standing on the left side of the open terrace of <Subject 3>, facing slightly right toward <Subject 2>, the taller gray-blue-robed man on the right. The pavilion pillar stays behind her left shoulder, the stone rail behind both figures and the distant pine toward frame right. Both people are present from the first frame. The man watches her quietly with his arms relaxed; he does not touch her yet. The camera makes a very slow, small forward move without crossing their eyeline. During the first three seconds she lifts her anatomical LEFT hand palm-up to lower-chest height and slowly draws a small circle above it with her RIGHT fingertips. Her sleeves move softly in the light breeze. Her expression is hopeful and a little earnest, with relaxed shoulders rather than exaggerated magical combat poses. From second three to six, <Subject 1> (S1) glances at him and says warmly, <d>[Chinese] 说好了，今日请你看雪.</d> Her mouth closes when the sentence finishes. He listens, smiling faintly without speaking. She turns her gaze down to her open left palm and brings her right fingertips closer together. From second six onward, three tiny water beads gather a few centimeters over her palm, catching the pale sun. Instead of turning into snow, they drop back into her palm with a soft, synchronized patter. Do not create a rainstorm or wet either costume. The woman's lips purse in mild disappointment, then she lowers only her right hand. The man retains a kind, amused expression without laughing at her. During the last second, hold a calm reproducible two-shot: her left palm remains open and slightly wet between them, his hands are still at his sides, they have not touched, and there is no snow in the air or on their shoulders. Keep the music and quiet wind continuing beyond the cut.\n\noverall_soundscape:\nContinuous very soft mountain wind and distant pine rustle; no crowds, traffic or storm. Carry the ambience smoothly from the preceding group where applicable, without repeating transient effects. Leave the ambient bed continuous at the ending.\n\nnon_diegetic_music:\nBegin a quiet instrumental guqin and airy bamboo-flute theme at approximately 68 BPM, warm and tender with sparse notes and no percussion or vocals. Fade in over the first second, remain below speech and the tiny water-drop sound, and leave the phrase open at the ending for immediate continuation.",
+        1280,
+        736,
+        243,
+        "match"
+      ],
+      "widgets_values_named": {
+        "prompt": "subject_definitions:\n<Subject 1> is Shen Zhiwei, the single 18-year-old adult Chinese woman in <Picture 1>. Preserve her oval face, almond eyes, long half-tied black hair with a small white jade hairpin, pale ivory cross-collar dress, pale-celadon outer robe and sash, and white cloth shoes. Her voice (S1) is clear, youthful adult female Mandarin, light and warm with natural conversational pacing.\n<Subject 2> is Xie Linchuan, the single approximately 30-year-old Chinese man in <Picture 2>. Preserve his mature clean-shaven angular face, gentle eyes, long half-tied black hair with silver crown, moon-white inner robe, gray-blue outer robe, dark gray-blue sash and dark boots. His voice (S2) is warm medium-low male Mandarin, calm and softly spoken.\nEach character reference is three views of ONE person. Use the references only for identity and costume, never as a first frame, collage, white background or duplicated people. Exactly one woman and one man participate. They are mutually affectionate adult companions. Consistent semi-realistic guofeng character rendering, softly idealized natural facial features, smooth skin, detailed hair and fabric, natural adult proportions and restrained acting; no subtitles, titles or narration.\n\n<Subject 3> is the mountain pavilion terrace in <Picture 3>, used only as an environment reference. Preserve the rear-left dark wooden pavilion, broad pale-gray stone acting area, rear and right stone balustrade, distant right pine and layered blue-gray mountains. Gentle filtered winter afternoon sunlight comes from upper left behind the pavilion; do not change the time of day. The characters already occupy this setting at the opening; never start with the empty reference plate.\n\nsummary:\n[reference generation] The woman promises snow to her companion, but her small spell produces water beads; he watches kindly.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - preserve the identity, costume and hair from the character sheet.\n<Subject 2> (appears in [Shot 1]): fully_preserved - preserve the identity, costume and hair from the character sheet.\n<Subject 3> (appears in [Shot 1]): fully_preserved - preserve the terrace geography, architecture and afternoon lighting.\n\ndetailed_description:\nThe target video uses semi-realistic Chinese guofeng fantasy romance rendering, gentle winter afternoon light, modest gestures, and a landscape frame. This is the first ten seconds of one continuous fifty-second scene.\n[Shot 1] A medium-wide two-shot shows <Subject 1>, the young woman in ivory and pale celadon, standing on the left side of the open terrace of <Subject 3>, facing slightly right toward <Subject 2>, the taller gray-blue-robed man on the right. The pavilion pillar stays behind her left shoulder, the stone rail behind both figures and the distant pine toward frame right. Both people are present from the first frame. The man watches her quietly with his arms relaxed; he does not touch her yet. The camera makes a very slow, small forward move without crossing their eyeline. During the first three seconds she lifts her anatomical LEFT hand palm-up to lower-chest height and slowly draws a small circle above it with her RIGHT fingertips. Her sleeves move softly in the light breeze. Her expression is hopeful and a little earnest, with relaxed shoulders rather than exaggerated magical combat poses. From second three to six, <Subject 1> (S1) glances at him and says warmly, <d>[Chinese] 说好了，今日请你看雪.</d> Her mouth closes when the sentence finishes. He listens, smiling faintly without speaking. She turns her gaze down to her open left palm and brings her right fingertips closer together. From second six onward, three tiny water beads gather a few centimeters over her palm, catching the pale sun. Instead of turning into snow, they drop back into her palm with a soft, synchronized patter. Do not create a rainstorm or wet either costume. The woman's lips purse in mild disappointment, then she lowers only her right hand. The man retains a kind, amused expression without laughing at her. During the last second, hold a calm reproducible two-shot: her left palm remains open and slightly wet between them, his hands are still at his sides, they have not touched, and there is no snow in the air or on their shoulders. Keep the music and quiet wind continuing beyond the cut.\n\noverall_soundscape:\nContinuous very soft mountain wind and distant pine rustle; no crowds, traffic or storm. Carry the ambience smoothly from the preceding group where applicable, without repeating transient effects. Leave the ambient bed continuous at the ending.\n\nnon_diegetic_music:\nBegin a quiet instrumental guqin and airy bamboo-flute theme at approximately 68 BPM, warm and tender with sparse notes and no percussion or vocals. Fade in over the first second, remain below speech and the tiny water-drop sound, and leave the phrase open at the ending for immediate continuation.",
+        "width": 1280,
+        "height": 736,
+        "length": 243,
+        "ref_image_size": "match"
+      }
+    },
+    {
+      "id": 17,
+      "type": "LoadImage",
+      "title": "连续片段：上一段实际末帧（首段不启用）",
+      "pos": [
+        1920,
+        990
+      ],
+      "size": [
+        580,
+        360
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            39
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 18,
+      "type": "MiniMaxH3AddGuide",
+      "title": "连续性分支（首段旁路）",
+      "pos": [
+        1920,
+        1440
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 36
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "link": 37
+        },
+        {
+          "name": "frame_idx",
+          "type": "INT",
+          "widget": {
+            "name": "frame_idx"
+          },
+          "link": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 38
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3AddGuide"
+      },
+      "widgets_values": [
+        0
+      ],
+      "widgets_values_named": {
+        "frame_idx": 0
+      }
+    },
+    {
+      "id": 19,
+      "type": "ConditioningZeroOut",
+      "title": "Empty negative conditioning",
+      "pos": [
+        2560,
+        80
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 14
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            18
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningZeroOut"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 20,
+      "type": "KSamplerSelect",
+      "title": "SelfLift compatible Euler",
+      "pos": [
+        2560,
+        420
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sampler_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "sampler_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            21
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler"
+      ],
+      "widgets_values_named": {
+        "sampler_name": "euler"
+      }
+    },
+    {
+      "id": 21,
+      "type": "BasicScheduler",
+      "title": "4 steps total",
+      "pos": [
+        2560,
+        760
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 15
+        },
+        {
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "widget": {
+            "name": "steps"
+          },
+          "link": null
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "widget": {
+            "name": "denoise"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            22
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "simple",
+        4,
+        1.0
+      ],
+      "widgets_values_named": {
+        "scheduler": "simple",
+        "steps": 4,
+        "denoise": 1.0
+      }
+    },
+    {
+      "id": 22,
+      "type": "SelfLiftH3Sampler",
+      "title": "SelfLift + H3 latent lift",
+      "pos": [
+        2560,
+        1100
+      ],
+      "size": [
+        580,
+        480
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 16
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 17
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 18
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 19
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 20
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 21
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 22
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "widget": {
+            "name": "seed"
+          },
+          "link": null
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "widget": {
+            "name": "cfg"
+          },
+          "link": null
+        },
+        {
+          "name": "transition_step",
+          "type": "INT",
+          "widget": {
+            "name": "transition_step"
+          },
+          "link": null
+        },
+        {
+          "name": "lowres_scale",
+          "type": "FLOAT",
+          "widget": {
+            "name": "lowres_scale"
+          },
+          "link": null
+        },
+        {
+          "name": "rho",
+          "type": "FLOAT",
+          "widget": {
+            "name": "rho"
+          },
+          "link": null
+        },
+        {
+          "name": "w_min",
+          "type": "FLOAT",
+          "widget": {
+            "name": "w_min"
+          },
+          "link": null
+        },
+        {
+          "name": "w_max",
+          "type": "FLOAT",
+          "widget": {
+            "name": "w_max"
+          },
+          "link": null
+        },
+        {
+          "name": "upscaler_model",
+          "type": "COMBO",
+          "widget": {
+            "name": "upscaler_model"
+          },
+          "link": null
+        },
+        {
+          "name": "highres_tiling",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "highres_tiling"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            23
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SelfLiftH3Sampler"
+      },
+      "widgets_values": [
+        2026091901,
+        "fixed",
+        1.0,
+        2,
+        0.75,
+        0.0,
+        0.5,
+        1.0,
+        "minimax_h3_latent_upscaler_3d_bf16.safetensors",
+        false
+      ],
+      "widgets_values_named": {
+        "seed": 2026091901,
+        "control_after_generate": "fixed",
+        "cfg": 1.0,
+        "transition_step": 2,
+        "lowres_scale": 0.75,
+        "rho": 0.0,
+        "w_min": 0.5,
+        "w_max": 1.0,
+        "upscaler_model": "minimax_h3_latent_upscaler_3d_bf16.safetensors",
+        "highres_tiling": false
+      }
+    },
+    {
+      "id": 23,
+      "type": "LTXVSeparateAVLatent",
+      "title": "Split generated video and audio",
+      "pos": [
+        3200,
+        80
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "av_latent",
+          "type": "LATENT",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_latent",
+          "type": "LATENT",
+          "links": [
+            24
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "audio_latent",
+          "type": "LATENT",
+          "links": [
+            26
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LTXVSeparateAVLatent"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 24,
+      "type": "VAEDecodeTiled",
+      "title": "Tiled video decoding",
+      "pos": [
+        3200,
+        420
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 24
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 25
+        },
+        {
+          "name": "tile_size",
+          "type": "INT",
+          "widget": {
+            "name": "tile_size"
+          },
+          "link": null
+        },
+        {
+          "name": "overlap",
+          "type": "INT",
+          "widget": {
+            "name": "overlap"
+          },
+          "link": null
+        },
+        {
+          "name": "temporal_size",
+          "type": "INT",
+          "widget": {
+            "name": "temporal_size"
+          },
+          "link": null
+        },
+        {
+          "name": "temporal_overlap",
+          "type": "INT",
+          "widget": {
+            "name": "temporal_overlap"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeTiled"
+      },
+      "widgets_values": [
+        512,
+        64,
+        32,
+        8
+      ],
+      "widgets_values_named": {
+        "tile_size": 512,
+        "overlap": 64,
+        "temporal_size": 32,
+        "temporal_overlap": 8
+      }
+    },
+    {
+      "id": 25,
+      "type": "VAEDecodeAudio",
+      "title": "Decode generated soundtrack",
+      "pos": [
+        3200,
+        760
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 26
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 27
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            30
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeAudio"
+      },
+      "widgets_values": [],
+      "widgets_values_named": {}
+    },
+    {
+      "id": 26,
+      "type": "ImageFromBatch",
+      "title": "Exactly 240 frames / 10 seconds",
+      "pos": [
+        3840,
+        80
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 28
+        },
+        {
+          "name": "batch_index",
+          "type": "INT",
+          "widget": {
+            "name": "batch_index"
+          },
+          "link": null
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            29,
+            34
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageFromBatch"
+      },
+      "widgets_values": [
+        0,
+        240
+      ],
+      "widgets_values_named": {
+        "batch_index": 0,
+        "length": 240
+      }
+    },
+    {
+      "id": 27,
+      "type": "ImageScale",
+      "title": "Final 1280 x 720 center crop",
+      "pos": [
+        3840,
+        420
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 29
+        },
+        {
+          "name": "upscale_method",
+          "type": "COMBO",
+          "widget": {
+            "name": "upscale_method"
+          },
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": null
+        },
+        {
+          "name": "crop",
+          "type": "COMBO",
+          "widget": {
+            "name": "crop"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            31
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "lanczos",
+        1280,
+        720,
+        "center"
+      ],
+      "widgets_values_named": {
+        "upscale_method": "lanczos",
+        "width": 1280,
+        "height": 720,
+        "crop": "center"
+      }
+    },
+    {
+      "id": 28,
+      "type": "TrimAudioDuration",
+      "title": "Exactly 10 seconds audio",
+      "pos": [
+        3840,
+        760
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 30
+        },
+        {
+          "name": "start_index",
+          "type": "FLOAT",
+          "widget": {
+            "name": "start_index"
+          },
+          "link": null
+        },
+        {
+          "name": "duration",
+          "type": "FLOAT",
+          "widget": {
+            "name": "duration"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            32
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "TrimAudioDuration"
+      },
+      "widgets_values": [
+        0.0,
+        10.0
+      ],
+      "widgets_values_named": {
+        "start_index": 0.0,
+        "duration": 10.0
+      }
+    },
+    {
+      "id": 31,
+      "type": "ImageFromBatch",
+      "title": "Actual kept last frame for next clip",
+      "pos": [
+        3840,
+        1100
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 34
+        },
+        {
+          "name": "batch_index",
+          "type": "INT",
+          "widget": {
+            "name": "batch_index"
+          },
+          "link": null
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            35
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageFromBatch"
+      },
+      "widgets_values": [
+        239,
+        1
+      ],
+      "widgets_values_named": {
+        "batch_index": 239,
+        "length": 1
+      }
+    },
+    {
+      "id": 29,
+      "type": "CreateVideo",
+      "title": "720p / 24fps with audio",
+      "pos": [
+        4480,
+        80
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 31
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": null
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "link": 32
+        },
+        {
+          "name": "bit_depth",
+          "type": "COMBO",
+          "widget": {
+            "name": "bit_depth"
+          },
+          "link": null
+        },
+        {
+          "name": "color_space",
+          "type": "COMBO",
+          "widget": {
+            "name": "color_space"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            33
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        24.0,
+        "auto",
+        "sRGB"
+      ],
+      "widgets_values_named": {
+        "fps": 24.0,
+        "bit_depth": "auto",
+        "color_space": "sRGB"
+      }
+    },
+    {
+      "id": 30,
+      "type": "SaveVideo",
+      "title": "Save 10-second clip",
+      "pos": [
+        4480,
+        420
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 33
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        },
+        {
+          "name": "format",
+          "type": "COMFY_DYNAMICCOMBO_V3",
+          "widget": {
+            "name": "format"
+          },
+          "link": null
+        },
+        {
+          "name": "format.codec",
+          "type": "COMBO",
+          "widget": {
+            "name": "format.codec"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "borrow_snow_20260919/main_preview",
+        "mp4",
+        "h264"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "borrow_snow_20260919/main_preview",
+        "format": "mp4",
+        "format.codec": "h264"
+      }
+    },
+    {
+      "id": 32,
+      "type": "SaveImage",
+      "title": "Save native-size continuity guide",
+      "pos": [
+        4480,
+        760
+      ],
+      "size": [
+        580,
+        250
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 35
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "widget": {
+            "name": "filename_prefix"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "borrow_snow_20260919/guides/main_preview_end"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "borrow_snow_20260919/guides/main_preview_end"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "MODEL"
+    ],
+    [
+      4,
+      4,
+      0,
+      5,
+      0,
+      "MODEL"
+    ],
+    [
+      5,
+      10,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      6,
+      11,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      12,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      8,
+      6,
+      0,
+      16,
+      0,
+      "CLIP"
+    ],
+    [
+      9,
+      7,
+      0,
+      16,
+      6,
+      "VAE"
+    ],
+    [
+      10,
+      8,
+      0,
+      16,
+      7,
+      "VAE"
+    ],
+    [
+      11,
+      13,
+      0,
+      16,
+      8,
+      "IMAGE"
+    ],
+    [
+      12,
+      14,
+      0,
+      16,
+      9,
+      "IMAGE"
+    ],
+    [
+      13,
+      15,
+      0,
+      16,
+      10,
+      "IMAGE"
+    ],
+    [
+      14,
+      16,
+      0,
+      19,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      15,
+      5,
+      0,
+      21,
+      0,
+      "MODEL"
+    ],
+    [
+      16,
+      5,
+      0,
+      22,
+      0,
+      "MODEL"
+    ],
+    [
+      17,
+      16,
+      0,
+      22,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      18,
+      19,
+      0,
+      22,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      19,
+      7,
+      0,
+      22,
+      3,
+      "VAE"
+    ],
+    [
+      20,
+      16,
+      1,
+      22,
+      4,
+      "LATENT"
+    ],
+    [
+      21,
+      20,
+      0,
+      22,
+      5,
+      "SAMPLER"
+    ],
+    [
+      22,
+      21,
+      0,
+      22,
+      6,
+      "SIGMAS"
+    ],
+    [
+      23,
+      22,
+      0,
+      23,
+      0,
+      "LATENT"
+    ],
+    [
+      24,
+      23,
+      0,
+      24,
+      0,
+      "LATENT"
+    ],
+    [
+      25,
+      7,
+      0,
+      24,
+      1,
+      "VAE"
+    ],
+    [
+      26,
+      23,
+      1,
+      25,
+      0,
+      "LATENT"
+    ],
+    [
+      27,
+      8,
+      0,
+      25,
+      1,
+      "VAE"
+    ],
+    [
+      28,
+      24,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      26,
+      0,
+      27,
+      0,
+      "IMAGE"
+    ],
+    [
+      30,
+      25,
+      0,
+      28,
+      0,
+      "AUDIO"
+    ],
+    [
+      31,
+      27,
+      0,
+      29,
+      0,
+      "IMAGE"
+    ],
+    [
+      32,
+      28,
+      0,
+      29,
+      2,
+      "AUDIO"
+    ],
+    [
+      33,
+      29,
+      0,
+      30,
+      0,
+      "VIDEO"
+    ],
+    [
+      34,
+      26,
+      0,
+      31,
+      0,
+      "IMAGE"
+    ],
+    [
+      35,
+      31,
+      0,
+      32,
+      0,
+      "IMAGE"
+    ],
+    [
+      36,
+      16,
+      0,
+      18,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      37,
+      16,
+      1,
+      18,
+      1,
+      "LATENT"
+    ],
+    [
+      38,
+      7,
+      0,
+      18,
+      3,
+      "VAE"
+    ],
+    [
+      39,
+      17,
+      0,
+      18,
+      4,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "01 模型与加速",
+      "bounding": [
+        -20,
+        10,
+        620,
+        1750
+      ],
+      "color": "#3f6278",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "02 编码器与VAE",
+      "bounding": [
+        620,
+        10,
+        620,
+        1070
+      ],
+      "color": "#3f6278",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "03 人物与场景参考",
+      "bounding": [
+        1260,
+        10,
+        620,
+        2420
+      ],
+      "color": "#3f6278",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "04 官方H3提示词与连续性",
+      "bounding": [
+        1900,
+        10,
+        620,
+        1750
+      ],
+      "color": "#3f6278",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "05 SelfLift与latent放大",
+      "bounding": [
+        2540,
+        10,
+        620,
+        1640
+      ],
+      "color": "#3f6278",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "06 音视频解码",
+      "bounding": [
+        3180,
+        10,
+        620,
+        1070
+      ],
+      "color": "#3f6278",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "07 精确10秒与720p",
+      "bounding": [
+        3820,
+        10,
+        620,
+        1410
+      ],
+      "color": "#3f6278",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 8,
+      "title": "08 视频和衔接末帧输出",
+      "bounding": [
+        4460,
+        10,
+        620,
+        1070
+      ],
+      "color": "#3f6278",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.23,
+      "offset": [
+        60,
+        80
+      ]
+    },
+    "workflow_role": "Reusable project master; guide branch inactive for first clip."
+  },
+  "version": 0.4
+}

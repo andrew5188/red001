@@ -1,0 +1,47 @@
+{
+  "width": 1280,
+  "height": 720,
+  "fps": 24.0,
+  "has_audio": true,
+  "frames": 240,
+  "sampled_times_seconds": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    9.958333333333334
+  ],
+  "audio_seconds": 10.016,
+  "audio_peak": 0.9523317813873291,
+  "audio_rms_db": -19.35374050264465,
+  "clipped_fraction": 0.0,
+  "technical_pass": true,
+  "visual_review": "passed_with_continuity_adjustment",
+  "dialogue_and_music_review": "passed_by_user_listening",
+  "visual_evidence": "Viewed 21 samples at 0.5s intervals plus native 0/5/9.96s frames: snow-covered eaves, railing, pine and mountain ridges persist; visible flakes and snow dusting; two consistent adult guofeng characters, woman left/man right, clear raised left palm and gentle expressions. Small action timing deviation: man touches her left wrist with his right fingers near the ending, earlier than planned. Adapt next segment to this actual contact instead of repeating the reach.",
+  "asr_attempt": {
+    "status": "blocked",
+    "reason": "Windows PowerShell script execution policy refused transcribe_audio.ps1; policy not changed."
+  },
+  "audio_evidence": {
+    "source": "user listening confirmation",
+    "answer": "声音符合，可以继续",
+    "at": "2026-09-19T12:55:43.619447+08:00"
+  }
+}

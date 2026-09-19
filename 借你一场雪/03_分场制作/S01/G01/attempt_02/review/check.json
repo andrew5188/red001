@@ -1,0 +1,14 @@
+{
+  "width": 1280,
+  "height": 720,
+  "fps": 24.0,
+  "has_audio": true,
+  "frames": 240,
+  "audio_seconds": 10.016,
+  "audio_peak": 0.8863117098808289,
+  "audio_rms_db": -19.420960367172654,
+  "clipped_fraction": 0.0,
+  "technical_pass": true,
+  "visual_review": "Sampled 0/2.5/5/7.5/9.96s: consistent two adult characters, female left/man right, stable terrace, coherent palm gesture and slow push-in; no obvious extra people or scene discontinuity.",
+  "dialogue_and_music_review": "not_listened"
+}
