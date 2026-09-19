@@ -1,0 +1,202 @@
+{
+  "status": "success",
+  "content_revision": 3,
+  "content_snapshot": {
+    "revision": 3,
+    "requirements_sha256": "e168dc61441d4da61d2aa7f28e634a8a64beb31e61539ef5be9d24bd1ff98c42",
+    "files": {
+      "00_故事大纲\\续篇20场大纲_已确认_v3.md": "fa848863d0b3771fb98c0205484a263703634e05b882dad2d4cc17e9f657c02b",
+      "01_完整剧本\\续篇完整剧本_v8.md": "f8e94ad926840b5674e3c1bf862906e4a1aa646ec0e2018967c1e3a5610f103e",
+      "03_分场制作\\S02\\G01_H3完整提示词_v4.txt": "386c001053c86192e62437da27e2b23361dbcb40db9caae9108979b32b131011",
+      "iworkflow\\main\\segments.json": "1c168bc25a48311be574e4daa8a3351233e9daa2833135ea1a63056b6e1ec4a4",
+      "iworkflow\\main\\profile.json": "70916c57041499fc83633371db89feec0250087f7be1e6a3a1c8a907dff7a35f",
+      "iworkflow\\main.ui.json": "2358c8b9cebb2f9b350f490b30873deaafc82b26e0142689e5452b36255a224c",
+      "iworkflow\\main\\main.api.json": "d69a9559ccc2f038fe3a344d3c2ff2190943f77af8e67be483d811b176c1ea91",
+      "03_分场制作\\S02\\关键帧\\S02_G01_单人开场引导_v2.png": "452ddcbbd6de47953c935aafd13479670a93c330bef87bea486a250c5dd53248"
+    },
+    "performance_sha256": "780e9ee664f000398fead083b017d2e4680463ef001dfe0c687b9b231e3841af",
+    "music_sha256": "58a8abbc6a5f6cb1fa1ea10eef7bd1998074ddc4c024ed4092818ecf57a0aa82",
+    "cast_sha256": "d5df52c290423b00fbc7d6fbd696fd9d6e3d62db2049d8d2dc9f445bdc51fc5d",
+    "scene_strategy_sha256": "0cb3b8a4983b98ee1890ae4190c44c14e755e7c731fe1caeba5ae9fc6535a2cc",
+    "api_sha256": "c9039371c00783c77834f1fccb3488f8421cee509255cb88926fcb4f3d2937ed"
+  },
+  "scene": "S02",
+  "group": "G01",
+  "attempt": 4,
+  "template": {
+    "api_sha256": "d69a9559ccc2f038fe3a344d3c2ff2190943f77af8e67be483d811b176c1ea91",
+    "ui_sha256": "2358c8b9cebb2f9b350f490b30873deaafc82b26e0142689e5452b36255a224c",
+    "preview_segment": "S02_G01",
+    "template_version": 5,
+    "submitted": false,
+    "frontend": "pending"
+  },
+  "inputs": {
+    "prompt": "03_分场制作\\S02\\G01_H3完整提示词_v4.txt",
+    "references": [
+      {
+        "image": "S02_G01_单人开场引导_v2.png",
+        "source_path": "03_分场制作/S02/关键帧/S02_G01_单人开场引导_v2.png",
+        "source_sha256": "452ddcbbd6de47953c935aafd13479670a93c330bef87bea486a250c5dd53248",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091902,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "opening_frame",
+      "predecessor": null,
+      "source_path": "03_分场制作/S02/关键帧/S02_G01_单人开场引导_v2.png",
+      "source_sha256": "452ddcbbd6de47953c935aafd13479670a93c330bef87bea486a250c5dd53248",
+      "image": "S02_G01_单人开场引导_v2.png",
+      "review_status": "passed",
+      "review_evidence": "Actual new opening image viewed: one revised Lu, round eyes/cheeks retained, rightward gaze, hands at hips, sword sheathed, snowy empty corridor; uploaded hash verified."
+    },
+    "content_revision": 3,
+    "asset_status": "ready",
+    "scene_strategy": {
+      "scene_type": "drama",
+      "main_emotion": "期待落空，嫉妒初起",
+      "action_lora": {
+        "enabled": false,
+        "model": "H3\\motion\\H3_Combat_V2.safetensors",
+        "strength": 0.5
+      },
+      "appearance_lora": {
+        "enabled": true,
+        "model": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength": 0.6,
+        "trigger": "r34l1sm",
+        "sha256": "acc529601d2da117fb81179e76c56e488a3beab1171659d305f04fa3655b787e",
+        "source": "https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA",
+        "revision": "039cc8579d7aa357a882d7f4111b25da4f72dccc",
+        "validation": "download_sha256_and_tensor_layout_verified_render_unverified",
+        "default_scope": [
+          "drama",
+          "action",
+          "mixed"
+        ]
+      }
+    }
+  },
+  "profile": {
+    "engine": "h3_ref2va",
+    "output": {
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "directory": "04_全片输出"
+    },
+    "comfy_output_prefix": "borrow_snow_20260919_r03",
+    "reference_slots": [
+      {
+        "load": "10",
+        "resize": "13"
+      },
+      {
+        "load": "11",
+        "resize": "14"
+      },
+      {
+        "load": "12",
+        "resize": "15"
+      },
+      {
+        "load": "40",
+        "resize": "50"
+      },
+      {
+        "load": "41",
+        "resize": "51"
+      },
+      {
+        "load": "42",
+        "resize": "52"
+      },
+      {
+        "load": "43",
+        "resize": "53"
+      },
+      {
+        "load": "44",
+        "resize": "54"
+      },
+      {
+        "load": "45",
+        "resize": "55"
+      }
+    ],
+    "sampler": {
+      "steps": 4,
+      "transition_step": 2,
+      "lowres_scale": 0.75,
+      "cfg": 1.0,
+      "rho": 0.0,
+      "highres_tiling": true
+    },
+    "limits": {
+      "max_references": 9,
+      "min_seconds": 4,
+      "max_seconds": 15
+    },
+    "notes": "Experimental highres tiling: full audio/references, first tile audio prediction retained. Must review video and sound.",
+    "runtime_fixes": [
+      {
+        "target": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui-SelfLift\\h3_tiling.py",
+        "sha256": "15dc484924ed2edb835929377738051c4b5fc259cab05b8a567e24ebc86eb3c2",
+        "record": "iworkflow/main/patches/patch_record.json"
+      }
+    ],
+    "scene_strategy": {
+      "default_scene_type": "drama",
+      "action_lora": {
+        "enabled": false,
+        "model": "H3\\motion\\H3_Combat_V2.safetensors",
+        "strength": 0.5
+      },
+      "loader_node": "60",
+      "switch_node": "61",
+      "strength_note": "0.5 is an untested starting candidate; current project keeps branch disabled.",
+      "candidates": [
+        {
+          "model": "H3\\motion\\H3_Combat_V2.safetensors",
+          "base_model": "minimax_h3",
+          "validation": "metadata_checked_render_unverified"
+        },
+        {
+          "model": "H3\\motion\\H3_Motion_BoosterV2.safetensors",
+          "base_model": "minimax_h3",
+          "validation": "metadata_checked_render_unverified"
+        }
+      ],
+      "appearance_lora": {
+        "enabled": true,
+        "model": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength": 0.6,
+        "trigger": "r34l1sm",
+        "sha256": "acc529601d2da117fb81179e76c56e488a3beab1171659d305f04fa3655b787e",
+        "source": "https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA",
+        "revision": "039cc8579d7aa357a882d7f4111b25da4f72dccc",
+        "validation": "download_sha256_and_tensor_layout_verified_render_unverified",
+        "default_scope": [
+          "drama",
+          "action",
+          "mixed"
+        ]
+      },
+      "appearance_loader_node": "70",
+      "appearance_switch_node": "71"
+    },
+    "lora_directory": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\models\\loras"
+  },
+  "guide": {
+    "kind": "authored_opening_frame",
+    "file": "03_分场制作/S02/关键帧/S02_G01_单人开场引导_v2.png",
+    "sha256": "452ddcbbd6de47953c935aafd13479670a93c330bef87bea486a250c5dd53248",
+    "input_name": "S02_G01_单人开场引导_v2.png",
+    "frame_idx": 0
+  },
+  "prompt_id": "737d570a-1020-4693-8be0-c65f9155f59a",
+  "outputs": [],
+  "submitted_at": "2026-09-19T17:56:17.668015+08:00"
+}

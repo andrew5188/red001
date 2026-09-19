@@ -1,0 +1,24 @@
+subject_definitions:
+<Subject 4> is Lu Xingzhou, the single 18-year-old adult male disciple in <Picture 1>. Preserve his youthful clean-shaven face, warm brown eyes, black high ponytail with a narrow silver band, charcoal inner layers, muted burgundy outer robe, dark belt and boots. One straight sword remains sheathed at his left hip with a dark-red tassel. The reference is a single front-view full-body portrait. Exactly this one person is visible in the target.
+<Subject 5> is the empty snowy pavilion-side corridor in <Picture 2>, with dark timber pillars on the left, snow-dusted stone paving, snow-capped balustrades and pine, distant snowy mountains and pale warm afternoon light.
+
+summary:
+[reference generation] In a ten-second single shot, <Subject 4> walks into <Subject 5>, notices something emotionally painful outside the frame, stops, and tightens his grip on his own sword tassel as anticipation turns into jealousy. Only <Subject 4> is visible. Character identity comes from <Picture 1>; the winter setting comes from <Picture 2>.
+
+retention_analysis:
+<Subject 4> (appears in [Shot 1]): fully_preserved - Retain one adult man's identity, proportions, hair, clothing and single sheathed sword while introducing the described restrained emotional reaction.
+<Subject 5> (appears in [Shot 1]): fully_preserved - Retain the corridor's timber, stone, snowfall, winter mountain setting and afternoon lighting; adapt framing for a single-person performance.
+
+detailed_description:
+r34l1sm. The target video keeps the established semi-realistic Chinese guofeng character style, with soft natural skin shading, restrained highlights and tangible cloth and hair; facial identity and gently idealized proportions remain faithful to the reference.
+[Shot 1] A stable eye-level medium shot opens on <Subject 4> already walking slowly beside the left-hand timber pillars of <Subject 5>. Frame him from the upper thighs upward, slightly left of center, leaving clear space in the direction of his gaze on screen right. His youthful face is visible in a gentle three-quarter angle. The sword is securely sheathed at his anatomical left hip, its small dark-red tassel resting against his robe. His hands begin relaxed; there is no drawn blade. Behind him, pale snow rests on the stone railing, branches and paving, and layered snowy mountains remain recognizable beyond the terrace. Fine flakes drift continuously through the exposed background and lightly across his outer shoulder.
+During the first two seconds, he takes two measured steps toward the near pillar, with an expectant, almost-smiling mouth and relaxed brows. Soft bootfalls on the thin snow and a brief robe rustle accompany the steps. His eyes then catch something beyond the right edge of the frame. His attention stays on that unseen point. He is the sole figure in an otherwise empty corridor, with only timber pillars, stone and snowy scenery behind him.
+Between two and four seconds, he stops beside the pillar. A small pause separates recognition from reaction. His eyes hold on that off-screen point; the corners of his mouth settle, and his brows draw subtly together. His shoulders remain controlled rather than collapsing. Let the change be readable in his face without a theatrical grimace or sudden head jerk.
+From four to seven seconds, his right hand crosses only as far as the small tassel at his left waist, closes around it and pulls it gently taut. The sword stays in its scabbard and attached to the same hip. His jaw firms and his breath becomes a little shallower; a quiet cloth and cord sound accompanies the grip. Keep his left hand low and still. The camera makes only a slight slow push, retaining the face, gripping hand and snowy railing in view.
+For the final three seconds, he holds the tassel and looks toward screen right, the former anticipation now replaced by contained hurt and jealousy. His lips remain closed, with no speech, singing or muttered words. End on his steady gaze beside the pillar, leaving the emotion unresolved for the following confrontation. Snow continues at the same gentle density; lighting, wardrobe and camera axis remain stable. No captions, titles, watermark or fade to black.
+
+overall_soundscape:
+Soft outdoor wind and faint pine movement continue through the sheltered corridor. Close bootfalls stop when he stops; robe and tassel handling produce small synchronized rustles. No dialogue, narration, additional voices or combat sounds.
+
+non_diegetic_music:
+A clearly audible but restrained instrumental guqin phrase and low sustained strings at approximately 68 BPM carry the established gentle theme into restrained tension. Introduce the lower note gradually as his smile disappears, without a loud sting, vocals or a fresh triumphant melody. Keep the score beneath the wind and close physical sounds, and leave its final note unresolved for the next scene.

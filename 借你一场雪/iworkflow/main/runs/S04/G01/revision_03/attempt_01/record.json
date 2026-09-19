@@ -1,0 +1,222 @@
+{
+  "status": "success",
+  "content_revision": 3,
+  "content_snapshot": {
+    "revision": 3,
+    "requirements_sha256": "e168dc61441d4da61d2aa7f28e634a8a64beb31e61539ef5be9d24bd1ff98c42",
+    "files": {
+      "00_故事大纲\\续篇20场大纲_已确认_v3.md": "fa848863d0b3771fb98c0205484a263703634e05b882dad2d4cc17e9f657c02b",
+      "01_完整剧本\\续篇完整剧本_v9.md": "2d31706f53894ef1a7867958487c4640af7779fd6083875e122c8e8938f8608d",
+      "03_分场制作\\S04\\G01_H3完整提示词_v6.txt": "ccc4aa70513ed5232a48ed141522bdb107441773a7894f747cb1c03a8cfd8026",
+      "iworkflow\\main\\segments.json": "a8c6cf1a8884c4bb33154c2333f42796ec5be545f3182c149b09ab9f105143d0",
+      "iworkflow\\main\\profile.json": "70916c57041499fc83633371db89feec0250087f7be1e6a3a1c8a907dff7a35f",
+      "iworkflow\\main.ui.json": "df1da2088cf575332cb58cb6ee30a16907d03dc5fc1381571f627b6438f0b023",
+      "iworkflow\\main\\main.api.json": "3af77c017a49577a2ea9711f0b18426356b6292df5f8ccbca77c613782146401",
+      "03_分场制作\\S04\\关键帧\\S04_G01_女主开场引导_v1.png": "9b1463a5837810e6cf8d0e2f717ac1e90a6b33df5e5c19c92a6b72b93ab4fa2f",
+      "03_分场制作\\S04\\关键帧\\S04_G01_女主结束关键帧_v1.png": "d4fd89fa85b0e88680b5bdbc9a8522437c6094a63b454aa3ce57806233ad07f6"
+    },
+    "performance_sha256": "ab6903f4ba2cdcd23ef2e826430eb8753e4e8af4b7e8cadfe0e36ce7d08224ce",
+    "music_sha256": "87fbbb4082f23d8537b5446162f5b1e9c89ee8eb0bcd3dfd3713ddfcfefee606",
+    "cast_sha256": "b8126093ab1fed248640a7b76b83ac4e3666d34b0773b72ac221142a71f3a369",
+    "scene_strategy_sha256": "a8312836dfb3db2715251aee76d868cd08b5b9009007489c6f6a7508788f4e8b",
+    "api_sha256": "530965ea9ed6c8e706d6761ba1c072d68cb69b9406e70ba08ec576ecd7a3aa5d"
+  },
+  "scene": "S04",
+  "group": "G01",
+  "attempt": 1,
+  "template": {
+    "api_sha256": "3af77c017a49577a2ea9711f0b18426356b6292df5f8ccbca77c613782146401",
+    "ui_sha256": "df1da2088cf575332cb58cb6ee30a16907d03dc5fc1381571f627b6438f0b023",
+    "preview_segment": "S04_G01",
+    "template_version": 6,
+    "submitted": false,
+    "frontend": "pending"
+  },
+  "inputs": {
+    "prompt": "03_分场制作\\S04\\G01_H3完整提示词_v6.txt",
+    "references": [
+      {
+        "image": "S04_G01_女主开场引导_v1.png",
+        "source_path": "03_分场制作/S04/关键帧/S04_G01_女主开场引导_v1.png",
+        "source_sha256": "9b1463a5837810e6cf8d0e2f717ac1e90a6b33df5e5c19c92a6b72b93ab4fa2f",
+        "resize_width": 864
+      },
+      {
+        "image": "S04_G01_女主结束关键帧_v1.png",
+        "source_path": "03_分场制作/S04/关键帧/S04_G01_女主结束关键帧_v1.png",
+        "source_sha256": "d4fd89fa85b0e88680b5bdbc9a8522437c6094a63b454aa3ce57806233ad07f6",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091904,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "opening_frame",
+      "predecessor": null,
+      "source_path": "03_分场制作/S04/关键帧/S04_G01_女主开场引导_v1.png",
+      "source_sha256": "9b1463a5837810e6cf8d0e2f717ac1e90a6b33df5e5c19c92a6b72b93ab4fa2f",
+      "image": "S04_G01_女主开场引导_v1.png",
+      "review_status": "passed",
+      "review_evidence": "Actual accepted S03 end viewed; deliberate reaction cut to Shen facing screen left, same clothing, jade pin, snow and corridor. Men remain offscreen."
+    },
+    "content_revision": 3,
+    "asset_status": "ready",
+    "end_frame": {
+      "enabled": true,
+      "source_path": "03_分场制作/S04/关键帧/S04_G01_女主结束关键帧_v1.png",
+      "source_sha256": "d4fd89fa85b0e88680b5bdbc9a8522437c6094a63b454aa3ce57806233ad07f6",
+      "image": "S04_G01_女主结束关键帧_v1.png",
+      "review_status": "passed"
+    },
+    "scene_strategy": {
+      "scene_type": "drama",
+      "main_emotion": "坚定，温柔但有边界",
+      "action_lora": {
+        "enabled": false,
+        "model": "H3\\motion\\H3_Combat_V2.safetensors",
+        "strength": 0.5
+      },
+      "appearance_lora": {
+        "enabled": true,
+        "model": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength": 0.6,
+        "trigger": "r34l1sm",
+        "sha256": "acc529601d2da117fb81179e76c56e488a3beab1171659d305f04fa3655b787e",
+        "source": "https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA",
+        "revision": "039cc8579d7aa357a882d7f4111b25da4f72dccc",
+        "validation": "download_sha256_and_tensor_layout_verified_render_unverified",
+        "default_scope": [
+          "drama",
+          "action",
+          "mixed"
+        ]
+      }
+    }
+  },
+  "profile": {
+    "engine": "h3_ref2va",
+    "output": {
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "directory": "04_全片输出"
+    },
+    "comfy_output_prefix": "borrow_snow_20260919_r03",
+    "reference_slots": [
+      {
+        "load": "10",
+        "resize": "13"
+      },
+      {
+        "load": "11",
+        "resize": "14"
+      },
+      {
+        "load": "12",
+        "resize": "15"
+      },
+      {
+        "load": "40",
+        "resize": "50"
+      },
+      {
+        "load": "41",
+        "resize": "51"
+      },
+      {
+        "load": "42",
+        "resize": "52"
+      },
+      {
+        "load": "43",
+        "resize": "53"
+      },
+      {
+        "load": "44",
+        "resize": "54"
+      },
+      {
+        "load": "45",
+        "resize": "55"
+      }
+    ],
+    "sampler": {
+      "steps": 4,
+      "transition_step": 2,
+      "lowres_scale": 0.75,
+      "cfg": 1.0,
+      "rho": 0.0,
+      "highres_tiling": true
+    },
+    "limits": {
+      "max_references": 9,
+      "min_seconds": 4,
+      "max_seconds": 15
+    },
+    "notes": "Experimental highres tiling: full audio/references, first tile audio prediction retained. Must review video and sound.",
+    "runtime_fixes": [
+      {
+        "target": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui-SelfLift\\h3_tiling.py",
+        "sha256": "15dc484924ed2edb835929377738051c4b5fc259cab05b8a567e24ebc86eb3c2",
+        "record": "iworkflow/main/patches/patch_record.json"
+      }
+    ],
+    "scene_strategy": {
+      "default_scene_type": "drama",
+      "action_lora": {
+        "enabled": false,
+        "model": "H3\\motion\\H3_Combat_V2.safetensors",
+        "strength": 0.5
+      },
+      "loader_node": "60",
+      "switch_node": "61",
+      "strength_note": "0.5 is an untested starting candidate; current project keeps branch disabled.",
+      "candidates": [
+        {
+          "model": "H3\\motion\\H3_Combat_V2.safetensors",
+          "base_model": "minimax_h3",
+          "validation": "metadata_checked_render_unverified"
+        },
+        {
+          "model": "H3\\motion\\H3_Motion_BoosterV2.safetensors",
+          "base_model": "minimax_h3",
+          "validation": "metadata_checked_render_unverified"
+        }
+      ],
+      "appearance_lora": {
+        "enabled": true,
+        "model": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength": 0.6,
+        "trigger": "r34l1sm",
+        "sha256": "acc529601d2da117fb81179e76c56e488a3beab1171659d305f04fa3655b787e",
+        "source": "https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA",
+        "revision": "039cc8579d7aa357a882d7f4111b25da4f72dccc",
+        "validation": "download_sha256_and_tensor_layout_verified_render_unverified",
+        "default_scope": [
+          "drama",
+          "action",
+          "mixed"
+        ]
+      },
+      "appearance_loader_node": "70",
+      "appearance_switch_node": "71"
+    },
+    "lora_directory": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\models\\loras"
+  },
+  "guide": {
+    "kind": "authored_opening_frame",
+    "file": "03_分场制作/S04/关键帧/S04_G01_女主开场引导_v1.png",
+    "sha256": "9b1463a5837810e6cf8d0e2f717ac1e90a6b33df5e5c19c92a6b72b93ab4fa2f",
+    "input_name": "S04_G01_女主开场引导_v1.png",
+    "frame_idx": 0,
+    "end_frame": {
+      "file": "03_分场制作/S04/关键帧/S04_G01_女主结束关键帧_v1.png",
+      "sha256": "d4fd89fa85b0e88680b5bdbc9a8522437c6094a63b454aa3ce57806233ad07f6",
+      "input_name": "S04_G01_女主结束关键帧_v1.png",
+      "frame_idx": 239
+    }
+  },
+  "prompt_id": "2dbbd077-f1d7-45ca-a119-dd716a541d0a",
+  "outputs": [],
+  "submitted_at": "2026-09-19T19:28:05.328414+08:00"
+}

@@ -1,0 +1,29 @@
+{
+  "template_version": 4,
+  "model": {
+    "enabled": true,
+    "model": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+    "strength": 0.6,
+    "trigger": "r34l1sm",
+    "sha256": "acc529601d2da117fb81179e76c56e488a3beab1171659d305f04fa3655b787e",
+    "source": "https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA",
+    "revision": "039cc8579d7aa357a882d7f4111b25da4f72dccc",
+    "validation": "download_sha256_and_tensor_layout_verified_render_unverified",
+    "default_scope": [
+      "drama",
+      "action",
+      "mixed"
+    ]
+  },
+  "checks": {
+    "ui_api_hash_pair": "passed",
+    "four_independent_switch_combinations": "passed",
+    "missing_trigger_rejected": "passed",
+    "default_drama_action_mixed": "passed",
+    "explicit_scene_segment_override": "passed",
+    "existing_completed_output_checks": "passed",
+    "ui_node_and_link_integrity": "passed"
+  },
+  "render_validation": "in_progress: S02_G01 first use of appearance LoRA",
+  "notes": "Subsequent templates automatically constructed by Agent from current schema; no runtime update or model replacement."
+}

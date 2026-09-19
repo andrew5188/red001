@@ -1,0 +1,32 @@
+subject_definitions:
+<Subject 1> is Shen Zhiwei, the single 18-year-old adult woman at the center of <Picture 1>, with her established face, long half-tied black hair and white jade pin, ivory cross-collar dress, pale green outer robe and sash. Preserve her semi-realistic guofeng identity and clothing.
+<Subject 2> is Xie Linchuan, the adult man around thirty on the right of <Picture 1>, with the established face, long half-tied black hair, small silver crown, white inner robe and flowing blue-gray embroidered outer robe. His single dark-blue sheathed straight sword hangs at his left hip; his hands are initially empty.
+<Subject 4> is Lu Xingzhou, the single 18-year-old adult man on the left of <Picture 1>, with a short rounded face, fuller cheeks, round-open eyes, gently curved brows, short nose, fuller lips, asymmetrical side fringe and a black high ponytail and narrow silver band, charcoal inner layers and muted burgundy outer robe. One straight sword stays sheathed at his left hip, with a dark-red tassel.
+<Subject 5> is the winter pavilion-side corridor surrounding the three characters in <Picture 1>, with timber pillars on the left, snow-dusted paving, snow-capped stone balustrades and pine, distant snowy mountains and pale warm afternoon light.
+<Picture 1> is the first frame of [Shot 1], establishing the three distinct characters, their spacing, sheathed weapons and snowy corridor.
+<Picture 2> is the final frame of [Shot 1], showing the same three people in the same arrangement after speaking: all mouths closed, Lu has released the tassel and lowered his right hand.
+
+summary:
+[keyframe completion + reference generation] A ten-second three-person exchange in <Subject 5>: <Subject 4> challenges <Subject 2> to a sparring match while <Subject 1> observes with growing concern. Begin from <Picture 1> and end on <Picture 2>, preserving the same three identities, composition and empty scenery. These are two times within one scene, not additional people.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Preserve the defined reference identity or environment, introducing only the described conversation and emotional responses.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Preserve the defined reference identity or environment, introducing only the described conversation and emotional responses.
+<Subject 4> (appears in [Shot 1]): fully_preserved - Preserve the defined reference identity or environment, introducing only the described conversation and emotional responses.
+<Subject 5> (appears in [Shot 1]): fully_preserved - Preserve the defined reference identity or environment, introducing only the described conversation and emotional responses.
+<Picture 1> ([Shot 1] first frame): fully_preserved - Preserve the opening composition, cast count and placement, then animate the conversation.
+<Picture 2> ([Shot 1] final frame): fully_preserved - Match the same three identities, closed mouths, released tassel and settled ending positions.
+
+detailed_description:
+r34l1sm. Retain the established semi-realistic Chinese guofeng appearance, soft natural skin shading and restrained highlights, with clear cloth texture and consistent adult faces.
+[Shot 1] Begin from <Picture 1>. Exactly three people remain visible: <Subject 1> and <Subject 2> and <Subject 4>; zero passersby or extras. An eye-level medium-wide shot establishes <Subject 5> in the same winter afternoon. <Subject 4> is on screen left, settling after one measured approach step. <Subject 2> stands on the right, already facing toward him, while <Subject 1> remains slightly behind them near the center. The three are distinct people matching their established identities within the shared opening frame. Keep the two men's faces in visible three-quarter views and the woman's face unobstructed between them. Fine snow falls beyond the roof and across the exposed terrace, with white snow caps visible on the railing and distant pine.
+In the opening two seconds, the young man's right hand releases his own sword tassel and settles near his belt. His scabbard stays attached to his left hip. His mouth is tight, chin slightly raised, and gaze fixed on the older man. The older man meets that gaze calmly, keeping both hands away from his weapon. The woman notices the tension; her already concerned expression deepens and her eyes move from the newcomer to the older man. Boots make one soft crunch, followed by a small clothing rustle as everyone comes to rest.
+From two to six seconds, <Subject 4> (S3), in a clear youthful adult male Mandarin voice, asks with contained challenge, <d>[Chinese] 谢临川, 可敢与我试剑?</d> His lips synchronize with his own line and his head stays mostly still. Only he speaks during these seconds. He does not draw his sword or crowd the woman's space. The older man listens with focused eyes and a relaxed jaw, rather than smiling dismissively. The woman's brow tightens slightly, showing that she understands this is more than a casual greeting.
+After a short quiet beat, from seven to nine seconds <Subject 2> (S2), in his established warm lower-register adult male Mandarin voice, replies evenly, <d>[Chinese] 点到即止.</d> The younger man's lips stay closed during this answer. Hold the camera position and keep their body positions stable; avoid a push that crops out the listener's reaction.
+In the final second, both men remain facing one another with their swords sheathed. The woman looks toward the younger man with composed determination, preparing to set her own boundary in the next shot. End on <Picture 2> with all three inside the same readable arrangement, mouths closed after the two lines, and the young man's right hand lowered away from the tassel. No additional dialogue, voice-over, crowd, subtitles, titles or black ending.
+
+overall_soundscape:
+Gentle winter wind, distant pine movement and small boot and fabric sounds. Only the two specified male lines; no additional voices, narration, blade clashes or singing.
+
+non_diegetic_music:
+Continue the quiet guqin and low sustained strings from the preceding scene, around 68 BPM. Keep the tension restrained and the score well below both voices, without a new dramatic opening or vocal layer.

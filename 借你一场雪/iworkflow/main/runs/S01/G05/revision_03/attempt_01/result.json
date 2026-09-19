@@ -1,0 +1,600 @@
+{
+  "prompt": [
+    3,
+    "0629ec57-f402-4708-a59c-161d5e43bc1c",
+    {
+      "1": {
+        "class_type": "UNETLoader",
+        "inputs": {
+          "unet_name": "H3\\minimax_h3_ref2va_pruned_w4a8_mixed.safetensors",
+          "weight_dtype": "default"
+        },
+        "_meta": {
+          "title": "H3 reference model"
+        }
+      },
+      "2": {
+        "class_type": "LoraLoaderModelOnly",
+        "inputs": {
+          "model": [
+            "1",
+            0
+          ],
+          "lora_name": "H3\\minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+          "strength_model": 1.0
+        },
+        "_meta": {
+          "title": "H3 4-step acceleration"
+        }
+      },
+      "3": {
+        "class_type": "PathchSageAttentionKJ",
+        "inputs": {
+          "model": [
+            "61",
+            0
+          ],
+          "sage_attention": "auto",
+          "allow_compile": false
+        },
+        "_meta": {
+          "title": "Sage attention"
+        }
+      },
+      "4": {
+        "class_type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+        "inputs": {
+          "model": [
+            "3",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "Memory-efficient H3 attention"
+        }
+      },
+      "5": {
+        "class_type": "MiniMaxH3SigmaShift",
+        "inputs": {
+          "model": [
+            "4",
+            0
+          ],
+          "shift_video": 12.0,
+          "shift_audio": 3.0
+        },
+        "_meta": {
+          "title": "H3 video/audio schedules"
+        }
+      },
+      "6": {
+        "class_type": "CLIPLoader",
+        "inputs": {
+          "clip_name": "Qwen3VL\\qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+          "type": "minimax",
+          "device": "default"
+        },
+        "_meta": {
+          "title": "H3 text encoder"
+        }
+      },
+      "7": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "H3\\minimax_h3_video_vae_fp16.safetensors"
+        },
+        "_meta": {
+          "title": "H3 video VAE"
+        }
+      },
+      "8": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "H3\\minimax_h3_audio_vae_fp32.safetensors"
+        },
+        "_meta": {
+          "title": "H3 audio VAE"
+        }
+      },
+      "10": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "CH01_沈知微_白底三视图_v2.png"
+        },
+        "_meta": {
+          "title": "CH01 Shen Zhiwei"
+        }
+      },
+      "13": {
+        "class_type": "ImageScale",
+        "inputs": {
+          "image": [
+            "10",
+            0
+          ],
+          "upscale_method": "lanczos",
+          "width": 768,
+          "height": 0,
+          "crop": "disabled"
+        },
+        "_meta": {
+          "title": "Bound reference token cost"
+        }
+      },
+      "11": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "CH02_谢临川_白底三视图_v2.png"
+        },
+        "_meta": {
+          "title": "CH02 Xie Linchuan"
+        }
+      },
+      "14": {
+        "class_type": "ImageScale",
+        "inputs": {
+          "image": [
+            "11",
+            0
+          ],
+          "upscale_method": "lanczos",
+          "width": 768,
+          "height": 0,
+          "crop": "disabled"
+        },
+        "_meta": {
+          "title": "Bound reference token cost"
+        }
+      },
+      "12": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "SC01_山亭_雪景无人母图_v2.png"
+        },
+        "_meta": {
+          "title": "SC01 mountain pavilion"
+        }
+      },
+      "15": {
+        "class_type": "ImageScale",
+        "inputs": {
+          "image": [
+            "12",
+            0
+          ],
+          "upscale_method": "lanczos",
+          "width": 864,
+          "height": 0,
+          "crop": "disabled"
+        },
+        "_meta": {
+          "title": "Bound reference token cost"
+        }
+      },
+      "16": {
+        "class_type": "MiniMaxH3ReferenceToVideo",
+        "inputs": {
+          "clip": [
+            "6",
+            0
+          ],
+          "vae": [
+            "7",
+            0
+          ],
+          "audio_vae": [
+            "8",
+            0
+          ],
+          "prompt": "subject_definitions:\n<Subject 1> is Shen Zhiwei, the single 18-year-old adult Chinese woman in <Picture 1>. Preserve her softly idealized face, almond eyes, long half-tied black hair with a small white jade hairpin, ivory cross-collar dress, pale-celadon outer robe and sash, and white cloth shoes. Her voice (S1) is clear adult female Mandarin, light, warm and naturally paced.\n<Subject 2> is Xie Linchuan, the single approximately 30-year-old adult Chinese man in <Picture 2>. Preserve his mature clean-shaven face, gentle eyes, long half-tied black hair and silver crown, white inner robe, gray-blue outer robe, dark gray-blue sash and dark boots. His voice (S2) is warm medium-low male Mandarin, calm and softly spoken.\n<Subject 3> is the visibly snowy mountain pavilion terrace in <Picture 3>: rear-left dark wooden pavilion with snow-covered eaves, snow-capped stone balustrade along rear and right, open terrace with a light settled snow layer, snow-laden pine at right and white distant mountain ridges. Preserve the gentle upper-left winter afternoon light and clear visibility. Falling snow is already present from the opening.\nEach character sheet represents three angles of ONE person, used only for identity, costume and the fixed semi-realistic guofeng rendering. Render exactly one woman and one man, mutually affectionate adult companions, in the environment. Do not reproduce the sheets, white background, panels or multiple copies. The environment plate is a spatial and weather reference, not an empty opening frame. No subtitles, written titles or narration.\n\nsummary:\n[reference generation] The man answers while looking at the woman; they share a small smile and gentle handhold, then look out together over the snow-covered mountains.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - retain the character identity, costume, hair and semi-realistic rendering; natural snow dusting is part of the scene.\n<Subject 2> (appears in [Shot 1]): fully_preserved - retain the character identity, costume, hair and semi-realistic rendering; natural snow dusting is part of the scene.\n<Subject 3> (appears in [Shot 1]): fully_preserved - retain the snowy architecture, snow-covered pine and mountains, settled terrace snow and afternoon lighting. Keep visible gentle snowfall throughout.\n\ndetailed_description:\nThe supplied opening guide anchors the actual previous end frame at time zero. Continue without repeating completed actions or dialogue.\nThe target video concludes the established semi-realistic guofeng romance with restrained adult expressions and soft winter light. The final ten-second passage moves from noticing affection through brief shyness to shared ease.\n[Shot 1] Begin from the actual preceding end frame, preserving <Subject 1> on frame left in ivory and pale celadon and <Subject 2> on frame right in gray-blue robes. Both initially meet each other's eyes with faint settled smiles, exactly as in the guide. Their hands are below the crop; preserve this framing rather than inventing raised joined hands. Keep their head angles and relaxed shoulders. The small crystal has already dispersed and must not reappear. <Subject 3> remains visibly wintry: settled snow on the pavilion roof and railing, a snow-laden pine, white mountain ridges and gentle falling flakes through the foreground and background.\nDuring the first three seconds, she briefly shifts her eyes from him toward nearby falling flakes, while his attention stays on her face. His brows remain relaxed and the corners of his mouth lift slightly, making his affection readable without a broad grin. Hold a stable medium two-shot with both faces large enough to see. Keep their arms low and preserve the same soft light on their eyes. Only their sleeves and a few hair strands move in the breeze; no distracting large gestures occur.\nBetween seconds three and five, <Subject 2> (S2) says in a warm, medium-low Mandarin voice with a small thoughtful pause after the first word, <d>[Chinese] 嗯，很好看.</d> His eyes stay on her while he speaks, so his meaning is conveyed by his gaze. Keep his jaw movement natural and his head mostly still. She begins to notice his attention, shifts her eyes toward him and briefly holds the look. Her smile pauses for a beat, conveying recognition rather than alarm. He closes his lips after the line and waits with a gentle expression.\nBetween seconds five and seven, she lowers her eyes for a short shy pause, her chin dipping only slightly. A small closed-mouth smile returns before she looks back up at him. Her response remains warm and comfortable, without exaggerated blushing, giggling or turning away in distress. As the framing begins to widen slightly, show a relaxed handhold near waist level, with no renewed raised-palm gesture. Keep fingers uncrossed. A small answering squeeze and slight cloth rustle complete her response. His smile warms in response rather than staying mechanically fixed.\nDuring the final three seconds, both settle into relaxed expressions and gradually direct their attention toward the snowy view. Preserve their left-right placement and handhold. The camera retreats slightly, retaining readable faces and the snowy terrace. Gentle snow continues through the last frame. The quiet guqin and bamboo-flute theme resolves softly, fading with the wind over the final second. End on the peaceful snowy tableau without titles, extra dialogue, another crystal effect or a black frame.\n\noverall_soundscape:\nContinuous soft mountain wind and distant pine rustle, with natural cloth movement during gestures. Snow falls quietly; no rain or storm sounds. Continue the existing ambience and fade it gently in the final second. Synchronized gesture sounds and any dialogue occur only at their described moments.\n\nnon_diegetic_music:\nContinue a quiet instrumental guqin and airy bamboo-flute theme at approximately 68 BPM, warm and tender, sparse notes, no vocals or percussion. Keep it below dialogue and delicate gesture sounds. Resolve the phrase softly during the last three seconds and fade over the final second.\n",
+          "width": 1280,
+          "height": 736,
+          "length": 243,
+          "ref_image_size": "match",
+          "ref_images.ref_image_0": [
+            "13",
+            0
+          ],
+          "ref_images.ref_image_1": [
+            "14",
+            0
+          ],
+          "ref_images.ref_image_2": [
+            "15",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "当前片段：H3官方完整Prompt"
+        }
+      },
+      "19": {
+        "class_type": "ConditioningZeroOut",
+        "inputs": {
+          "conditioning": [
+            "18",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "Empty negative conditioning"
+        }
+      },
+      "20": {
+        "class_type": "KSamplerSelect",
+        "inputs": {
+          "sampler_name": "euler"
+        },
+        "_meta": {
+          "title": "SelfLift compatible Euler"
+        }
+      },
+      "21": {
+        "class_type": "BasicScheduler",
+        "inputs": {
+          "model": [
+            "5",
+            0
+          ],
+          "scheduler": "simple",
+          "steps": 4,
+          "denoise": 1.0
+        },
+        "_meta": {
+          "title": "4 steps total"
+        }
+      },
+      "22": {
+        "class_type": "SelfLiftH3Sampler",
+        "inputs": {
+          "model": [
+            "5",
+            0
+          ],
+          "positive": [
+            "18",
+            0
+          ],
+          "negative": [
+            "19",
+            0
+          ],
+          "vae": [
+            "7",
+            0
+          ],
+          "latent_image": [
+            "16",
+            1
+          ],
+          "sampler": [
+            "20",
+            0
+          ],
+          "sigmas": [
+            "21",
+            0
+          ],
+          "seed": 2026091935,
+          "cfg": 1.0,
+          "transition_step": 2,
+          "lowres_scale": 0.75,
+          "rho": 0.0,
+          "w_min": 0.5,
+          "w_max": 1.0,
+          "upscaler_model": "minimax_h3_latent_upscaler_3d_bf16.safetensors",
+          "highres_tiling": true
+        },
+        "_meta": {
+          "title": "SelfLift + H3 latent lift"
+        }
+      },
+      "23": {
+        "class_type": "LTXVSeparateAVLatent",
+        "inputs": {
+          "av_latent": [
+            "22",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "Split generated video and audio"
+        }
+      },
+      "24": {
+        "class_type": "VAEDecodeTiled",
+        "inputs": {
+          "samples": [
+            "23",
+            0
+          ],
+          "vae": [
+            "7",
+            0
+          ],
+          "tile_size": 512,
+          "overlap": 64,
+          "temporal_size": 32,
+          "temporal_overlap": 8
+        },
+        "_meta": {
+          "title": "Tiled video decoding"
+        }
+      },
+      "25": {
+        "class_type": "VAEDecodeAudio",
+        "inputs": {
+          "samples": [
+            "23",
+            1
+          ],
+          "vae": [
+            "8",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "Decode generated soundtrack"
+        }
+      },
+      "26": {
+        "class_type": "ImageFromBatch",
+        "inputs": {
+          "image": [
+            "24",
+            0
+          ],
+          "batch_index": 0,
+          "length": 240
+        },
+        "_meta": {
+          "title": "Exactly 240 frames / 10 seconds"
+        }
+      },
+      "27": {
+        "class_type": "ImageScale",
+        "inputs": {
+          "image": [
+            "26",
+            0
+          ],
+          "upscale_method": "lanczos",
+          "width": 1280,
+          "height": 720,
+          "crop": "center"
+        },
+        "_meta": {
+          "title": "Final 1280 x 720 center crop"
+        }
+      },
+      "28": {
+        "class_type": "TrimAudioDuration",
+        "inputs": {
+          "audio": [
+            "25",
+            0
+          ],
+          "start_index": 0.0,
+          "duration": 10.0
+        },
+        "_meta": {
+          "title": "Exactly 10 seconds audio"
+        }
+      },
+      "29": {
+        "class_type": "CreateVideo",
+        "inputs": {
+          "images": [
+            "27",
+            0
+          ],
+          "audio": [
+            "28",
+            0
+          ],
+          "fps": 24.0,
+          "bit_depth": "auto",
+          "color_space": "sRGB"
+        },
+        "_meta": {
+          "title": "720p / 24fps with audio"
+        }
+      },
+      "30": {
+        "class_type": "SaveVideo",
+        "inputs": {
+          "video": [
+            "29",
+            0
+          ],
+          "filename_prefix": "borrow_snow_20260919_r03/S01_G05/attempt_01",
+          "format": "mp4",
+          "format.codec": "h264"
+        },
+        "_meta": {
+          "title": "Save 10-second clip"
+        }
+      },
+      "31": {
+        "class_type": "ImageFromBatch",
+        "inputs": {
+          "image": [
+            "26",
+            0
+          ],
+          "batch_index": 239,
+          "length": 1
+        },
+        "_meta": {
+          "title": "Actual kept last frame for next clip"
+        }
+      },
+      "32": {
+        "class_type": "SaveImage",
+        "inputs": {
+          "images": [
+            "31",
+            0
+          ],
+          "filename_prefix": "borrow_snow_20260919_r03/guides/S01_G05_attempt_01_end"
+        },
+        "_meta": {
+          "title": "Save native-size continuity guide"
+        }
+      },
+      "17": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "S01_G04_attempt_01_end_00001_.png"
+        },
+        "_meta": {
+          "title": "连续片段：上一段实际末帧（首段不启用）"
+        }
+      },
+      "18": {
+        "class_type": "MiniMaxH3AddGuide",
+        "inputs": {
+          "positive": [
+            "16",
+            0
+          ],
+          "latent": [
+            "16",
+            1
+          ],
+          "vae": [
+            "7",
+            0
+          ],
+          "image": [
+            "17",
+            0
+          ],
+          "frame_idx": 0
+        },
+        "_meta": {
+          "title": "连续性分支（首段旁路）"
+        }
+      },
+      "60": {
+        "class_type": "LoraLoaderModelOnly",
+        "inputs": {
+          "model": [
+            "2",
+            0
+          ],
+          "lora_name": "H3\\motion\\H3_Combat_V2.safetensors",
+          "strength_model": 0.5
+        },
+        "_meta": {
+          "title": "武戏动作LoRA（模型与强度）"
+        }
+      },
+      "61": {
+        "class_type": "LazySwitchKJ",
+        "inputs": {
+          "switch": false,
+          "on_false": [
+            "2",
+            0
+          ],
+          "on_true": [
+            "60",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "武戏开关：关=文戏直通，开=动作LoRA"
+        }
+      }
+    },
+    {
+      "project": "借你一场雪",
+      "segment": "S01_G05",
+      "client_id": "short-drama-agent",
+      "create_time": 1789801708984
+    },
+    [
+      "30",
+      "32"
+    ]
+  ],
+  "outputs": {
+    "32": {
+      "images": [
+        {
+          "filename": "S01_G05_attempt_01_end_00001_.png",
+          "subfolder": "borrow_snow_20260919_r03\\guides",
+          "type": "output"
+        }
+      ]
+    },
+    "30": {
+      "images": [
+        {
+          "filename": "attempt_01_00001_.mp4",
+          "subfolder": "borrow_snow_20260919_r03\\S01_G05",
+          "type": "output"
+        }
+      ],
+      "animated": [
+        true
+      ]
+    }
+  },
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "0629ec57-f402-4708-a59c-161d5e43bc1c",
+          "timestamp": 1789801708990
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "6",
+            "7",
+            "8",
+            "10",
+            "13",
+            "11",
+            "14",
+            "12",
+            "15",
+            "20"
+          ],
+          "prompt_id": "0629ec57-f402-4708-a59c-161d5e43bc1c",
+          "timestamp": 1789801709027
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "0629ec57-f402-4708-a59c-161d5e43bc1c",
+          "timestamp": 1789803223623
+        }
+      ]
+    ]
+  },
+  "meta": {
+    "32": {
+      "node_id": "32",
+      "display_node": "32",
+      "parent_node": null,
+      "real_node_id": "32"
+    },
+    "30": {
+      "node_id": "30",
+      "display_node": "30",
+      "parent_node": null,
+      "real_node_id": "30"
+    }
+  }
+}

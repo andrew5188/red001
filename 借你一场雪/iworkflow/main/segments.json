@@ -90,7 +90,7 @@
     "content_revision": 3
   },
   "S01_G04": {
-    "prompt": "03_分场制作/S01/G04_H3完整提示词_v3.txt",
+    "prompt": "03_分场制作/S01/G04_H3完整提示词_v4.txt",
     "references": [
       {
         "image": "CH01_沈知微_白底三视图_v2.png",
@@ -120,7 +120,7 @@
     "content_revision": 3
   },
   "S01_G05": {
-    "prompt": "03_分场制作/S01/G05_H3完整提示词_v3.txt",
+    "prompt": "03_分场制作\\S01\\G05_H3完整提示词_v5.txt",
     "references": [
       {
         "image": "CH01_沈知微_白底三视图_v2.png",
@@ -148,5 +148,673 @@
       "predecessor": "S01_G04"
     },
     "content_revision": 3
+  },
+  "S02_G01": {
+    "prompt": "03_分场制作\\S02\\G01_H3完整提示词_v5.txt",
+    "references": [
+      {
+        "image": "S02_G01_单人开场引导_v2.png",
+        "source_path": "03_分场制作/S02/关键帧/S02_G01_单人开场引导_v2.png",
+        "source_sha256": "452ddcbbd6de47953c935aafd13479670a93c330bef87bea486a250c5dd53248",
+        "resize_width": 864
+      },
+      {
+        "image": "S02_G01_握穗结束关键帧_v1.png",
+        "source_path": "03_分场制作/S02/关键帧/S02_G01_握穗结束关键帧_v1.png",
+        "source_sha256": "e46749b50156ac948433b842f16b723c682995fac1dc2e3d55edd1d93d896729",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091912,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "opening_frame",
+      "predecessor": null,
+      "source_path": "03_分场制作/S02/关键帧/S02_G01_单人开场引导_v2.png",
+      "source_sha256": "452ddcbbd6de47953c935aafd13479670a93c330bef87bea486a250c5dd53248",
+      "image": "S02_G01_单人开场引导_v2.png",
+      "review_status": "passed",
+      "review_evidence": "Actual new opening image viewed: one revised Lu, round eyes/cheeks retained, rightward gaze, hands at hips, sword sheathed, snowy empty corridor; uploaded hash verified."
+    },
+    "content_revision": 3,
+    "asset_status": "ready",
+    "end_frame": {
+      "enabled": true,
+      "image": "S02_G01_握穗结束关键帧_v1.png",
+      "source_path": "03_分场制作/S02/关键帧/S02_G01_握穗结束关键帧_v1.png",
+      "source_sha256": "e46749b50156ac948433b842f16b723c682995fac1dc2e3d55edd1d93d896729",
+      "review_status": "passed"
+    }
+  },
+  "S03_G01": {
+    "prompt": "03_分场制作\\S03\\G01_H3完整提示词_v7.txt",
+    "references": [
+      {
+        "image": "S03_G01_三人开场引导_v2.png",
+        "source_path": "03_分场制作/S03/关键帧/S03_G01_三人开场引导_v2.png",
+        "source_sha256": "2670c6737dadd6aca7ff41c0290809a875ddd33aae4d8b804b945de256cc6a7a",
+        "resize_width": 864
+      },
+      {
+        "image": "S03_G01_三人结束关键帧_v1.png",
+        "source_path": "03_分场制作/S03/关键帧/S03_G01_三人结束关键帧_v1.png",
+        "source_sha256": "35dd081db38506a8357bc0fbc139ce050964bfa967af5d2270fba1db5eab701e",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091903,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "opening_frame",
+      "predecessor": null,
+      "source_path": "03_分场制作/S03/关键帧/S03_G01_三人开场引导_v2.png",
+      "source_sha256": "2670c6737dadd6aca7ff41c0290809a875ddd33aae4d8b804b945de256cc6a7a",
+      "image": "S03_G01_三人开场引导_v2.png",
+      "review_status": "passed",
+      "review_evidence": "Actual candidate viewed, three distinct characters; compared with accepted S02 end: Lu left, rightward tense gaze, right hand at left-waist tassel. Cut reveals standing couple, preserving same setting/time."
+    },
+    "content_revision": 3,
+    "asset_status": "ready",
+    "end_frame": {
+      "enabled": true,
+      "source_path": "03_分场制作/S03/关键帧/S03_G01_三人结束关键帧_v1.png",
+      "source_sha256": "35dd081db38506a8357bc0fbc139ce050964bfa967af5d2270fba1db5eab701e",
+      "image": "S03_G01_三人结束关键帧_v1.png",
+      "review_status": "passed"
+    }
+  },
+  "S04_G01": {
+    "prompt": "03_分场制作\\S04\\G01_H3完整提示词_v6.txt",
+    "references": [
+      {
+        "image": "S04_G01_女主开场引导_v1.png",
+        "source_path": "03_分场制作/S04/关键帧/S04_G01_女主开场引导_v1.png",
+        "source_sha256": "9b1463a5837810e6cf8d0e2f717ac1e90a6b33df5e5c19c92a6b72b93ab4fa2f",
+        "resize_width": 864
+      },
+      {
+        "image": "S04_G01_女主结束关键帧_v1.png",
+        "source_path": "03_分场制作/S04/关键帧/S04_G01_女主结束关键帧_v1.png",
+        "source_sha256": "d4fd89fa85b0e88680b5bdbc9a8522437c6094a63b454aa3ce57806233ad07f6",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091904,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "opening_frame",
+      "predecessor": null,
+      "source_path": "03_分场制作/S04/关键帧/S04_G01_女主开场引导_v1.png",
+      "source_sha256": "9b1463a5837810e6cf8d0e2f717ac1e90a6b33df5e5c19c92a6b72b93ab4fa2f",
+      "image": "S04_G01_女主开场引导_v1.png",
+      "review_status": "passed",
+      "review_evidence": "Actual accepted S03 end viewed; deliberate reaction cut to Shen facing screen left, same clothing, jade pin, snow and corridor. Men remain offscreen."
+    },
+    "content_revision": 3,
+    "asset_status": "ready",
+    "end_frame": {
+      "enabled": true,
+      "source_path": "03_分场制作/S04/关键帧/S04_G01_女主结束关键帧_v1.png",
+      "source_sha256": "d4fd89fa85b0e88680b5bdbc9a8522437c6094a63b454aa3ce57806233ad07f6",
+      "image": "S04_G01_女主结束关键帧_v1.png",
+      "review_status": "passed"
+    }
+  },
+  "S05_G01": {
+    "prompt": "03_分场制作\\S05\\G01_H3完整提示词_v6.txt",
+    "references": [
+      {
+        "image": "S05_G01_双人持剑开场_v2.png",
+        "source_path": "03_分场制作/S05/关键帧/S05_G01_双人持剑开场_v2.png",
+        "source_sha256": "b5694db476e870b8516e13f752df032ad7c65cac2553e8a06f96592b6768bce2",
+        "resize_width": 864
+      },
+      {
+        "image": "S05_G01_试剑收势关键帧_v1.png",
+        "source_path": "03_分场制作/S05/关键帧/S05_G01_试剑收势关键帧_v1.png",
+        "source_sha256": "a409c027504f9929d0a4cf487a9005c8692c0a51fa96e7e2901c5e0a302c558f",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091905,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "opening_frame",
+      "predecessor": null,
+      "source_path": "03_分场制作/S05/关键帧/S05_G01_双人持剑开场_v2.png",
+      "source_sha256": "b5694db476e870b8516e13f752df032ad7c65cac2553e8a06f96592b6768bce2",
+      "image": "S05_G01_双人持剑开场_v2.png",
+      "review_status": "passed",
+      "review_evidence": "Actual accepted S04 end viewed: Shen indicates offscreen practice area to right; cut to snow court establishing Lu left and Xie right already drawn swords; woman offscreen. Deliberate time/location cut, not a continuous unsheathing claim."
+    },
+    "content_revision": 3,
+    "asset_status": "ready",
+    "end_frame": {
+      "enabled": true,
+      "source_path": "03_分场制作/S05/关键帧/S05_G01_试剑收势关键帧_v1.png",
+      "source_sha256": "a409c027504f9929d0a4cf487a9005c8692c0a51fa96e7e2901c5e0a302c558f",
+      "image": "S05_G01_试剑收势关键帧_v1.png",
+      "review_status": "passed"
+    }
+  },
+  "S06_G01": {
+    "prompt": "03_分场制作\\S06\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC03_雪坪试剑台_无人母图_v1.png",
+        "source_path": "03_分场制作/S05/SC03_雪坪试剑台_无人母图_v1.png",
+        "source_sha256": "a5014af5b5d335e72a1622a9dec9ef7fbeb3eea5f3f2d1eae0576e52ca316caf",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091906,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S05_G01"
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S07_G01": {
+    "prompt": "03_分场制作\\S07\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC03_雪坪试剑台_无人母图_v1.png",
+        "source_path": "03_分场制作/S05/SC03_雪坪试剑台_无人母图_v1.png",
+        "source_sha256": "a5014af5b5d335e72a1622a9dec9ef7fbeb3eea5f3f2d1eae0576e52ca316caf",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091907,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S06_G01"
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S08_G01": {
+    "prompt": "03_分场制作\\S08\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC03_雪坪试剑台_无人母图_v1.png",
+        "source_path": "03_分场制作/S05/SC03_雪坪试剑台_无人母图_v1.png",
+        "source_sha256": "a5014af5b5d335e72a1622a9dec9ef7fbeb3eea5f3f2d1eae0576e52ca316caf",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091908,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S07_G01"
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S09_G01": {
+    "prompt": "03_分场制作\\S09\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC03_雪坪试剑台_无人母图_v1.png",
+        "source_path": "03_分场制作/S05/SC03_雪坪试剑台_无人母图_v1.png",
+        "source_sha256": "a5014af5b5d335e72a1622a9dec9ef7fbeb3eea5f3f2d1eae0576e52ca316caf",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091909,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S08_G01"
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S10_G01": {
+    "prompt": "03_分场制作\\S10\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC04_竹林试剑区_无人母图_v1.png",
+        "source_path": "03_分场制作/S10/SC04_竹林试剑区_无人母图_v1.png",
+        "source_sha256": "b275ddb48dcd52bd8ff7bac3388f18bc408b1899b50045acc075ad75b4d6e6c3",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091910,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "cut",
+      "predecessor": null
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S11_G01": {
+    "prompt": "03_分场制作\\S11\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC04_竹林试剑区_无人母图_v1.png",
+        "source_path": "03_分场制作/S10/SC04_竹林试剑区_无人母图_v1.png",
+        "source_sha256": "b275ddb48dcd52bd8ff7bac3388f18bc408b1899b50045acc075ad75b4d6e6c3",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091911,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S10_G01"
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S12_G01": {
+    "prompt": "03_分场制作\\S12\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH01_沈知微_单人视频参考_v3.png",
+        "source_path": "02_角色库/CH01_沈知微_单人视频参考_v3.png",
+        "source_sha256": "9657a7790d2814d00dd281d95343df00b7afa8c153b14e8c9a0bd960223e6d14",
+        "resize_width": 768
+      },
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC04_竹林试剑区_无人母图_v1.png",
+        "source_path": "03_分场制作/S10/SC04_竹林试剑区_无人母图_v1.png",
+        "source_sha256": "b275ddb48dcd52bd8ff7bac3388f18bc408b1899b50045acc075ad75b4d6e6c3",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091912,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "cut",
+      "predecessor": null
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S13_G01": {
+    "prompt": "03_分场制作\\S13\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC04_竹林试剑区_无人母图_v1.png",
+        "source_path": "03_分场制作/S10/SC04_竹林试剑区_无人母图_v1.png",
+        "source_sha256": "b275ddb48dcd52bd8ff7bac3388f18bc408b1899b50045acc075ad75b4d6e6c3",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091913,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "cut",
+      "predecessor": null
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S14_G01": {
+    "prompt": "03_分场制作\\S14\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC04_竹林试剑区_无人母图_v1.png",
+        "source_path": "03_分场制作/S10/SC04_竹林试剑区_无人母图_v1.png",
+        "source_sha256": "b275ddb48dcd52bd8ff7bac3388f18bc408b1899b50045acc075ad75b4d6e6c3",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091914,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S13_G01"
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S15_G01": {
+    "prompt": "03_分场制作\\S15\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC05_冰湖试剑台_无人母图_v1.png",
+        "source_path": "03_分场制作/S15/SC05_冰湖试剑台_无人母图_v1.png",
+        "source_sha256": "a745adaf599e884c7c7ac65cbc019a539ab59471cfd907057922e00ce762bde9",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091915,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "cut",
+      "predecessor": null
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S16_G01": {
+    "prompt": "03_分场制作\\S16\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC05_冰湖试剑台_无人母图_v1.png",
+        "source_path": "03_分场制作/S15/SC05_冰湖试剑台_无人母图_v1.png",
+        "source_sha256": "a745adaf599e884c7c7ac65cbc019a539ab59471cfd907057922e00ce762bde9",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091916,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S15_G01"
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S17_G01": {
+    "prompt": "03_分场制作\\S17\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC05_冰湖试剑台_无人母图_v1.png",
+        "source_path": "03_分场制作/S15/SC05_冰湖试剑台_无人母图_v1.png",
+        "source_sha256": "a745adaf599e884c7c7ac65cbc019a539ab59471cfd907057922e00ce762bde9",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091917,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S16_G01"
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S18_G01": {
+    "prompt": "03_分场制作\\S18\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH01_沈知微_单人视频参考_v3.png",
+        "source_path": "02_角色库/CH01_沈知微_单人视频参考_v3.png",
+        "source_sha256": "9657a7790d2814d00dd281d95343df00b7afa8c153b14e8c9a0bd960223e6d14",
+        "resize_width": 768
+      },
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC05_冰湖试剑台_无人母图_v1.png",
+        "source_path": "03_分场制作/S15/SC05_冰湖试剑台_无人母图_v1.png",
+        "source_sha256": "a745adaf599e884c7c7ac65cbc019a539ab59471cfd907057922e00ce762bde9",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091918,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "cut",
+      "predecessor": null
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S19_G01": {
+    "prompt": "03_分场制作\\S19\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC05_冰湖试剑台_无人母图_v1.png",
+        "source_path": "03_分场制作/S15/SC05_冰湖试剑台_无人母图_v1.png",
+        "source_sha256": "a745adaf599e884c7c7ac65cbc019a539ab59471cfd907057922e00ce762bde9",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091919,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S18_G01"
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S20_G01": {
+    "prompt": "03_分场制作\\S20\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH01_沈知微_单人视频参考_v3.png",
+        "source_path": "02_角色库/CH01_沈知微_单人视频参考_v3.png",
+        "source_sha256": "9657a7790d2814d00dd281d95343df00b7afa8c153b14e8c9a0bd960223e6d14",
+        "resize_width": 768
+      },
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC05_冰湖试剑台_无人母图_v1.png",
+        "source_path": "03_分场制作/S15/SC05_冰湖试剑台_无人母图_v1.png",
+        "source_sha256": "a745adaf599e884c7c7ac65cbc019a539ab59471cfd907057922e00ce762bde9",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091920,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "cut",
+      "predecessor": null
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
+  },
+  "S21_G01": {
+    "prompt": "03_分场制作\\S21\\G01_H3完整提示词_v3.txt",
+    "references": [
+      {
+        "image": "CH01_沈知微_单人视频参考_v3.png",
+        "source_path": "02_角色库/CH01_沈知微_单人视频参考_v3.png",
+        "source_sha256": "9657a7790d2814d00dd281d95343df00b7afa8c153b14e8c9a0bd960223e6d14",
+        "resize_width": 768
+      },
+      {
+        "image": "CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_path": "02_角色库/CH02_谢临川_佩剑单人视频参考_v4.png",
+        "source_sha256": "9cbfef17e250764ddb3a317a0a345521117ca4c773628d76e8f96b281e1c8305",
+        "resize_width": 768
+      },
+      {
+        "image": "CH03_陆行舟_单人全身_v3.png",
+        "source_path": "02_角色库/CH03_陆行舟/单人全身_v3.png",
+        "source_sha256": "5e7825b96226813d566299e72828fc207ea1c56402d410f4b083d78593560fe4",
+        "resize_width": 768
+      },
+      {
+        "image": "SC05_冰湖试剑台_无人母图_v1.png",
+        "source_path": "03_分场制作/S15/SC05_冰湖试剑台_无人母图_v1.png",
+        "source_sha256": "a745adaf599e884c7c7ac65cbc019a539ab59471cfd907057922e00ce762bde9",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091921,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S20_G01"
+    },
+    "content_revision": 3,
+    "asset_status": "ready"
   }
 }

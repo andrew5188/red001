@@ -1,0 +1,27 @@
+subject_definitions:
+<Subject 1> is Shen Zhiwei, the established 18-year-old adult woman, preserving her face, half-tied long black hair, white jade pin, ivory dress, pale green outer robe and sash; she carries no weapon, as shown by the single-person portrait <Picture 1>.
+<Subject 2> is Xie Linchuan, the established adult man around thirty, preserving his face, long half-tied black hair, silver crown, white inner robe and blue-gray embroidered outer robe; he carries one straight jian with a dark-blue left-hip scabbard, as shown by the single-person portrait <Picture 2>.
+<Subject 4> is Lu Xingzhou, the established 18-year-old adult male disciple, preserving his youthful face, high black ponytail, silver band, charcoal layers and burgundy robe; he carries one straight jian with a dark left-hip scabbard and red tassel, as shown by the single-person portrait <Picture 3>.
+<Subject 8> is the frozen lake and low ice practice platform with a left approach, safe snowy shore, boulder, bamboo, pine and distant winter mountains, from the empty environment <Picture 4>.
+
+summary:
+[reference generation] The woman secures the arena boundary, then the older fighter redirects the dangerous sword and steadies the younger man. Each individual image defines one character; the environment reference defines the winter setting.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+<Subject 2> (appears in [Shot 2]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+<Subject 4> (appears in [Shot 2]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+<Subject 8> (appears in [Shot 1], [Shot 2]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+
+detailed_description:
+r34l1sm. Keep the established semi-realistic Chinese guofeng characters, natural skin shading and tangible clothing, with restrained magic serving readable physical action.
+[Shot 1] Only <Subject 1> is visible, with zero extras. A stable medium view frames <Subject 1> on the safe snowy shore beside the boulder of <Subject 8>. The low ice practice platform is visible beyond her. Her established pale green robe and white jade hair pin remain unchanged. She sees the stray blue-green sword energy approach the platform boundary from the off-screen combat area and reacts immediately. During the first second, her brows tighten and she plants her feet. From one to three seconds, she raises both empty hands and presses her palms forward, forming one thin translucent protective plane at the edge of the practice area. The effect follows her hands rather than covering her face or filling the screen. A low restrained hum accompanies its appearance. <Subject 1> (S1), in her established clear adult female Mandarin voice, commands firmly, <d>[Chinese] 收势!</d> A brief pulse touches the barrier and disperses without reaching her. Keep her stance grounded and her expression focused.
+[Shot 2] At 00:04.000, exactly two people are visible: <Subject 2> and <Subject 4>, with zero extras. cut to an eye-level medium-wide view of <Subject 2> and <Subject 4> on the same ice platform. The younger man is still pitched slightly forward after his excessive technique, holding his sword in his right hand. The older man stands at his side-front, also using one right-hand sword. Preserve their recognizable faces, contrasting blue-gray and burgundy clothes, left-hip scabbards and the small shallow cracks already present in the ice coating.
+From four to seven seconds, the older man angles his blade against the younger man's sword to carry its remaining force away from their bodies. At the same time his empty left hand steadies the younger man's upper arm, helping him place his front foot securely. Make this one connected intervention, with the blade contact and the supporting hand visible. The younger man does not collapse, spin through him or suddenly lose his weapon. The remaining energy thins and disappears as the motion settles, with a short fading sword hiss.
+For the last three seconds, the younger man regains balance and looks briefly at the older man with surprise replacing panic. The older man releases the supporting hand once he is steady, keeping his sword safely lowered. End with two stable stances and separated weapons, the immediate danger over but the contest not yet verbally resolved. Snow continues in the surroundings. No extra people, duplicated limbs, large explosion, additional dialogue, text or black ending.
+
+overall_soundscape:
+Soft winter wind and faint pine or bamboo rustle continue with the physical sounds specified in each shot. Only explicitly written dialogue is audible; no unrelated voices or narration.
+
+non_diegetic_music:
+Continue the ice-round instrumental drum and string theme around 112 BPM. Briefly reduce the percussion under the woman's command and barrier sound, then give one restrained accent to the successful redirection. Settle the intensity as both men regain balance. No vocals or triumphant finale.

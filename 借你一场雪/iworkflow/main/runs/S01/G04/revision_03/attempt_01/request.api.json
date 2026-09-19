@@ -1,0 +1,475 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "H3\\minimax_h3_ref2va_pruned_w4a8_mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "_meta": {
+      "title": "H3 reference model"
+    }
+  },
+  "2": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "H3\\minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+      "strength_model": 1.0
+    },
+    "_meta": {
+      "title": "H3 4-step acceleration"
+    }
+  },
+  "3": {
+    "class_type": "PathchSageAttentionKJ",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "sage_attention": "auto",
+      "allow_compile": false
+    },
+    "_meta": {
+      "title": "Sage attention"
+    }
+  },
+  "4": {
+    "class_type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Memory-efficient H3 attention"
+    }
+  },
+  "5": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "shift_video": 12.0,
+      "shift_audio": 3.0
+    },
+    "_meta": {
+      "title": "H3 video/audio schedules"
+    }
+  },
+  "6": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "Qwen3VL\\qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    },
+    "_meta": {
+      "title": "H3 text encoder"
+    }
+  },
+  "7": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "H3\\minimax_h3_video_vae_fp16.safetensors"
+    },
+    "_meta": {
+      "title": "H3 video VAE"
+    }
+  },
+  "8": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "H3\\minimax_h3_audio_vae_fp32.safetensors"
+    },
+    "_meta": {
+      "title": "H3 audio VAE"
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "CH01_沈知微_白底三视图_v2.png"
+    },
+    "_meta": {
+      "title": "CH01 Shen Zhiwei"
+    }
+  },
+  "13": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "10",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": 768,
+      "height": 0,
+      "crop": "disabled"
+    },
+    "_meta": {
+      "title": "Bound reference token cost"
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "CH02_谢临川_白底三视图_v2.png"
+    },
+    "_meta": {
+      "title": "CH02 Xie Linchuan"
+    }
+  },
+  "14": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "11",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": 768,
+      "height": 0,
+      "crop": "disabled"
+    },
+    "_meta": {
+      "title": "Bound reference token cost"
+    }
+  },
+  "12": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "SC01_山亭_雪景无人母图_v2.png"
+    },
+    "_meta": {
+      "title": "SC01 mountain pavilion"
+    }
+  },
+  "15": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "12",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": 864,
+      "height": 0,
+      "crop": "disabled"
+    },
+    "_meta": {
+      "title": "Bound reference token cost"
+    }
+  },
+  "16": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "6",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ],
+      "audio_vae": [
+        "8",
+        0
+      ],
+      "prompt": "subject_definitions:\n<Subject 1> is Shen Zhiwei, the single 18-year-old adult Chinese woman in <Picture 1>. Preserve her softly idealized face, almond eyes, long half-tied black hair with a small white jade hairpin, ivory cross-collar dress, pale-celadon outer robe and sash, and white cloth shoes. Her voice (S1) is clear adult female Mandarin, light, warm and naturally paced.\n<Subject 2> is Xie Linchuan, the single approximately 30-year-old adult Chinese man in <Picture 2>. Preserve his mature clean-shaven face, gentle eyes, long half-tied black hair and silver crown, white inner robe, gray-blue outer robe, dark gray-blue sash and dark boots. His voice (S2) is warm medium-low male Mandarin, calm and softly spoken.\n<Subject 3> is the visibly snowy mountain pavilion terrace in <Picture 3>: rear-left dark wooden pavilion with snow-covered eaves, snow-capped stone balustrade along rear and right, open terrace with a light settled snow layer, snow-laden pine at right and white distant mountain ridges. Preserve the gentle upper-left winter afternoon light and clear visibility. Falling snow is already present from the opening.\nEach character sheet represents three angles of ONE person, used only for identity, costume and the fixed semi-realistic guofeng rendering. Render exactly one woman and one man, mutually affectionate adult companions, in the environment. Do not reproduce the sheets, white background, panels or multiple copies. The environment plate is a spatial and weather reference, not an empty opening frame. No subtitles, written titles or narration.\n\nsummary:\n[reference generation] The small crystal disperses into the snowfall that already surrounds the couple. The woman admires the view while her companion watches her fondly.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - retain the character identity, costume, hair and semi-realistic rendering; natural snow dusting is part of the scene.\n<Subject 2> (appears in [Shot 1]): fully_preserved - retain the character identity, costume, hair and semi-realistic rendering; natural snow dusting is part of the scene.\n<Subject 3> (appears in [Shot 1]): fully_preserved - retain the snowy architecture, snow-covered pine and mountains, settled terrace snow and afternoon lighting. Keep visible gentle snowfall throughout.\n\ndetailed_description:\nThe supplied opening guide anchors the actual previous end frame at time zero. Continue without repeating completed actions or dialogue.\nThe target video continues the established semi-realistic guofeng romance with natural adult faces, restrained but readable acting, and warm afternoon light within a snow-covered mountain setting. This ten-second passage develops wonder into quiet contentment.\n[Shot 1] Begin from the actual preceding end frame. <Subject 1>, the ivory-and-celadon-robed woman, stands on frame left; <Subject 2>, the gray-blue-robed man, stands on frame right. Their eyes initially meet with the warm smiles already present in the guide. Her anatomical LEFT hand remains within his existing gentle cradle; preserve all visible supporting fingers and sleeve positions instead of resetting their grip. The small branched white snow crystal already hovers above their joined hands. <Subject 3> retains the snow-covered pavilion at left, white railing, snow-laden pine and distant ridges. Fine falling flakes remain visible around their shoulders.\nOver the first three seconds, the crystal slowly rises from its existing position toward the space between their faces. They notice its movement and shift their eyes toward it before slightly lifting their chins. Her brows lift a little and her eyes open with attentive wonder; her smile briefly softens as she follows the delicate movement. His response is quieter: relaxed brows, a small closed-mouth smile and a steady gaze toward the crystal. Keep both faces and the crystal readable in a stable medium two-shot. A very small upward camera tilt follows the rise, without losing the snowy railing or making their faces tiny. A faint glasslike shimmer accompanies the crystal.\nBetween seconds three and five, the crystal separates into a few ordinary white flakes that drift into the snowfall already surrounding them. It does not create new weather. She follows the dispersing flakes with her eyes, takes a small relaxed breath, and lets a pleased smile gradually return. Her shoulders ease slightly. His attention shifts from the last flakes to her face, with a fond, patient expression. Their hands stay together without a new reaching action. Snow cover and the upper-left light remain unchanged.\nBetween seconds five and seven, <Subject 1> (S1) says in warm, softly delighted Mandarin, <d>[Chinese] 真好看.</d> Keep her head nearly still while speaking, with clear mouth movement and no competing large gesture. He remains silent, watching her with a gentle smile rather than copying her expression.\nDuring the last three seconds, her lips close and her lifted brows relax into quiet contentment. She looks toward the falling snow beyond the railing while he continues looking at her. Keep their faces visible at readable three-quarter angles and retain the existing hand contact. End with her absorbed in the view and his affectionate attention still on her, leaving a clear emotional starting point for his reply. Maintain drifting snow, soft cloth movement, the quiet instrumental phrase and continuous mountain wind without a final cadence.\n\noverall_soundscape:\nContinuous soft mountain wind and distant pine rustle, with natural cloth movement during gestures. Snow falls quietly; no rain or storm sounds. Continue the preceding ambient bed without restarting it or repeating previous transient effects. Synchronized gesture sounds and any dialogue occur only at their described moments.\n\nnon_diegetic_music:\nContinue a quiet instrumental guqin and airy bamboo-flute theme at approximately 68 BPM, warm and tender, sparse notes, no vocals or percussion. Keep it below dialogue and delicate gesture sounds. Preserve the same musical character and leave the phrase open at the ending; do not add an opening flourish or final cadence.\n",
+      "width": 1280,
+      "height": 736,
+      "length": 243,
+      "ref_image_size": "match",
+      "ref_images.ref_image_0": [
+        "13",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "14",
+        0
+      ],
+      "ref_images.ref_image_2": [
+        "15",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "G01 official H3 prompt"
+    }
+  },
+  "19": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "18",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Empty negative conditioning"
+    }
+  },
+  "20": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "_meta": {
+      "title": "SelfLift compatible Euler"
+    }
+  },
+  "21": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 4,
+      "denoise": 1.0
+    },
+    "_meta": {
+      "title": "4 steps total"
+    }
+  },
+  "22": {
+    "class_type": "SelfLiftH3Sampler",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "positive": [
+        "18",
+        0
+      ],
+      "negative": [
+        "19",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "16",
+        1
+      ],
+      "sampler": [
+        "20",
+        0
+      ],
+      "sigmas": [
+        "21",
+        0
+      ],
+      "seed": 2026091934,
+      "cfg": 1.0,
+      "transition_step": 2,
+      "lowres_scale": 0.75,
+      "rho": 0.0,
+      "w_min": 0.5,
+      "w_max": 1.0,
+      "upscaler_model": "minimax_h3_latent_upscaler_3d_bf16.safetensors",
+      "highres_tiling": true
+    },
+    "_meta": {
+      "title": "SelfLift + H3 latent lift"
+    }
+  },
+  "23": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "22",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Split generated video and audio"
+    }
+  },
+  "24": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "23",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ],
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 32,
+      "temporal_overlap": 8
+    },
+    "_meta": {
+      "title": "Tiled video decoding"
+    }
+  },
+  "25": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "23",
+        1
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Decode generated soundtrack"
+    }
+  },
+  "26": {
+    "class_type": "ImageFromBatch",
+    "inputs": {
+      "image": [
+        "24",
+        0
+      ],
+      "batch_index": 0,
+      "length": 240
+    },
+    "_meta": {
+      "title": "Exactly 240 frames / 10 seconds"
+    }
+  },
+  "27": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "26",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": 1280,
+      "height": 720,
+      "crop": "center"
+    },
+    "_meta": {
+      "title": "Final 1280 x 720 center crop"
+    }
+  },
+  "28": {
+    "class_type": "TrimAudioDuration",
+    "inputs": {
+      "audio": [
+        "25",
+        0
+      ],
+      "start_index": 0.0,
+      "duration": 10
+    },
+    "_meta": {
+      "title": "Exactly 10 seconds audio"
+    }
+  },
+  "29": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "27",
+        0
+      ],
+      "audio": [
+        "28",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": "auto",
+      "color_space": "sRGB"
+    },
+    "_meta": {
+      "title": "720p / 24fps with audio"
+    }
+  },
+  "30": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "29",
+        0
+      ],
+      "filename_prefix": "borrow_snow_20260919_r03/S01_G04/attempt_01",
+      "format": "mp4",
+      "format.codec": "h264"
+    },
+    "_meta": {
+      "title": "Save 10-second clip"
+    }
+  },
+  "31": {
+    "class_type": "ImageFromBatch",
+    "inputs": {
+      "image": [
+        "26",
+        0
+      ],
+      "batch_index": 239,
+      "length": 1
+    },
+    "_meta": {
+      "title": "Actual kept last frame for next clip"
+    }
+  },
+  "32": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "31",
+        0
+      ],
+      "filename_prefix": "borrow_snow_20260919_r03/guides/S01_G04_attempt_01_end"
+    },
+    "_meta": {
+      "title": "Save native-size continuity guide"
+    }
+  },
+  "17": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "S01_G03_attempt_01_end_00001_.png"
+    },
+    "_meta": {
+      "title": "连续片段：上一段实际末帧（首段不启用）"
+    }
+  },
+  "18": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "16",
+        0
+      ],
+      "latent": [
+        "16",
+        1
+      ],
+      "vae": [
+        "7",
+        0
+      ],
+      "image": [
+        "17",
+        0
+      ],
+      "frame_idx": 0
+    },
+    "_meta": {
+      "title": "连续性分支（首段旁路）"
+    }
+  }
+}

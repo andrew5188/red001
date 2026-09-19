@@ -1,0 +1,53 @@
+{
+  "width": 1280,
+  "height": 720,
+  "fps": 24.0,
+  "has_audio": true,
+  "frames": 240,
+  "sampled_times_seconds": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    9.958333333333334
+  ],
+  "audio_seconds": 10.016,
+  "audio_peak": 0.14067432284355164,
+  "audio_rms_db": -32.89548776324868,
+  "clipped_fraction": 0.0,
+  "technical_pass": true,
+  "visual_review": "failed",
+  "dialogue_and_music_review": "not_listened",
+  "cast_review": "failed",
+  "cast_evidence": {
+    "expected": {
+      "characters": [
+        "CH03"
+      ],
+      "total_visible": 1,
+      "passersby": 0,
+      "bit_players": 0
+    },
+    "observed": "Foreground CH03 plus an unauthorized blue-clothed human figure behind his screen-right shoulder",
+    "sample_time_seconds": 5.0,
+    "frame": "frame_0120.png",
+    "coverage": "21 sampled frames, with 5.0s viewed enlarged; not a full-frame-by-frame review"
+  },
+  "failure": "S02 attempt 2: a distinct blue-clothed human figure appears behind Lu Xingzhou near the timber pillar, clearly visible at 5.0s and in multiple sampled frames. Expected only CH03, no background people. Single-person reference did not eliminate the extra figure."
+}

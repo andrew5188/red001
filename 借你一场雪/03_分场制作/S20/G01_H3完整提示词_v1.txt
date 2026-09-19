@@ -1,0 +1,28 @@
+subject_definitions:
+<Subject 1> is Shen Zhiwei, the established 18-year-old adult woman, preserving her face, half-tied long black hair, white jade pin, ivory dress, pale green outer robe and sash; she carries no weapon, as shown by the single-person portrait <Picture 1>.
+<Subject 2> is Xie Linchuan, the established adult man around thirty, preserving his face, long half-tied black hair, silver crown, white inner robe and blue-gray embroidered outer robe; he carries one straight jian with a dark-blue left-hip scabbard, as shown by the single-person portrait <Picture 2>.
+<Subject 4> is Lu Xingzhou, the established 18-year-old adult male disciple, preserving his youthful face, high black ponytail, silver band, charcoal layers and burgundy robe; he carries one straight jian with a dark left-hip scabbard and red tassel, as shown by the single-person portrait <Picture 3>.
+<Subject 8> is the frozen lake and low ice practice platform with a left approach, safe snowy shore, boulder, bamboo, pine and distant winter mountains, from the empty environment <Picture 4>.
+
+summary:
+[reference generation] After the sparring match, the younger man admits what he wanted and the woman answers with kindness and a clear romantic choice. Each individual image defines one character; the environment reference defines the winter setting.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+<Subject 4> (appears in [Shot 1]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+<Subject 8> (appears in [Shot 1]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+
+detailed_description:
+r34l1sm. Preserve the established semi-realistic Chinese guofeng character style, softly shaded natural skin and quiet expressive faces.
+[Shot 1] Cut to an eye-level medium three-person view on the snowy shore beside <Subject 8>. The now-quiet ice practice platform is visible behind them. <Subject 4> stands on screen left, <Subject 1> near the center, and <Subject 2> on the right, slightly farther back. Both men's swords are now safely sheathed at their left hips; this deliberate relocation and pause ends the active contest. Keep all three individual identities, hairstyles and clothing consistent with their single-person references. The woman is unarmed. Fine snow falls between the shore and lake, with snow-capped pine and stone railing still visible.
+At the start, the younger man's hand leaves his sword hilt after settling the scabbard. His shoulders have dropped from the rigid fighting posture. He lifts his eyes toward the woman, hesitates for a small beat, then speaks from roughly one to four seconds. <Subject 4> (S3), in a clear youthful adult male Mandarin voice, now quieter and honest rather than challenging, says, <d>[Chinese] 我想赢的, 不只是剑.</d> Let the line finish naturally, without adding a confession from another speaker or a sudden smile.
+The woman listens without interrupting. Her brows soften with sympathy while her posture remains upright and decided. Her gaze stays on him rather than darting toward the older man for permission. From five to eight seconds <Subject 1> (S1), in her established warm clear adult female Mandarin voice, replies gently but firmly, <d>[Chinese] 可我的心, 已有归处.</d> Her expression conveys care and a clear choice, not teasing or uncertainty. The younger man's mouth stays closed during her reply.
+Throughout the exchange the older man remains silent. He takes one small half-step back to give them conversational space, keeping his hands relaxed and his expression respectful rather than possessive or victorious. That step produces only a faint snow and robe sound, without distracting from the dialogue.
+For the final two seconds, the younger man lowers his eyes, accepts the boundary with a small breath and remains visibly sad. Do not turn his disappointment into instant happiness or exaggerated rage. The woman keeps her composed expression, and the older man quietly waits. Hold their positions for the next departure scene. No extra words, crowd, sword attack, glowing magic, captions, watermarks or fade to black.
+
+overall_soundscape:
+Soft winter wind and faint pine or bamboo rustle continue with the physical sounds specified in each shot. Only explicitly written dialogue is audible; no unrelated voices or narration.
+
+non_diegetic_music:
+Leave a short quiet opening after the battle theme stops. A sparse warm guqin phrase returns gently beneath the conversation, very low under both voices; a faint bamboo flute tone may enter only after the reply. No celebratory rhythm or lyrics. Carry the gentle unresolved phrase into the departure.

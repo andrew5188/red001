@@ -1,0 +1,164 @@
+{
+  "checked_at": "2026-09-19T20:59:53.247321+08:00",
+  "output": "04_全片输出\\batch_09clips_1280x720_v1.mp4",
+  "sha256": "da208738e3a5e5fd4d1a5cc8e20e573fe709ec3aa9c55b47b97f5876ae26f9a8",
+  "bytes": 30943824,
+  "sources": [
+    {
+      "key": "S01_G01",
+      "output": "03_分场制作\\S01\\G01\\revision_03\\attempt_01\\attempt_01_00001_.mp4",
+      "sha256": "0162a793195ea23696af6d7e5741d1a9c33dee559c9e8c023d8f0d9b656708f5",
+      "start_seconds": 0.0,
+      "duration_seconds": 10
+    },
+    {
+      "key": "S01_G02",
+      "output": "03_分场制作\\S01\\G02\\revision_03\\attempt_02\\attempt_02_00001_.mp4",
+      "sha256": "097f1a36799a27c2a66547078b95ee69497366eea92fbb476e4a7c01d060fce4",
+      "start_seconds": 10.0,
+      "duration_seconds": 10
+    },
+    {
+      "key": "S01_G03",
+      "output": "03_分场制作\\S01\\G03\\revision_03\\attempt_01\\attempt_01_00001_.mp4",
+      "sha256": "d3eb55d6f34d1c2da02a4a2086d7841816b96444af9d5edef6d41b2f5d3d7ba2",
+      "start_seconds": 20.0,
+      "duration_seconds": 10
+    },
+    {
+      "key": "S01_G04",
+      "output": "03_分场制作\\S01\\G04\\revision_03\\attempt_01\\attempt_01_00001_.mp4",
+      "sha256": "2a0531683c567fb833931431a809e3ab1181466e28b3c46cbe980a3e4a6b518c",
+      "start_seconds": 30.0,
+      "duration_seconds": 10
+    },
+    {
+      "key": "S01_G05",
+      "output": "03_分场制作\\S01\\G05\\revision_03\\attempt_01\\attempt_01_00001_.mp4",
+      "sha256": "4f72b67025e54982106aa9ba8c0a21b12273d2510f1eaeab243c91788b7530d3",
+      "start_seconds": 40.0,
+      "duration_seconds": 10
+    },
+    {
+      "key": "S02_G01",
+      "output": "03_分场制作\\S02\\G01\\revision_03\\attempt_05\\attempt_05_00001_.mp4",
+      "sha256": "35f5db98e2535974256badaeed7d2ec258cb0639791183c2422deb096f1fc5b0",
+      "start_seconds": 50.0,
+      "duration_seconds": 10
+    },
+    {
+      "key": "S03_G01",
+      "output": "03_分场制作\\S03\\G01\\revision_03\\attempt_01\\attempt_01_00001_.mp4",
+      "sha256": "4e4c7952bfeff866da554f7eb7b5c13d10b113fc373905bb5d8e557294534e08",
+      "start_seconds": 60.0,
+      "duration_seconds": 10
+    },
+    {
+      "key": "S04_G01",
+      "output": "03_分场制作\\S04\\G01\\revision_03\\attempt_01\\attempt_01_00001_.mp4",
+      "sha256": "6726507be2a8aa2ff079a89a99721988fe8f82478e98a0c6285da88e932237aa",
+      "start_seconds": 70.0,
+      "duration_seconds": 10
+    },
+    {
+      "key": "S05_G01",
+      "output": "03_分场制作\\S05\\G01\\revision_03\\attempt_01\\attempt_01_00001_.mp4",
+      "sha256": "b783e104fafff6b13de5a0e890e9a5825384cda4f35f8a3323466dffae5d63e9",
+      "start_seconds": 80.0,
+      "duration_seconds": 10
+    }
+  ],
+  "media": {
+    "width": 1280,
+    "height": 720,
+    "fps": 24.0,
+    "video_codec": "h264",
+    "has_audio": true,
+    "frames": 2160,
+    "duration_seconds": 90.0,
+    "audio_rate": 48000,
+    "audio_layout": "stereo",
+    "audio_codec": "aac",
+    "audio_seconds": 90.00533333333334,
+    "audio_peak": 0.9113706350326538,
+    "audio_rms_db": -22.647493970418637,
+    "clipped_fraction": 0.0,
+    "technical_pass": true
+  },
+  "source_order_checks": [
+    {
+      "key": "S01_G01",
+      "final_frame": 120,
+      "source_frame": 120,
+      "psnr_db": 40.75060531682092,
+      "pass": true
+    },
+    {
+      "key": "S01_G02",
+      "final_frame": 360,
+      "source_frame": 120,
+      "psnr_db": 42.74569897215848,
+      "pass": true
+    },
+    {
+      "key": "S01_G03",
+      "final_frame": 600,
+      "source_frame": 120,
+      "psnr_db": 42.40298440242921,
+      "pass": true
+    },
+    {
+      "key": "S01_G04",
+      "final_frame": 840,
+      "source_frame": 120,
+      "psnr_db": 43.840861813622105,
+      "pass": true
+    },
+    {
+      "key": "S01_G05",
+      "final_frame": 1080,
+      "source_frame": 120,
+      "psnr_db": 43.35371616091953,
+      "pass": true
+    },
+    {
+      "key": "S02_G01",
+      "final_frame": 1320,
+      "source_frame": 120,
+      "psnr_db": 43.14704122497715,
+      "pass": true
+    },
+    {
+      "key": "S03_G01",
+      "final_frame": 1560,
+      "source_frame": 120,
+      "psnr_db": 43.08831981202363,
+      "pass": true
+    },
+    {
+      "key": "S04_G01",
+      "final_frame": 1800,
+      "source_frame": 120,
+      "psnr_db": 41.56778390265924,
+      "pass": true
+    },
+    {
+      "key": "S05_G01",
+      "final_frame": 2040,
+      "source_frame": 120,
+      "psnr_db": 41.70837385724355,
+      "pass": true
+    }
+  ],
+  "visual_review": "passed_for_requested_edition",
+  "subjective_audio": "unverified under existing first-video policy",
+  "audio_processing": "15ms per-clip edge fades, preserved relative mix, -1dB overall headroom, final0.6s fade; does not guarantee melody continuity",
+  "known_clip_limitations": "Attack occurs later than planned2-5s; thrust is higher toward head/upper-body line, defense closes distance rather than a clearly visible background half-step. Around6.25-7s foreground blade overlays forehead in image projection. Enlarged6.5s shows continuous foreground blade, but depth/clearance is uncertain from sampled frames; explicitly presented to user for first martial review, not claimed physically validated.",
+  "visual_evidence": "Actual merged timeline viewed at27 first/middle/last samples; correct9-segment story order, expected cuts at50/60/70/80s, no new black/filler sections observed. Source midpoint comparison40.75-43.84dB PSNR supports correct unaltered source selection. Existing S05 close-contact limitation and user as-is acceptance retained. This is merge validation, not a claim that every source motion or subjective audio is newly verified.",
+  "checks": {
+    "technical": "passed",
+    "visual": "passed",
+    "continuity": "passed",
+    "audio": "waived"
+  }
+}

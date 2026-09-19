@@ -1,0 +1,28 @@
+subject_definitions:
+<Subject 1> is Shen Zhiwei, the established 18-year-old adult woman, preserving her face, half-tied long black hair, white jade pin, ivory dress, pale green outer robe and sash; she carries no weapon, as shown by the single-person portrait <Picture 1>.
+<Subject 2> is Xie Linchuan, the established adult man around thirty, preserving his face, long half-tied black hair, silver crown, white inner robe and blue-gray embroidered outer robe; he carries one straight jian with a dark-blue left-hip scabbard, as shown by the single-person portrait <Picture 2>.
+<Subject 4> is Lu Xingzhou, the established 18-year-old adult male disciple, preserving his youthful face, high black ponytail, silver band, charcoal layers and burgundy robe; he carries one straight jian with a dark left-hip scabbard and red tassel, as shown by the single-person portrait <Picture 3>.
+<Subject 7> is the snowy bamboo clearing with open central ground, a thick clump and adjoining stone paths, from the empty environment <Picture 4>.
+
+summary:
+[reference generation] The younger disciple's jealous reaction is triggered by the woman's concern for the older fighter. Each individual image defines one character; the environment reference defines the winter setting.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+<Subject 4> (appears in [Shot 1]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+<Subject 7> (appears in [Shot 1]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+
+detailed_description:
+r34l1sm. Preserve the established semi-realistic Chinese guofeng appearance, natural skin shading and subtle expressions, with restrained winter light.
+[Shot 1] Cut to a stable eye-level medium three-person view of <Subject 7>, the same snowy bamboo clearing after the swordsmen have separated. <Subject 4> occupies the near left of the frame, <Subject 2> the right middle ground, and <Subject 1> stands safely behind their fighting line near the central path. Keep the younger man's face clearly visible while allowing the direction of the woman's attention to be understood. Both men hold their separate swords low in the right hand; they are paused between exchanges. The woman has no weapon and does not walk between blades. Snow remains on bamboo leaves, stones and the ground, with fine flakes visible in the open background.
+During the first two seconds, the younger man takes a controlled breath and briefly looks away from his opponent toward the woman, hoping for a sign of concern. His mouth softens slightly at first. The older man keeps his attention on the opponent rather than displaying affection or starting another attack. Use a very small, slow push to bring the younger man's reaction into emphasis without changing the three-person arrangement.
+From two to five seconds, the woman looks toward the older man's face and sword arm with visible concern: a slight lift of her inner brows, a quiet inhale, and a steady gaze. She does not speak or run forward. The younger man notices the direction of her eyes. Let a short pause separate what he sees from how he reacts, so jealousy has a visible trigger instead of becoming an unexplained angry expression.
+From five to eight seconds, his brows draw together and his jaw firms. His right fingers close more tightly around his own sword handle while its tip stays lowered. His breathing becomes a little shallower and his shoulders stiffen without exaggerated shaking. A small leather-grip creak and robe sound accompany the tension. The older man notices that change and becomes more alert; the woman remains concerned rather than smiling.
+For the final two seconds, the younger man turns his eyes back to the older man and settles his weight slightly forward, ready to resume combat. Keep him distinct from the older blue-gray-clad man, with no doubled faces or extra figures. All movements stay small and readable, and there is no sword strike in this reaction shot. The setting, clothing, scabbards and snowfall remain consistent. No dialogue, whispered words, narration, singing, subtitles or black ending.
+
+overall_soundscape:
+Soft winter wind and faint pine or bamboo rustle continue with the physical sounds specified in each shot. Only explicitly written dialogue is audible; no unrelated voices or narration.
+
+non_diegetic_music:
+A clearly audible but restrained guqin and low string tone carry tension around 68 BPM. Let the prior battle drums fall away during the glance, leaving space for breathing and the grip sound; introduce no loud sting. Leave the unresolved low note to lead back into combat.

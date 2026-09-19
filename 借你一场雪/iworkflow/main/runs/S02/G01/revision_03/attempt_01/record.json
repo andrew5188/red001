@@ -1,0 +1,196 @@
+{
+  "status": "success",
+  "content_revision": 3,
+  "content_snapshot": {
+    "revision": 3,
+    "requirements_sha256": "e168dc61441d4da61d2aa7f28e634a8a64beb31e61539ef5be9d24bd1ff98c42",
+    "files": {
+      "00_故事大纲\\续篇20场大纲_已确认_v3.md": "fa848863d0b3771fb98c0205484a263703634e05b882dad2d4cc17e9f657c02b",
+      "01_完整剧本\\续篇完整剧本_v5.md": "208c6e9ed9143321f343c2576a915c9be0e69137ab951dcd0789c2e9c4720ac1",
+      "03_分场制作\\S02\\G01_H3完整提示词_v1.txt": "07f72e2863377fad47e59e24d9ad1c5e97e446349c6fc934614234c434a4cd6a",
+      "iworkflow\\main\\segments.json": "90082a6a28198fabb5982200bfeed504f7154580c5087d1d7f298ed21801a1d3",
+      "iworkflow\\main\\profile.json": "70916c57041499fc83633371db89feec0250087f7be1e6a3a1c8a907dff7a35f",
+      "iworkflow\\main.ui.json": "8e946750f7c2d0692a3a642422829a628c504dbc280bf4d5041ada283b959a75",
+      "iworkflow\\main\\main.api.json": "acecff00c4c6015d2f7bb30962361461a048c4f9fc453a1029f50e901131dd89",
+      "02_角色库\\CH03_陆行舟_白底三视图_v1.png": "bdb8f003a77692a72c144fde501b2b2d604684fd6db2898446fbfee65437d31a",
+      "03_分场制作\\S02\\SC02_亭侧雪廊_无人母图_v1.png": "a8a50d2bed00aa7463f3f740be27cce1e0ba9a1838683c80f9237ad2cb585d86"
+    },
+    "performance_sha256": "1dc849b453f1d73ebaa30bb614763a0e769f7288bc22461c72aa625ee4fdb71e",
+    "scene_strategy_sha256": "0cb3b8a4983b98ee1890ae4190c44c14e755e7c731fe1caeba5ae9fc6535a2cc",
+    "api_sha256": "88b8336d08c9def4428d937d6a35d93f8e923458fb4ecad8a61b6936a0aac176"
+  },
+  "scene": "S02",
+  "group": "G01",
+  "attempt": 1,
+  "template": {
+    "api_sha256": "acecff00c4c6015d2f7bb30962361461a048c4f9fc453a1029f50e901131dd89",
+    "ui_sha256": "8e946750f7c2d0692a3a642422829a628c504dbc280bf4d5041ada283b959a75",
+    "preview_segment": "S02_G01",
+    "template_version": 4,
+    "submitted": false,
+    "frontend": "pending"
+  },
+  "inputs": {
+    "prompt": "03_分场制作/S02/G01_H3完整提示词_v1.txt",
+    "references": [
+      {
+        "image": "CH03_陆行舟_白底三视图_v1.png",
+        "source_path": "02_角色库\\CH03_陆行舟_白底三视图_v1.png",
+        "source_sha256": "bdb8f003a77692a72c144fde501b2b2d604684fd6db2898446fbfee65437d31a",
+        "resize_width": 768
+      },
+      {
+        "image": "SC02_亭侧雪廊_无人母图_v1.png",
+        "source_path": "03_分场制作\\S02\\SC02_亭侧雪廊_无人母图_v1.png",
+        "source_sha256": "a8a50d2bed00aa7463f3f740be27cce1e0ba9a1838683c80f9237ad2cb585d86",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091902,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "cut",
+      "predecessor": null
+    },
+    "content_revision": 3,
+    "asset_status": "ready",
+    "scene_strategy": {
+      "scene_type": "drama",
+      "main_emotion": "期待落空，嫉妒初起",
+      "action_lora": {
+        "enabled": false,
+        "model": "H3\\motion\\H3_Combat_V2.safetensors",
+        "strength": 0.5
+      },
+      "appearance_lora": {
+        "enabled": true,
+        "model": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength": 0.6,
+        "trigger": "r34l1sm",
+        "sha256": "acc529601d2da117fb81179e76c56e488a3beab1171659d305f04fa3655b787e",
+        "source": "https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA",
+        "revision": "039cc8579d7aa357a882d7f4111b25da4f72dccc",
+        "validation": "download_sha256_and_tensor_layout_verified_render_unverified",
+        "default_scope": [
+          "drama",
+          "action",
+          "mixed"
+        ]
+      }
+    }
+  },
+  "profile": {
+    "engine": "h3_ref2va",
+    "output": {
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "directory": "04_全片输出"
+    },
+    "comfy_output_prefix": "borrow_snow_20260919_r03",
+    "reference_slots": [
+      {
+        "load": "10",
+        "resize": "13"
+      },
+      {
+        "load": "11",
+        "resize": "14"
+      },
+      {
+        "load": "12",
+        "resize": "15"
+      },
+      {
+        "load": "40",
+        "resize": "50"
+      },
+      {
+        "load": "41",
+        "resize": "51"
+      },
+      {
+        "load": "42",
+        "resize": "52"
+      },
+      {
+        "load": "43",
+        "resize": "53"
+      },
+      {
+        "load": "44",
+        "resize": "54"
+      },
+      {
+        "load": "45",
+        "resize": "55"
+      }
+    ],
+    "sampler": {
+      "steps": 4,
+      "transition_step": 2,
+      "lowres_scale": 0.75,
+      "cfg": 1.0,
+      "rho": 0.0,
+      "highres_tiling": true
+    },
+    "limits": {
+      "max_references": 9,
+      "min_seconds": 4,
+      "max_seconds": 15
+    },
+    "notes": "Experimental highres tiling: full audio/references, first tile audio prediction retained. Must review video and sound.",
+    "runtime_fixes": [
+      {
+        "target": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui-SelfLift\\h3_tiling.py",
+        "sha256": "15dc484924ed2edb835929377738051c4b5fc259cab05b8a567e24ebc86eb3c2",
+        "record": "iworkflow/main/patches/patch_record.json"
+      }
+    ],
+    "scene_strategy": {
+      "default_scene_type": "drama",
+      "action_lora": {
+        "enabled": false,
+        "model": "H3\\motion\\H3_Combat_V2.safetensors",
+        "strength": 0.5
+      },
+      "loader_node": "60",
+      "switch_node": "61",
+      "strength_note": "0.5 is an untested starting candidate; current project keeps branch disabled.",
+      "candidates": [
+        {
+          "model": "H3\\motion\\H3_Combat_V2.safetensors",
+          "base_model": "minimax_h3",
+          "validation": "metadata_checked_render_unverified"
+        },
+        {
+          "model": "H3\\motion\\H3_Motion_BoosterV2.safetensors",
+          "base_model": "minimax_h3",
+          "validation": "metadata_checked_render_unverified"
+        }
+      ],
+      "appearance_lora": {
+        "enabled": true,
+        "model": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength": 0.6,
+        "trigger": "r34l1sm",
+        "sha256": "acc529601d2da117fb81179e76c56e488a3beab1171659d305f04fa3655b787e",
+        "source": "https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA",
+        "revision": "039cc8579d7aa357a882d7f4111b25da4f72dccc",
+        "validation": "download_sha256_and_tensor_layout_verified_render_unverified",
+        "default_scope": [
+          "drama",
+          "action",
+          "mixed"
+        ]
+      },
+      "appearance_loader_node": "70",
+      "appearance_switch_node": "71"
+    },
+    "lora_directory": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\models\\loras"
+  },
+  "guide": null,
+  "prompt_id": "35e436bc-9fe5-4816-be07-c083788a1f03",
+  "outputs": [],
+  "submitted_at": "2026-09-19T16:02:06.163786+08:00"
+}

@@ -27,7 +27,7 @@
     "class_type": "PathchSageAttentionKJ",
     "inputs": {
       "model": [
-        "2",
+        "61",
         0
       ],
       "sage_attention": "auto",
@@ -95,7 +95,7 @@
   "10": {
     "class_type": "LoadImage",
     "inputs": {
-      "image": "CH01_沈知微_白底三视图_v2.png"
+      "image": "S05_G01_双人持剑开场_v2.png"
     },
     "_meta": {
       "title": "CH01 Shen Zhiwei"
@@ -109,7 +109,7 @@
         0
       ],
       "upscale_method": "lanczos",
-      "width": 768,
+      "width": 864,
       "height": 0,
       "crop": "disabled"
     },
@@ -120,7 +120,7 @@
   "11": {
     "class_type": "LoadImage",
     "inputs": {
-      "image": "CH02_谢临川_白底三视图_v2.png"
+      "image": "S05_G01_试剑收势关键帧_v1.png"
     },
     "_meta": {
       "title": "CH02 Xie Linchuan"
@@ -134,7 +134,7 @@
         0
       ],
       "upscale_method": "lanczos",
-      "width": 768,
+      "width": 864,
       "height": 0,
       "crop": "disabled"
     },
@@ -182,7 +182,7 @@
         "8",
         0
       ],
-      "prompt": "subject_definitions:\n<Subject 1> is Shen Zhiwei, the single 18-year-old adult Chinese woman in <Picture 1>. Preserve her softly idealized face, almond eyes, long half-tied black hair with a small white jade hairpin, ivory cross-collar dress, pale-celadon outer robe and sash, and white cloth shoes. Her voice (S1) is clear adult female Mandarin, light, warm and naturally paced.\n<Subject 2> is Xie Linchuan, the single approximately 30-year-old adult Chinese man in <Picture 2>. Preserve his mature clean-shaven face, gentle eyes, long half-tied black hair and silver crown, white inner robe, gray-blue outer robe, dark gray-blue sash and dark boots. His voice (S2) is warm medium-low male Mandarin, calm and softly spoken.\n<Subject 3> is the visibly snowy mountain pavilion terrace in <Picture 3>: rear-left dark wooden pavilion with snow-covered eaves, snow-capped stone balustrade along rear and right, open terrace with a light settled snow layer, snow-laden pine at right and white distant mountain ridges. Preserve the gentle upper-left winter afternoon light and clear visibility. Falling snow is already present from the opening.\nEach character sheet represents three angles of ONE person, used only for identity, costume and the fixed semi-realistic guofeng rendering. Render exactly one woman and one man, mutually affectionate adult companions, in the environment. Do not reproduce the sheets, white background, panels or multiple copies. The environment plate is a spatial and weather reference, not an empty opening frame. No subtitles, written titles or narration.\n\nsummary:\n[reference generation] The woman watches snowflakes melt on her open palm; her companion replies gently and supports her hand. The settled snow and continuous falling snow remain visible.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - retain the character identity, costume, hair and semi-realistic rendering; natural snow dusting is part of the scene.\n<Subject 2> (appears in [Shot 1]): fully_preserved - retain the character identity, costume, hair and semi-realistic rendering; natural snow dusting is part of the scene.\n<Subject 3> (appears in [Shot 1]): fully_preserved - retain the snowy architecture, snow-covered pine and mountains, settled terrace snow and afternoon lighting. Keep visible gentle snowfall throughout.\n\ndetailed_description:\nThe supplied opening guide anchors the actual previous end frame at time zero. Continue without repeating completed actions or dialogue.\nThe target video retains the same semi-realistic guofeng adult characters, soft winter afternoon light, and landscape composition. These ten seconds immediately follow the preceding shot with continuous gentle snowfall.\n[Shot 1] Begin from the supplied actual preceding end frame, preserving the positions of <Subject 1> on the left and <Subject 2> on the right in <Subject 3>. The woman has her anatomical LEFT palm open at lower chest height and her right hand relaxed near her waist. The man's anatomical RIGHT fingers already lightly touch the top of her left wrist, while his left hand stays lowered. Both look down toward her palm. Preserve this existing contact, hand height, spacing, snow dusting and gaze from the actual guide; never reset his right hand to his side or repeat the completed reach. Keep the snow-covered railing across the background, the pavilion edge at left and snow-laden pine toward right. Snowflakes remain visible both in front of the couple and against the dark posts behind them, with the same gentle density and diagonal drift as before.\nDuring the first three seconds, a few naturally falling flakes settle onto the woman's open palm and melt into tiny glints of moisture. She notices this small change with a fond, slightly wistful expression, not distress. Her palm stays open and steady. The camera holds the guide's established closer medium two-shot, still showing both faces and their touching hands; there is no cut to an isolated hand or change of screen side. Her ivory and pale-celadon sleeve hangs below her wrist, retaining its original embroidery.\nFrom second three to six, <Subject 2> (S2) looks at her and replies gently in warm, medium-low adult male Mandarin, <d>[Chinese] 好，我陪你.</d> His lips close at the end of the short sentence. His expression is calm and affectionate. As the reply ends, his anatomical RIGHT fingers slide gently from the top of her left wrist around to support the underside of her open hand. This is a small adjustment of existing contact, not a new reach. Keep his other hand lowered and her right hand separate near her waist.\nDuring seconds six through nine, he gently supports her left hand from underneath with his right palm. She accepts the contact and glances up toward his face, her shoulders relaxing. Their fingers remain anatomically distinct, lightly resting rather than interlocking in a complicated grip. Soft cloth movement accompanies the gesture. Finish with their joined hands supported between them at lower chest height and both faces visible. Neither person repeats the opening request. Snow continues falling throughout, accumulating only subtly on hair and shoulders; the settled snow on architecture does not vanish. Wind and the quiet instrumental theme carry smoothly into the next segment.\n\noverall_soundscape:\nContinuous soft mountain wind and distant pine rustle, with natural cloth movement during gestures. Snow falls quietly; no rain or storm sounds. Continue the preceding ambient bed without restarting it or repeating previous transient effects. Synchronized gesture sounds and any dialogue occur only at their described moments.\n\nnon_diegetic_music:\nContinue a quiet instrumental guqin and airy bamboo-flute theme at approximately 68 BPM, warm and tender, sparse notes, no vocals or percussion. Keep it below dialogue and delicate gesture sounds. Preserve the same musical character and leave the phrase open at the ending; do not add an opening flourish or final cadence.\n",
+      "prompt": "subject_definitions:\n<Subject 2> is Xie Linchuan, the single adult man around thirty in <Picture 1>, preserving his established face, long half-tied black hair, silver crown, white inner robe and blue-gray flowing embroidered outer robe. He uses one straight silver-gray jian with a plain guard; its dark-blue empty scabbard remains at his left hip when the sword is drawn.\n<Subject 4> is Lu Xingzhou, the single 18-year-old adult male disciple in <Picture 1>, preserving his youthful face, high black ponytail and narrow silver band, charcoal layers, muted burgundy outer robe, dark belt and boots. He uses one slender straight jian in his right hand; the empty dark scabbard and red tassel remain at his left hip. His revised identity has a short rounded face, fuller cheeks, round-open eyes, gently curved brows, a short nose, fuller lips and an asymmetrical side fringe; retain this distinct young adult face.\n<Subject 6> is the snowy practice courtyard surrounding the two men in <Picture 1>: a broad level stone platform with a visible dark rectangular boundary, snow-capped railing, pavilion at the left rear, bamboo entrance to the right, snowy pines and distant mountains in pale afternoon light.\n<Picture 1> is the first frame of [Shot 1], showing Lu on the left and Xie on the right, both holding one drawn sword in their anatomical right hands, with their full bodies and the snowy courtyard visible.\n<Picture 2> is the final frame of [Shot 1], showing the SAME two men after the exchange, balanced a little closer, anatomical right-hand blades separated in low guards and left hands empty.\n\nsummary:\n[keyframe completion + reference generation] A ten-second first-round sparring exchange in <Subject 6>. <Subject 4> initiates a controlled straight thrust; <Subject 2> steps off the attack line and parries it, after which both recover. Begin from <Picture 1> and finish on <Picture 2>, which establishes two distinct adult identities, right-hand drawn swords, empty left-hip scabbards and the fighting space. This is the first representative combat clip, with a visible attack, defense and result.\n\nretention_analysis:\n<Subject 2> (appears in [Shot 1]): fully_preserved - Preserve his identity, clothing, sword design and adult proportions; change the reference resting pose to the described drawn-sword stance and controlled defense.\n<Subject 4> (appears in [Shot 1]): fully_preserved - Preserve his identity, burgundy clothing, sword and scabbard design; introduce the described measured thrust and recovery.\n<Subject 6> (appears in [Shot 1]): fully_preserved - Preserve the open practice platform, visible boundary, surrounding architecture, snow and winter daylight.\n<Picture 1> ([Shot 1] first frame): fully_preserved - Preserve the inspected opening composition, character count, body positions and props, then animate the described response.\n<Picture 2> ([Shot 1] final frame): fully_preserved - Preserve the same identities and setting at the specified later time, matching the finished gesture or recovered guard.\n\ndetailed_description:\nr34l1sm. The target video retains the established semi-realistic Chinese guofeng character style, soft natural skin shading and readable cloth texture, with clear physical swordplay and restrained visual effects.\n[Shot 1] Begin from <Picture 1>. Exactly two people remain visible: <Subject 2> and <Subject 4>; zero passersby or extras. A stable eye-level medium-wide full-body shot establishes <Subject 6>. <Subject 4> stands on screen left facing right, while <Subject 2> stands on screen right facing left, about two steps apart. Both are already inside the clearly visible stone boundary, each holding exactly one drawn straight sword in his anatomical right hand. Empty scabbards stay attached at their left hips. Keep both heads, feet, sword tips and the space between them visible throughout the exchange. The woman and other spectators remain outside the frame. Snow rests on the platform, railings and pavilion roof, and fine flakes continue falling without obscuring the fighters.\nDuring the first two seconds, the men briefly acknowledge one another with a small sword salute, then settle into balanced guards. The younger man's eyes are intent, jaw set and weight slightly forward; the older man's gaze is focused and shoulders relaxed. This short preparation immediately leads into actual action rather than becoming a standing pose for the whole clip. Their boots lightly compress the thin snow; fabric follows their weight shifts.\nFrom two to five seconds, the younger man pushes from his back foot, advances one controlled step and extends his right arm in a straight thrust toward the older man's upper-torso line. Show the sword tip traveling from left to right along a continuous readable path. The older man reacts after the thrust begins: he moves a half-step toward the background, away from the direct line, and brings his own right-hand blade diagonally across to meet and redirect the attacking blade outward. The swords make one visible contact in the open space between them, synchronized with a single sharp metal ring. Neither blade passes through a body or changes hands.\nFrom five to eight seconds, the redirected thrust finishes beside the defender rather than inside him. The younger man bends his elbow, retrieves his blade and shifts weight back to regain balance. The older man releases the pressure and returns to a low controlled guard without adding a second attack. A small spray of powder snow follows their foot placement; robe hems and ponytails settle naturally after the movement. The younger man's expression briefly registers surprise, while the older man remains attentive rather than triumphant.\nFor the final two seconds, both men stand securely about one and a half steps apart, younger man left and older man right, swords separated and held low enough to make the completed exchange clear. Settle into the recovered positions in <Picture 2> and hold them for continuity. The intervening thrust, visible parry contact and recovery must occur before reaching this ending. No spoken lines, slow motion, large magical bursts, blood, extra weapons, body doubling, camera orbit, subtitles or black ending.\n\noverall_soundscape:\nContinuous winter wind and distant pine movement, close boot scrapes and snow crunch, cloth movement and one synchronized metal contact. Breathing is restrained; there is no dialogue, narration, chanting or yelling.\n\nnon_diegetic_music:\nA restrained but energetic instrumental battle motif begins with low drums, clipped pipa notes and rhythmic strings around 96 BPM. Keep a steady pulse under the exchange, briefly leaving sonic space for the blade contact. Avoid vocals and exaggerated heroic swells. Continue the rhythmic phrase into the next combat clip instead of resolving or restarting every ten seconds.\n",
       "width": 1280,
       "height": 736,
       "length": 243,
@@ -194,21 +194,17 @@
       "ref_images.ref_image_1": [
         "14",
         0
-      ],
-      "ref_images.ref_image_2": [
-        "15",
-        0
       ]
     },
     "_meta": {
-      "title": "G01 official H3 prompt"
+      "title": "当前片段：H3官方完整Prompt"
     }
   },
   "19": {
     "class_type": "ConditioningZeroOut",
     "inputs": {
       "conditioning": [
-        "18",
+        "73",
         0
       ]
     },
@@ -248,7 +244,7 @@
         0
       ],
       "positive": [
-        "18",
+        "73",
         0
       ],
       "negative": [
@@ -271,7 +267,7 @@
         "21",
         0
       ],
-      "seed": 2026091932,
+      "seed": 2026091905,
       "cfg": 1.0,
       "transition_step": 2,
       "lowres_scale": 0.75,
@@ -403,7 +399,7 @@
         "29",
         0
       ],
-      "filename_prefix": "borrow_snow_20260919_r03/S01_G02/attempt_02",
+      "filename_prefix": "borrow_snow_20260919_r03/S05_G01/attempt_01",
       "format": "mp4",
       "format.codec": "h264"
     },
@@ -432,7 +428,7 @@
         "31",
         0
       ],
-      "filename_prefix": "borrow_snow_20260919_r03/guides/S01_G02_attempt_02_end"
+      "filename_prefix": "borrow_snow_20260919_r03/guides/S05_G01_attempt_01_end"
     },
     "_meta": {
       "title": "Save native-size continuity guide"
@@ -441,10 +437,10 @@
   "17": {
     "class_type": "LoadImage",
     "inputs": {
-      "image": "S01_G01_attempt_01_end_00001_.png"
+      "image": "S05_G01_双人持剑开场_v2.png"
     },
     "_meta": {
-      "title": "连续片段：上一段实际末帧（首段不启用）"
+      "title": "首帧或连续性引导图（实际配置绑定）"
     }
   },
   "18": {
@@ -469,7 +465,7 @@
       "frame_idx": 0
     },
     "_meta": {
-      "title": "连续性分支（首段旁路）"
+      "title": "H3 画面引导（当前第0帧）"
     }
   },
   "40": {
@@ -620,6 +616,102 @@
     },
     "_meta": {
       "title": "参考图 9 尺寸约束"
+    }
+  },
+  "60": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "71",
+        0
+      ],
+      "lora_name": "H3\\motion\\H3_Combat_V2.safetensors",
+      "strength_model": 0.5
+    },
+    "_meta": {
+      "title": "武戏动作LoRA（模型与强度）"
+    }
+  },
+  "61": {
+    "class_type": "LazySwitchKJ",
+    "inputs": {
+      "switch": true,
+      "on_false": [
+        "71",
+        0
+      ],
+      "on_true": [
+        "60",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "武戏开关：关=文戏直通，开=动作LoRA"
+    }
+  },
+  "70": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "lora_name": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+      "strength_model": 0.6
+    },
+    "_meta": {
+      "title": "公共自然肤质 LoRA（去油腻候选，文武戏共用）"
+    }
+  },
+  "71": {
+    "class_type": "LazySwitchKJ",
+    "inputs": {
+      "switch": true,
+      "on_false": [
+        "2",
+        0
+      ],
+      "on_true": [
+        "70",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "公共自然肤质开关（后续默认开）"
+    }
+  },
+  "72": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "S05_G01_试剑收势关键帧_v1.png"
+    },
+    "_meta": {
+      "title": "可选结束关键帧（按片段配置启用）"
+    }
+  },
+  "73": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "18",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ],
+      "latent": [
+        "16",
+        1
+      ],
+      "image": [
+        "72",
+        0
+      ],
+      "frame_idx": 239
+    },
+    "_meta": {
+      "title": "H3 可选结束画面引导"
     }
   }
 }

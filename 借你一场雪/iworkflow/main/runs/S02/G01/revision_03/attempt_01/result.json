@@ -1,0 +1,562 @@
+{
+  "prompt": [
+    4,
+    "35e436bc-9fe5-4816-be07-c083788a1f03",
+    {
+      "1": {
+        "class_type": "UNETLoader",
+        "inputs": {
+          "unet_name": "H3\\minimax_h3_ref2va_pruned_w4a8_mixed.safetensors",
+          "weight_dtype": "default"
+        },
+        "_meta": {
+          "title": "H3 reference model"
+        }
+      },
+      "2": {
+        "class_type": "LoraLoaderModelOnly",
+        "inputs": {
+          "model": [
+            "1",
+            0
+          ],
+          "lora_name": "H3\\minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+          "strength_model": 1.0
+        },
+        "_meta": {
+          "title": "H3 4-step acceleration"
+        }
+      },
+      "3": {
+        "class_type": "PathchSageAttentionKJ",
+        "inputs": {
+          "model": [
+            "61",
+            0
+          ],
+          "sage_attention": "auto",
+          "allow_compile": false
+        },
+        "_meta": {
+          "title": "Sage attention"
+        }
+      },
+      "4": {
+        "class_type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+        "inputs": {
+          "model": [
+            "3",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "Memory-efficient H3 attention"
+        }
+      },
+      "5": {
+        "class_type": "MiniMaxH3SigmaShift",
+        "inputs": {
+          "model": [
+            "4",
+            0
+          ],
+          "shift_video": 12.0,
+          "shift_audio": 3.0
+        },
+        "_meta": {
+          "title": "H3 video/audio schedules"
+        }
+      },
+      "6": {
+        "class_type": "CLIPLoader",
+        "inputs": {
+          "clip_name": "Qwen3VL\\qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+          "type": "minimax",
+          "device": "default"
+        },
+        "_meta": {
+          "title": "H3 text encoder"
+        }
+      },
+      "7": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "H3\\minimax_h3_video_vae_fp16.safetensors"
+        },
+        "_meta": {
+          "title": "H3 video VAE"
+        }
+      },
+      "8": {
+        "class_type": "VAELoader",
+        "inputs": {
+          "vae_name": "H3\\minimax_h3_audio_vae_fp32.safetensors"
+        },
+        "_meta": {
+          "title": "H3 audio VAE"
+        }
+      },
+      "10": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "CH03_陆行舟_白底三视图_v1.png"
+        },
+        "_meta": {
+          "title": "CH01 Shen Zhiwei"
+        }
+      },
+      "13": {
+        "class_type": "ImageScale",
+        "inputs": {
+          "image": [
+            "10",
+            0
+          ],
+          "upscale_method": "lanczos",
+          "width": 768,
+          "height": 0,
+          "crop": "disabled"
+        },
+        "_meta": {
+          "title": "Bound reference token cost"
+        }
+      },
+      "11": {
+        "class_type": "LoadImage",
+        "inputs": {
+          "image": "SC02_亭侧雪廊_无人母图_v1.png"
+        },
+        "_meta": {
+          "title": "CH02 Xie Linchuan"
+        }
+      },
+      "14": {
+        "class_type": "ImageScale",
+        "inputs": {
+          "image": [
+            "11",
+            0
+          ],
+          "upscale_method": "lanczos",
+          "width": 864,
+          "height": 0,
+          "crop": "disabled"
+        },
+        "_meta": {
+          "title": "Bound reference token cost"
+        }
+      },
+      "16": {
+        "class_type": "MiniMaxH3ReferenceToVideo",
+        "inputs": {
+          "clip": [
+            "6",
+            0
+          ],
+          "vae": [
+            "7",
+            0
+          ],
+          "audio_vae": [
+            "8",
+            0
+          ],
+          "prompt": "subject_definitions:\n<Subject 4> is Lu Xingzhou, the single 18-year-old adult male disciple in <Picture 1>. Preserve his youthful clean-shaven face, warm brown eyes, black high ponytail with a narrow silver band, charcoal inner layers, muted burgundy outer robe, dark belt and boots. One straight sword remains sheathed at his left hip with a dark-red tassel. The three reference views show one person, not three people.\n<Subject 5> is the empty snowy pavilion-side corridor in <Picture 2>, with dark timber pillars on the left, snow-dusted stone paving, snow-capped balustrades and pine, distant snowy mountains and pale warm afternoon light.\n\nsummary:\n[reference generation] In a ten-second single shot, <Subject 4> walks into <Subject 5>, notices the affectionate couple outside the frame, stops, and tightens his grip on his own sword tassel as anticipation turns into jealousy. Only <Subject 4> is visible. Character identity comes from <Picture 1>; the winter setting comes from <Picture 2>.\n\nretention_analysis:\n<Subject 4> (appears in [Shot 1]): fully_preserved - Retain one adult man's identity, proportions, hair, clothing and single sheathed sword while introducing the described restrained emotional reaction.\n<Subject 5> (appears in [Shot 1]): fully_preserved - Retain the corridor's timber, stone, snowfall, winter mountain setting and afternoon lighting; adapt framing for a single-person performance.\n\ndetailed_description:\nr34l1sm. The target video keeps the established semi-realistic Chinese guofeng character style, with soft natural skin shading, restrained highlights and tangible cloth and hair; facial identity and gently idealized proportions remain faithful to the reference.\n[Shot 1] A stable eye-level medium shot opens on <Subject 4> already walking slowly beside the left-hand timber pillars of <Subject 5>. Frame him from the upper thighs upward, slightly left of center, leaving clear space in the direction of his gaze on screen right. His youthful face is visible in a gentle three-quarter angle. The sword is securely sheathed at his anatomical left hip, its small dark-red tassel resting against his robe. His hands begin relaxed; there is no drawn blade. Behind him, pale snow rests on the stone railing, branches and paving, and layered snowy mountains remain recognizable beyond the terrace. Fine flakes drift continuously through the exposed background and lightly across his outer shoulder.\nDuring the first two seconds, he takes two measured steps toward the near pillar, with an expectant, almost-smiling mouth and relaxed brows. Soft bootfalls on the thin snow and a brief robe rustle accompany the steps. His eyes then catch something beyond the right edge of the frame. The couple he observes stays entirely off-screen; do not create a second person, a silhouette or an inset image.\nBetween two and four seconds, he stops beside the pillar. A small pause separates recognition from reaction. His eyes hold on that off-screen point; the corners of his mouth settle, and his brows draw subtly together. His shoulders remain controlled rather than collapsing. Let the change be readable in his face without a theatrical grimace or sudden head jerk.\nFrom four to seven seconds, his right hand crosses only as far as the small tassel at his left waist, closes around it and pulls it gently taut. The sword stays in its scabbard and attached to the same hip. His jaw firms and his breath becomes a little shallower; a quiet cloth and cord sound accompanies the grip. Keep his left hand low and still. The camera makes only a slight slow push, retaining the face, gripping hand and snowy railing in view.\nFor the final three seconds, he holds the tassel and looks toward screen right, the former anticipation now replaced by contained hurt and jealousy. His lips remain closed, with no speech, singing or muttered words. End on his steady gaze beside the pillar, leaving the emotion unresolved for the following confrontation. Snow continues at the same gentle density; lighting, wardrobe and camera axis remain stable. No captions, titles, watermark or fade to black.\n\noverall_soundscape:\nSoft outdoor wind and faint pine movement continue through the sheltered corridor. Close bootfalls stop when he stops; robe and tassel handling produce small synchronized rustles. No dialogue, narration, additional voices or combat sounds.\n\nnon_diegetic_music:\nA quiet instrumental guqin phrase and low sustained strings at approximately 68 BPM carry the established gentle theme into restrained tension. Introduce the lower note gradually as his smile disappears, without a loud sting, vocals or a fresh triumphant melody. Keep the score beneath the wind and close physical sounds, and leave its final note unresolved for the next scene.\n",
+          "width": 1280,
+          "height": 736,
+          "length": 243,
+          "ref_image_size": "match",
+          "ref_images.ref_image_0": [
+            "13",
+            0
+          ],
+          "ref_images.ref_image_1": [
+            "14",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "当前片段：H3官方完整Prompt"
+        }
+      },
+      "19": {
+        "class_type": "ConditioningZeroOut",
+        "inputs": {
+          "conditioning": [
+            "16",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "Empty negative conditioning"
+        }
+      },
+      "20": {
+        "class_type": "KSamplerSelect",
+        "inputs": {
+          "sampler_name": "euler"
+        },
+        "_meta": {
+          "title": "SelfLift compatible Euler"
+        }
+      },
+      "21": {
+        "class_type": "BasicScheduler",
+        "inputs": {
+          "model": [
+            "5",
+            0
+          ],
+          "scheduler": "simple",
+          "steps": 4,
+          "denoise": 1.0
+        },
+        "_meta": {
+          "title": "4 steps total"
+        }
+      },
+      "22": {
+        "class_type": "SelfLiftH3Sampler",
+        "inputs": {
+          "model": [
+            "5",
+            0
+          ],
+          "positive": [
+            "16",
+            0
+          ],
+          "negative": [
+            "19",
+            0
+          ],
+          "vae": [
+            "7",
+            0
+          ],
+          "latent_image": [
+            "16",
+            1
+          ],
+          "sampler": [
+            "20",
+            0
+          ],
+          "sigmas": [
+            "21",
+            0
+          ],
+          "seed": 2026091902,
+          "cfg": 1.0,
+          "transition_step": 2,
+          "lowres_scale": 0.75,
+          "rho": 0.0,
+          "w_min": 0.5,
+          "w_max": 1.0,
+          "upscaler_model": "minimax_h3_latent_upscaler_3d_bf16.safetensors",
+          "highres_tiling": true
+        },
+        "_meta": {
+          "title": "SelfLift + H3 latent lift"
+        }
+      },
+      "23": {
+        "class_type": "LTXVSeparateAVLatent",
+        "inputs": {
+          "av_latent": [
+            "22",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "Split generated video and audio"
+        }
+      },
+      "24": {
+        "class_type": "VAEDecodeTiled",
+        "inputs": {
+          "samples": [
+            "23",
+            0
+          ],
+          "vae": [
+            "7",
+            0
+          ],
+          "tile_size": 512,
+          "overlap": 64,
+          "temporal_size": 32,
+          "temporal_overlap": 8
+        },
+        "_meta": {
+          "title": "Tiled video decoding"
+        }
+      },
+      "25": {
+        "class_type": "VAEDecodeAudio",
+        "inputs": {
+          "samples": [
+            "23",
+            1
+          ],
+          "vae": [
+            "8",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "Decode generated soundtrack"
+        }
+      },
+      "26": {
+        "class_type": "ImageFromBatch",
+        "inputs": {
+          "image": [
+            "24",
+            0
+          ],
+          "batch_index": 0,
+          "length": 240
+        },
+        "_meta": {
+          "title": "Exactly 240 frames / 10 seconds"
+        }
+      },
+      "27": {
+        "class_type": "ImageScale",
+        "inputs": {
+          "image": [
+            "26",
+            0
+          ],
+          "upscale_method": "lanczos",
+          "width": 1280,
+          "height": 720,
+          "crop": "center"
+        },
+        "_meta": {
+          "title": "Final 1280 x 720 center crop"
+        }
+      },
+      "28": {
+        "class_type": "TrimAudioDuration",
+        "inputs": {
+          "audio": [
+            "25",
+            0
+          ],
+          "start_index": 0.0,
+          "duration": 10.0
+        },
+        "_meta": {
+          "title": "Exactly 10 seconds audio"
+        }
+      },
+      "29": {
+        "class_type": "CreateVideo",
+        "inputs": {
+          "images": [
+            "27",
+            0
+          ],
+          "audio": [
+            "28",
+            0
+          ],
+          "fps": 24.0,
+          "bit_depth": "auto",
+          "color_space": "sRGB"
+        },
+        "_meta": {
+          "title": "720p / 24fps with audio"
+        }
+      },
+      "30": {
+        "class_type": "SaveVideo",
+        "inputs": {
+          "video": [
+            "29",
+            0
+          ],
+          "filename_prefix": "borrow_snow_20260919_r03/S02_G01/attempt_01",
+          "format": "mp4",
+          "format.codec": "h264"
+        },
+        "_meta": {
+          "title": "Save 10-second clip"
+        }
+      },
+      "31": {
+        "class_type": "ImageFromBatch",
+        "inputs": {
+          "image": [
+            "26",
+            0
+          ],
+          "batch_index": 239,
+          "length": 1
+        },
+        "_meta": {
+          "title": "Actual kept last frame for next clip"
+        }
+      },
+      "32": {
+        "class_type": "SaveImage",
+        "inputs": {
+          "images": [
+            "31",
+            0
+          ],
+          "filename_prefix": "borrow_snow_20260919_r03/guides/S02_G01_attempt_01_end"
+        },
+        "_meta": {
+          "title": "Save native-size continuity guide"
+        }
+      },
+      "60": {
+        "class_type": "LoraLoaderModelOnly",
+        "inputs": {
+          "model": [
+            "71",
+            0
+          ],
+          "lora_name": "H3\\motion\\H3_Combat_V2.safetensors",
+          "strength_model": 0.5
+        },
+        "_meta": {
+          "title": "武戏动作LoRA（模型与强度）"
+        }
+      },
+      "61": {
+        "class_type": "LazySwitchKJ",
+        "inputs": {
+          "switch": false,
+          "on_false": [
+            "71",
+            0
+          ],
+          "on_true": [
+            "60",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "武戏开关：关=文戏直通，开=动作LoRA"
+        }
+      },
+      "70": {
+        "class_type": "LoraLoaderModelOnly",
+        "inputs": {
+          "model": [
+            "2",
+            0
+          ],
+          "lora_name": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+          "strength_model": 0.6
+        },
+        "_meta": {
+          "title": "公共自然肤质 LoRA（去油腻候选，文武戏共用）"
+        }
+      },
+      "71": {
+        "class_type": "LazySwitchKJ",
+        "inputs": {
+          "switch": true,
+          "on_false": [
+            "2",
+            0
+          ],
+          "on_true": [
+            "70",
+            0
+          ]
+        },
+        "_meta": {
+          "title": "公共自然肤质开关（后续默认开）"
+        }
+      }
+    },
+    {
+      "project": "借你一场雪",
+      "segment": "S02_G01",
+      "client_id": "short-drama-agent",
+      "create_time": 1789804926191
+    },
+    [
+      "30",
+      "32"
+    ]
+  ],
+  "outputs": {
+    "32": {
+      "images": [
+        {
+          "filename": "S02_G01_attempt_01_end_00001_.png",
+          "subfolder": "borrow_snow_20260919_r03\\guides",
+          "type": "output"
+        }
+      ]
+    },
+    "30": {
+      "images": [
+        {
+          "filename": "attempt_01_00001_.mp4",
+          "subfolder": "borrow_snow_20260919_r03\\S02_G01",
+          "type": "output"
+        }
+      ],
+      "animated": [
+        true
+      ]
+    }
+  },
+  "status": {
+    "status_str": "success",
+    "completed": true,
+    "messages": [
+      [
+        "execution_start",
+        {
+          "prompt_id": "35e436bc-9fe5-4816-be07-c083788a1f03",
+          "timestamp": 1789804926194
+        }
+      ],
+      [
+        "execution_cached",
+        {
+          "nodes": [
+            "1",
+            "2",
+            "6",
+            "7",
+            "8",
+            "20"
+          ],
+          "prompt_id": "35e436bc-9fe5-4816-be07-c083788a1f03",
+          "timestamp": 1789804926219
+        }
+      ],
+      [
+        "execution_success",
+        {
+          "prompt_id": "35e436bc-9fe5-4816-be07-c083788a1f03",
+          "timestamp": 1789806309062
+        }
+      ]
+    ]
+  },
+  "meta": {
+    "32": {
+      "node_id": "32",
+      "display_node": "32",
+      "parent_node": null,
+      "real_node_id": "32"
+    },
+    "30": {
+      "node_id": "30",
+      "display_node": "30",
+      "parent_node": null,
+      "real_node_id": "30"
+    }
+  }
+}

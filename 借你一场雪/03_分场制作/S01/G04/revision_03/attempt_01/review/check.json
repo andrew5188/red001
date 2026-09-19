@@ -1,0 +1,49 @@
+{
+  "width": 1280,
+  "height": 720,
+  "fps": 24.0,
+  "has_audio": true,
+  "frames": 240,
+  "sampled_times_seconds": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    9.958333333333334
+  ],
+  "audio_seconds": 10.016,
+  "audio_peak": 0.6516207456588745,
+  "audio_rms_db": -28.09631928328733,
+  "clipped_fraction": 0.0,
+  "technical_pass": true,
+  "visual_review": "passed: inspected 21 half-second frames and native ending. Snow-covered setting and falling flakes persist; consistent two adult characters. Crystal rises from existing hands across 1-3s, disperses above them around 3.5-5s, does not reappear. No duplicate people or major anatomy break observed.",
+  "dialogue_and_music_review": "unverified subjective audio; waived under first-video-only policy. Audio technical checks passed, no clipping.",
+  "first_frame_vs_previous_guide_mean_abs_rgb_difference": 5.884322916666667,
+  "performance_review": {
+    "status": "passed",
+    "observations": [
+      "0-1s: existing smiles and hand contact continue, both briefly look toward the crystal.",
+      "1.5-4.5s: their eyes and chins follow its rise; woman shows visible open, delighted expression.",
+      "5-6.5s: woman smiles warmly while looking up, man gradually turns attention toward her.",
+      "7-9.96s: both return to mutual gaze; smiles settle, hands lower below the final crop."
+    ],
+    "deviation": "Mutual gaze returns earlier than planned, instead of woman still looking at snowfall at end. Emotional arc is readable; G05 will start from actual mutual gaze rather than resetting it."
+  },
+  "continuity_review": "passed with documented G05 adaptation: native ending is a closer mutual-gaze two-shot; hands below crop, crystal gone."
+}

@@ -1,0 +1,222 @@
+{
+  "status": "success",
+  "content_revision": 3,
+  "content_snapshot": {
+    "revision": 3,
+    "requirements_sha256": "e168dc61441d4da61d2aa7f28e634a8a64beb31e61539ef5be9d24bd1ff98c42",
+    "files": {
+      "00_故事大纲\\续篇20场大纲_已确认_v3.md": "fa848863d0b3771fb98c0205484a263703634e05b882dad2d4cc17e9f657c02b",
+      "01_完整剧本\\续篇完整剧本_v9.md": "2d31706f53894ef1a7867958487c4640af7779fd6083875e122c8e8938f8608d",
+      "03_分场制作\\S05\\G01_H3完整提示词_v6.txt": "4a58d59dbaa1a97e9cc34ecfcdc17b4affb3ee7d6de7109d337fa53df67b8d26",
+      "iworkflow\\main\\segments.json": "bcc88a0ce961ba02ab208454e47e59a9c8d5d95c0a352ae33acebc9d1e61fbfe",
+      "iworkflow\\main\\profile.json": "70916c57041499fc83633371db89feec0250087f7be1e6a3a1c8a907dff7a35f",
+      "iworkflow\\main.ui.json": "1d403c9960a746cc150894307eccf68df4a2907e1c037e8d48557f30c46f84bb",
+      "iworkflow\\main\\main.api.json": "9dc1e828d4581e53c5b1711fb8f2c847ba132753acbf6138870711684e50cd1f",
+      "03_分场制作\\S05\\关键帧\\S05_G01_双人持剑开场_v2.png": "b5694db476e870b8516e13f752df032ad7c65cac2553e8a06f96592b6768bce2",
+      "03_分场制作\\S05\\关键帧\\S05_G01_试剑收势关键帧_v1.png": "a409c027504f9929d0a4cf487a9005c8692c0a51fa96e7e2901c5e0a302c558f"
+    },
+    "performance_sha256": "aeb565ad5ecce490dff00983285920a7df4068b3220705aba99c25b422643e92",
+    "music_sha256": "e10dfee5a3c2334961b2dfc5639c1caabffba7c645c4026815c48b2b0084f31e",
+    "cast_sha256": "c936d7e571038c9d7e99daa1d900f0da145daaded86f936e48d13ac34b1669ef",
+    "scene_strategy_sha256": "0a809becdb4eb0dd5078eff4baa228e7dcc8ee7b0adea043cb29a3b1ae5fa72f",
+    "api_sha256": "044d6ec5832b6ecf20d6caf21144c5bf2d8bc2803c8cdaf2ab9942b252c7d431"
+  },
+  "scene": "S05",
+  "group": "G01",
+  "attempt": 1,
+  "template": {
+    "api_sha256": "9dc1e828d4581e53c5b1711fb8f2c847ba132753acbf6138870711684e50cd1f",
+    "ui_sha256": "1d403c9960a746cc150894307eccf68df4a2907e1c037e8d48557f30c46f84bb",
+    "preview_segment": "S05_G01",
+    "template_version": 6,
+    "submitted": false,
+    "frontend": "pending"
+  },
+  "inputs": {
+    "prompt": "03_分场制作\\S05\\G01_H3完整提示词_v6.txt",
+    "references": [
+      {
+        "image": "S05_G01_双人持剑开场_v2.png",
+        "source_path": "03_分场制作/S05/关键帧/S05_G01_双人持剑开场_v2.png",
+        "source_sha256": "b5694db476e870b8516e13f752df032ad7c65cac2553e8a06f96592b6768bce2",
+        "resize_width": 864
+      },
+      {
+        "image": "S05_G01_试剑收势关键帧_v1.png",
+        "source_path": "03_分场制作/S05/关键帧/S05_G01_试剑收势关键帧_v1.png",
+        "source_sha256": "a409c027504f9929d0a4cf487a9005c8692c0a51fa96e7e2901c5e0a302c558f",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091905,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "opening_frame",
+      "predecessor": null,
+      "source_path": "03_分场制作/S05/关键帧/S05_G01_双人持剑开场_v2.png",
+      "source_sha256": "b5694db476e870b8516e13f752df032ad7c65cac2553e8a06f96592b6768bce2",
+      "image": "S05_G01_双人持剑开场_v2.png",
+      "review_status": "passed",
+      "review_evidence": "Actual accepted S04 end viewed: Shen indicates offscreen practice area to right; cut to snow court establishing Lu left and Xie right already drawn swords; woman offscreen. Deliberate time/location cut, not a continuous unsheathing claim."
+    },
+    "content_revision": 3,
+    "asset_status": "ready",
+    "end_frame": {
+      "enabled": true,
+      "source_path": "03_分场制作/S05/关键帧/S05_G01_试剑收势关键帧_v1.png",
+      "source_sha256": "a409c027504f9929d0a4cf487a9005c8692c0a51fa96e7e2901c5e0a302c558f",
+      "image": "S05_G01_试剑收势关键帧_v1.png",
+      "review_status": "passed"
+    },
+    "scene_strategy": {
+      "scene_type": "action",
+      "main_emotion": "试探变锋芒",
+      "action_lora": {
+        "enabled": true,
+        "model": "H3\\motion\\H3_Combat_V2.safetensors",
+        "strength": 0.5
+      },
+      "appearance_lora": {
+        "enabled": true,
+        "model": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength": 0.6,
+        "trigger": "r34l1sm",
+        "sha256": "acc529601d2da117fb81179e76c56e488a3beab1171659d305f04fa3655b787e",
+        "source": "https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA",
+        "revision": "039cc8579d7aa357a882d7f4111b25da4f72dccc",
+        "validation": "download_sha256_and_tensor_layout_verified_render_unverified",
+        "default_scope": [
+          "drama",
+          "action",
+          "mixed"
+        ]
+      }
+    }
+  },
+  "profile": {
+    "engine": "h3_ref2va",
+    "output": {
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "directory": "04_全片输出"
+    },
+    "comfy_output_prefix": "borrow_snow_20260919_r03",
+    "reference_slots": [
+      {
+        "load": "10",
+        "resize": "13"
+      },
+      {
+        "load": "11",
+        "resize": "14"
+      },
+      {
+        "load": "12",
+        "resize": "15"
+      },
+      {
+        "load": "40",
+        "resize": "50"
+      },
+      {
+        "load": "41",
+        "resize": "51"
+      },
+      {
+        "load": "42",
+        "resize": "52"
+      },
+      {
+        "load": "43",
+        "resize": "53"
+      },
+      {
+        "load": "44",
+        "resize": "54"
+      },
+      {
+        "load": "45",
+        "resize": "55"
+      }
+    ],
+    "sampler": {
+      "steps": 4,
+      "transition_step": 2,
+      "lowres_scale": 0.75,
+      "cfg": 1.0,
+      "rho": 0.0,
+      "highres_tiling": true
+    },
+    "limits": {
+      "max_references": 9,
+      "min_seconds": 4,
+      "max_seconds": 15
+    },
+    "notes": "Experimental highres tiling: full audio/references, first tile audio prediction retained. Must review video and sound.",
+    "runtime_fixes": [
+      {
+        "target": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui-SelfLift\\h3_tiling.py",
+        "sha256": "15dc484924ed2edb835929377738051c4b5fc259cab05b8a567e24ebc86eb3c2",
+        "record": "iworkflow/main/patches/patch_record.json"
+      }
+    ],
+    "scene_strategy": {
+      "default_scene_type": "drama",
+      "action_lora": {
+        "enabled": false,
+        "model": "H3\\motion\\H3_Combat_V2.safetensors",
+        "strength": 0.5
+      },
+      "loader_node": "60",
+      "switch_node": "61",
+      "strength_note": "0.5 is an untested starting candidate; current project keeps branch disabled.",
+      "candidates": [
+        {
+          "model": "H3\\motion\\H3_Combat_V2.safetensors",
+          "base_model": "minimax_h3",
+          "validation": "metadata_checked_render_unverified"
+        },
+        {
+          "model": "H3\\motion\\H3_Motion_BoosterV2.safetensors",
+          "base_model": "minimax_h3",
+          "validation": "metadata_checked_render_unverified"
+        }
+      ],
+      "appearance_lora": {
+        "enabled": true,
+        "model": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength": 0.6,
+        "trigger": "r34l1sm",
+        "sha256": "acc529601d2da117fb81179e76c56e488a3beab1171659d305f04fa3655b787e",
+        "source": "https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA",
+        "revision": "039cc8579d7aa357a882d7f4111b25da4f72dccc",
+        "validation": "download_sha256_and_tensor_layout_verified_render_unverified",
+        "default_scope": [
+          "drama",
+          "action",
+          "mixed"
+        ]
+      },
+      "appearance_loader_node": "70",
+      "appearance_switch_node": "71"
+    },
+    "lora_directory": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\models\\loras"
+  },
+  "guide": {
+    "kind": "authored_opening_frame",
+    "file": "03_分场制作/S05/关键帧/S05_G01_双人持剑开场_v2.png",
+    "sha256": "b5694db476e870b8516e13f752df032ad7c65cac2553e8a06f96592b6768bce2",
+    "input_name": "S05_G01_双人持剑开场_v2.png",
+    "frame_idx": 0,
+    "end_frame": {
+      "file": "03_分场制作/S05/关键帧/S05_G01_试剑收势关键帧_v1.png",
+      "sha256": "a409c027504f9929d0a4cf487a9005c8692c0a51fa96e7e2901c5e0a302c558f",
+      "input_name": "S05_G01_试剑收势关键帧_v1.png",
+      "frame_idx": 239
+    }
+  },
+  "prompt_id": "4ba9020a-8b85-47f4-b000-d36b57519097",
+  "outputs": [],
+  "submitted_at": "2026-09-19T19:54:26.624127+08:00"
+}

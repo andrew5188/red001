@@ -1,0 +1,542 @@
+{
+  "1": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "H3\\minimax_h3_ref2va_pruned_w4a8_mixed.safetensors",
+      "weight_dtype": "default"
+    },
+    "_meta": {
+      "title": "H3 reference model"
+    }
+  },
+  "2": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "H3\\minimax_h3_ref2v_turbo_4step_v0.1_comfyui_bf16.safetensors",
+      "strength_model": 1.0
+    },
+    "_meta": {
+      "title": "H3 4-step acceleration"
+    }
+  },
+  "3": {
+    "class_type": "PathchSageAttentionKJ",
+    "inputs": {
+      "model": [
+        "61",
+        0
+      ],
+      "sage_attention": "auto",
+      "allow_compile": false
+    },
+    "_meta": {
+      "title": "Sage attention"
+    }
+  },
+  "4": {
+    "class_type": "MiniMaxH3MemoryEfficientSageAttentionPatch",
+    "inputs": {
+      "model": [
+        "3",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Memory-efficient H3 attention"
+    }
+  },
+  "5": {
+    "class_type": "MiniMaxH3SigmaShift",
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "shift_video": 12.0,
+      "shift_audio": 3.0
+    },
+    "_meta": {
+      "title": "H3 video/audio schedules"
+    }
+  },
+  "6": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "Qwen3VL\\qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    },
+    "_meta": {
+      "title": "H3 text encoder"
+    }
+  },
+  "7": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "H3\\minimax_h3_video_vae_fp16.safetensors"
+    },
+    "_meta": {
+      "title": "H3 video VAE"
+    }
+  },
+  "8": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "H3\\minimax_h3_audio_vae_fp32.safetensors"
+    },
+    "_meta": {
+      "title": "H3 audio VAE"
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "S04_G01_女主开场引导_v1.png"
+    },
+    "_meta": {
+      "title": "CH01 Shen Zhiwei"
+    }
+  },
+  "13": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "10",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": 864,
+      "height": 0,
+      "crop": "disabled"
+    },
+    "_meta": {
+      "title": "Bound reference token cost"
+    }
+  },
+  "11": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "S04_G01_女主结束关键帧_v1.png"
+    },
+    "_meta": {
+      "title": "CH02 Xie Linchuan"
+    }
+  },
+  "14": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "11",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": 864,
+      "height": 0,
+      "crop": "disabled"
+    },
+    "_meta": {
+      "title": "Bound reference token cost"
+    }
+  },
+  "16": {
+    "class_type": "MiniMaxH3ReferenceToVideo",
+    "inputs": {
+      "clip": [
+        "6",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ],
+      "audio_vae": [
+        "8",
+        0
+      ],
+      "prompt": "subject_definitions:\n<Subject 1> is Shen Zhiwei, the single 18-year-old adult woman in <Picture 1>, with her established face, long half-tied black hair and white jade pin, ivory cross-collar dress, pale green outer robe and sash. Preserve her semi-realistic guofeng identity and clothing.\n<Subject 5> is the winter pavilion-side corridor surrounding her in <Picture 1>, with timber pillars on the left, snow-dusted paving, snow-capped stone balustrades and pine, distant snowy mountains and pale warm afternoon light.\n<Picture 1> is the first frame of [Shot 1], showing only the woman at waist-up distance in the snowy corridor, with both hands together.\n<Picture 2> is the final frame of [Shot 1], showing the SAME woman looking toward screen right with her anatomical left palm softly indicating the off-screen practice area, after finishing her lines.\n\nsummary:\n[keyframe completion + reference generation] In a ten-second close conversation shot, <Subject 1> sets her own boundary and states the sparring rules, then indicates the nearby snowy practice area. <Subject 5> preserves the current corridor and winter lighting. Begin from <Picture 1> and finish on <Picture 2>; only the woman is visible.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - Keep her established face, hair, outfit and adult proportions while adding the firm spoken response.\n<Subject 5> (appears in [Shot 1]): fully_preserved - Retain the corridor material, snow and afternoon light in a closer framing.\n<Picture 1> ([Shot 1] first frame): fully_preserved - Preserve the inspected opening composition, character count, body positions and props, then animate the described response.\n<Picture 2> ([Shot 1] final frame): fully_preserved - Preserve the same identities and setting at the specified later time, matching her completed open-palm indication.\n\ndetailed_description:\nr34l1sm. Keep the fixed semi-realistic Chinese guofeng rendering with soft natural skin, gently idealized facial proportions, fine hair and cloth, and restrained winter highlights.\n[Shot 1] Begin from <Picture 1>. Exactly one person remains visible: <Subject 1>; zero passersby or extras. Cut to a stable eye-level medium close-up of <Subject 1> in <Subject 5>. This is a deliberate reaction shot in the same snowy corridor, not an attempt to preserve the preceding three-person frame. Frame her from the waist upward, slightly right of center, with her face turned gently toward screen left where the younger disciple now stands off-screen. Her ivory collar, pale green robe and white jade hair ornament remain recognizable. A timber pillar lies at the left edge, and the background contains the same snow-capped stone railing, softly layered mountains and fine falling flakes. Keep enough depth and background clarity for the winter setting to remain visible without distracting from her face.\nDuring the first second, she takes one calm breath and settles her shoulders. Her former romantic smile is gone, but her expression is steady rather than angry. Her eyes hold on the off-screen listener. Both hands start together at her lower waist, with no weapon or glowing magic present. A faint sleeve rustle accompanies her small posture adjustment. Do not add the two men to this composition, even as reflections or extra faces in the background.\nFrom one to four seconds, <Subject 1> (S1), using her established clear warm adult female Mandarin voice with measured resolve, says, <d>[Chinese] 我不是赌注.</d> She lifts her chin only slightly and keeps her lips and eyes easy to read. The line is a personal boundary, delivered without shouting, a teasing smile or exaggerated scorn. Leave a brief pause after the statement, allowing her still gaze to hold its meaning.\nFrom five to eight seconds, <Subject 1> (S1) continues in the same calm firm voice, <d>[Chinese] 三轮试剑, 点到即止.</d> Her mouth follows only these words. Her hands remain quiet during most of the speech so the performance is focused and natural. No man replies off-screen and no narrator explains the rule.\nAs the second line ends, she turns her eyes first, then her head a small amount toward the open snowy practice area on screen right. Her left hand rises gently from her waist and indicates that direction with an open palm below shoulder level. The movement is a simple invitation to relocate, not a spell. In the final second her left hand settles into the modest open-palm indication in <Picture 2>, and her expression remains composed and decisive. Hold the same framing through the end, with snow continuing outside the shelter. Avoid extra dialogue, gestures, text, captions, watermarks, magical effects or a fade to black.\n\noverall_soundscape:\nSoft wind and faint pine rustle persist. A subtle sleeve sound accompanies her final hand indication. Only the specified female dialogue is audible; no other speech, singing or combat noise.\n\nnon_diegetic_music:\nQuiet guqin and a sustained low string tone continue below the dialogue. Ease the tension slightly as she establishes the boundary; leave a restrained unresolved ending into the first round, without a loud flourish or lyrics.\n",
+      "width": 1280,
+      "height": 736,
+      "length": 243,
+      "ref_image_size": "match",
+      "ref_images.ref_image_0": [
+        "13",
+        0
+      ],
+      "ref_images.ref_image_1": [
+        "14",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "当前片段：H3官方完整Prompt"
+    }
+  },
+  "19": {
+    "class_type": "ConditioningZeroOut",
+    "inputs": {
+      "conditioning": [
+        "73",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Empty negative conditioning"
+    }
+  },
+  "20": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "euler"
+    },
+    "_meta": {
+      "title": "SelfLift compatible Euler"
+    }
+  },
+  "21": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 4,
+      "denoise": 1.0
+    },
+    "_meta": {
+      "title": "4 steps total"
+    }
+  },
+  "22": {
+    "class_type": "SelfLiftH3Sampler",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "positive": [
+        "73",
+        0
+      ],
+      "negative": [
+        "19",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "16",
+        1
+      ],
+      "sampler": [
+        "20",
+        0
+      ],
+      "sigmas": [
+        "21",
+        0
+      ],
+      "seed": 2026091904,
+      "cfg": 1.0,
+      "transition_step": 2,
+      "lowres_scale": 0.75,
+      "rho": 0.0,
+      "w_min": 0.5,
+      "w_max": 1.0,
+      "upscaler_model": "minimax_h3_latent_upscaler_3d_bf16.safetensors",
+      "highres_tiling": true
+    },
+    "_meta": {
+      "title": "SelfLift + H3 latent lift"
+    }
+  },
+  "23": {
+    "class_type": "LTXVSeparateAVLatent",
+    "inputs": {
+      "av_latent": [
+        "22",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Split generated video and audio"
+    }
+  },
+  "24": {
+    "class_type": "VAEDecodeTiled",
+    "inputs": {
+      "samples": [
+        "23",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ],
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 32,
+      "temporal_overlap": 8
+    },
+    "_meta": {
+      "title": "Tiled video decoding"
+    }
+  },
+  "25": {
+    "class_type": "VAEDecodeAudio",
+    "inputs": {
+      "samples": [
+        "23",
+        1
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Decode generated soundtrack"
+    }
+  },
+  "26": {
+    "class_type": "ImageFromBatch",
+    "inputs": {
+      "image": [
+        "24",
+        0
+      ],
+      "batch_index": 0,
+      "length": 240
+    },
+    "_meta": {
+      "title": "Exactly 240 frames / 10 seconds"
+    }
+  },
+  "27": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "26",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": 1280,
+      "height": 720,
+      "crop": "center"
+    },
+    "_meta": {
+      "title": "Final 1280 x 720 center crop"
+    }
+  },
+  "28": {
+    "class_type": "TrimAudioDuration",
+    "inputs": {
+      "audio": [
+        "25",
+        0
+      ],
+      "start_index": 0.0,
+      "duration": 10
+    },
+    "_meta": {
+      "title": "Exactly 10 seconds audio"
+    }
+  },
+  "29": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "27",
+        0
+      ],
+      "audio": [
+        "28",
+        0
+      ],
+      "fps": 24,
+      "bit_depth": "auto",
+      "color_space": "sRGB"
+    },
+    "_meta": {
+      "title": "720p / 24fps with audio"
+    }
+  },
+  "30": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "29",
+        0
+      ],
+      "filename_prefix": "borrow_snow_20260919_r03/S04_G01/attempt_01",
+      "format": "mp4",
+      "format.codec": "h264"
+    },
+    "_meta": {
+      "title": "Save 10-second clip"
+    }
+  },
+  "31": {
+    "class_type": "ImageFromBatch",
+    "inputs": {
+      "image": [
+        "26",
+        0
+      ],
+      "batch_index": 239,
+      "length": 1
+    },
+    "_meta": {
+      "title": "Actual kept last frame for next clip"
+    }
+  },
+  "32": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "31",
+        0
+      ],
+      "filename_prefix": "borrow_snow_20260919_r03/guides/S04_G01_attempt_01_end"
+    },
+    "_meta": {
+      "title": "Save native-size continuity guide"
+    }
+  },
+  "17": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "S04_G01_女主开场引导_v1.png"
+    },
+    "_meta": {
+      "title": "首帧或连续性引导图（实际配置绑定）"
+    }
+  },
+  "18": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "16",
+        0
+      ],
+      "latent": [
+        "16",
+        1
+      ],
+      "vae": [
+        "7",
+        0
+      ],
+      "image": [
+        "17",
+        0
+      ],
+      "frame_idx": 0
+    },
+    "_meta": {
+      "title": "H3 画面引导（当前第0帧）"
+    }
+  },
+  "60": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "71",
+        0
+      ],
+      "lora_name": "H3\\motion\\H3_Combat_V2.safetensors",
+      "strength_model": 0.5
+    },
+    "_meta": {
+      "title": "武戏动作LoRA（模型与强度）"
+    }
+  },
+  "61": {
+    "class_type": "LazySwitchKJ",
+    "inputs": {
+      "switch": false,
+      "on_false": [
+        "71",
+        0
+      ],
+      "on_true": [
+        "60",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "武戏开关：关=文戏直通，开=动作LoRA"
+    }
+  },
+  "70": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "2",
+        0
+      ],
+      "lora_name": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+      "strength_model": 0.6
+    },
+    "_meta": {
+      "title": "公共自然肤质 LoRA（去油腻候选，文武戏共用）"
+    }
+  },
+  "71": {
+    "class_type": "LazySwitchKJ",
+    "inputs": {
+      "switch": true,
+      "on_false": [
+        "2",
+        0
+      ],
+      "on_true": [
+        "70",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "公共自然肤质开关（后续默认开）"
+    }
+  },
+  "72": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "S04_G01_女主结束关键帧_v1.png"
+    },
+    "_meta": {
+      "title": "可选结束关键帧（按片段配置启用）"
+    }
+  },
+  "73": {
+    "class_type": "MiniMaxH3AddGuide",
+    "inputs": {
+      "positive": [
+        "18",
+        0
+      ],
+      "vae": [
+        "7",
+        0
+      ],
+      "latent": [
+        "16",
+        1
+      ],
+      "image": [
+        "72",
+        0
+      ],
+      "frame_idx": 239
+    },
+    "_meta": {
+      "title": "H3 可选结束画面引导"
+    }
+  }
+}

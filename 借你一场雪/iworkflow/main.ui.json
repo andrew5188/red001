@@ -1,6 +1,6 @@
 {
-  "last_node_id": 55,
-  "last_link_id": 45,
+  "last_node_id": 73,
+  "last_link_id": 54,
   "nodes": [
     {
       "id": 1,
@@ -104,7 +104,8 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            2
+            48,
+            49
           ],
           "slot_index": 0
         }
@@ -122,9 +123,9 @@
       }
     },
     {
-      "id": 3,
-      "type": "PathchSageAttentionKJ",
-      "title": "Sage attention",
+      "id": 70,
+      "type": "LoraLoaderModelOnly",
+      "title": "公共自然肤质 LoRA（去油腻候选，文武戏共用）",
       "pos": [
         0,
         700
@@ -137,6 +138,245 @@
         "collapsed": false
       },
       "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 48
+        },
+        {
+          "name": "lora_name",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "lora_name"
+          }
+        },
+        {
+          "name": "strength_model",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "strength_model"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            50
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+        0.6
+      ],
+      "widgets_values_named": {
+        "lora_name": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 0.6
+      }
+    },
+    {
+      "id": 71,
+      "type": "LazySwitchKJ",
+      "title": "公共自然肤质开关（后续默认开）",
+      "pos": [
+        0,
+        1010
+      ],
+      "size": [
+        600,
+        240
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "switch",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "switch"
+          }
+        },
+        {
+          "name": "on_false",
+          "type": "*",
+          "link": 49
+        },
+        {
+          "name": "on_true",
+          "type": "*",
+          "link": 50
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [
+            45,
+            46
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LazySwitchKJ"
+      },
+      "widgets_values": [
+        true
+      ],
+      "widgets_values_named": {
+        "switch": true
+      }
+    },
+    {
+      "id": 60,
+      "type": "LoraLoaderModelOnly",
+      "title": "武戏动作LoRA（模型与强度）",
+      "pos": [
+        0,
+        1320
+      ],
+      "size": [
+        600,
+        240
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 45
+        },
+        {
+          "name": "lora_name",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "lora_name"
+          }
+        },
+        {
+          "name": "strength_model",
+          "type": "FLOAT",
+          "link": null,
+          "widget": {
+            "name": "strength_model"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            47
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "H3\\motion\\H3_Combat_V2.safetensors",
+        0.5
+      ],
+      "widgets_values_named": {
+        "lora_name": "H3\\motion\\H3_Combat_V2.safetensors",
+        "strength_model": 0.5
+      }
+    },
+    {
+      "id": 61,
+      "type": "LazySwitchKJ",
+      "title": "武戏开关：关=文戏直通，开=动作LoRA",
+      "pos": [
+        0,
+        1630
+      ],
+      "size": [
+        600,
+        240
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "switch",
+          "type": "BOOLEAN",
+          "link": null,
+          "widget": {
+            "name": "switch"
+          }
+        },
+        {
+          "name": "on_false",
+          "type": "*",
+          "link": 46
+        },
+        {
+          "name": "on_true",
+          "type": "*",
+          "link": 47
+        }
+      ],
+      "outputs": [
+        {
+          "name": "*",
+          "type": "*",
+          "links": [
+            2
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LazySwitchKJ"
+      },
+      "widgets_values": [
+        true
+      ],
+      "widgets_values_named": {
+        "switch": true
+      }
+    },
+    {
+      "id": 3,
+      "type": "PathchSageAttentionKJ",
+      "title": "Sage attention",
+      "pos": [
+        0,
+        1940
+      ],
+      "size": [
+        600,
+        240
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -189,7 +429,7 @@
       "title": "Memory-efficient H3 attention",
       "pos": [
         0,
-        1010
+        2250
       ],
       "size": [
         600,
@@ -198,7 +438,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 3,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -229,7 +469,7 @@
       "title": "H3 video/audio schedules",
       "pos": [
         0,
-        1320
+        2560
       ],
       "size": [
         600,
@@ -238,7 +478,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 4,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -268,8 +508,8 @@
           "name": "MODEL",
           "type": "MODEL",
           "links": [
-            15,
-            16
+            14,
+            15
           ],
           "slot_index": 0
         }
@@ -292,7 +532,7 @@
       "title": "H3 text encoder",
       "pos": [
         0,
-        1630
+        2870
       ],
       "size": [
         600,
@@ -301,7 +541,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 5,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -359,7 +599,7 @@
       "title": "H3 video VAE",
       "pos": [
         0,
-        1940
+        3180
       ],
       "size": [
         600,
@@ -368,7 +608,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 6,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -386,9 +626,10 @@
           "type": "VAE",
           "links": [
             9,
-            19,
-            25,
-            38
+            18,
+            24,
+            37,
+            53
           ],
           "slot_index": 0
         }
@@ -409,7 +650,7 @@
       "title": "H3 audio VAE",
       "pos": [
         0,
-        2250
+        3490
       ],
       "size": [
         600,
@@ -418,7 +659,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 7,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -436,7 +677,7 @@
           "type": "VAE",
           "links": [
             10,
-            27
+            26
           ],
           "slot_index": 0
         }
@@ -466,7 +707,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 8,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -498,11 +739,11 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "CH01_沈知微_白底三视图_v2.png",
+        "S05_G01_双人持剑开场_v2.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "CH01_沈知微_白底三视图_v2.png"
+        "image": "S05_G01_双人持剑开场_v2.png"
       }
     },
     {
@@ -520,7 +761,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 9,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -576,13 +817,13 @@
       },
       "widgets_values": [
         "lanczos",
-        768,
+        864,
         0,
         "disabled"
       ],
       "widgets_values_named": {
         "upscale_method": "lanczos",
-        "width": 768,
+        "width": 864,
         "height": 0,
         "crop": "disabled"
       }
@@ -602,7 +843,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 10,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -634,11 +875,11 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "CH02_谢临川_白底三视图_v2.png",
+        "S05_G01_试剑收势关键帧_v1.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "CH02_谢临川_白底三视图_v2.png"
+        "image": "S05_G01_试剑收势关键帧_v1.png"
       }
     },
     {
@@ -656,7 +897,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 11,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -712,13 +953,13 @@
       },
       "widgets_values": [
         "lanczos",
-        768,
+        864,
         0,
         "disabled"
       ],
       "widgets_values_named": {
         "upscale_method": "lanczos",
-        "width": 768,
+        "width": 864,
         "height": 0,
         "crop": "disabled"
       }
@@ -736,10 +977,10 @@
         340
       ],
       "flags": {
-        "collapsed": false
+        "collapsed": true
       },
-      "order": 12,
-      "mode": 0,
+      "order": 16,
+      "mode": 2,
       "inputs": [
         {
           "name": "image",
@@ -783,17 +1024,17 @@
       "title": "Bound reference token cost",
       "pos": [
         680,
-        1930
+        1590
       ],
       "size": [
         600,
         240
       ],
       "flags": {
-        "collapsed": false
+        "collapsed": true
       },
-      "order": 13,
-      "mode": 0,
+      "order": 17,
+      "mode": 2,
       "inputs": [
         {
           "name": "image",
@@ -837,9 +1078,7 @@
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            13
-          ],
+          "links": [],
           "slot_index": 0
         }
       ],
@@ -865,7 +1104,7 @@
       "title": "参考图 4（按需启用）",
       "pos": [
         680,
-        2240
+        1660
       ],
       "size": [
         600,
@@ -874,7 +1113,141 @@
       "flags": {
         "collapsed": true
       },
-      "order": 14,
+      "order": 18,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "image"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            39
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": ""
+      }
+    },
+    {
+      "id": 50,
+      "type": "ImageScale",
+      "title": "参考图 4 尺寸约束",
+      "pos": [
+        680,
+        1730
+      ],
+      "size": [
+        600,
+        240
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 19,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 39
+        },
+        {
+          "name": "upscale_method",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "upscale_method"
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "height"
+          }
+        },
+        {
+          "name": "crop",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "crop"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "lanczos",
+        768,
+        0,
+        "disabled"
+      ],
+      "widgets_values_named": {
+        "upscale_method": "lanczos",
+        "width": 768,
+        "height": 0,
+        "crop": "disabled"
+      }
+    },
+    {
+      "id": 41,
+      "type": "LoadImage",
+      "title": "参考图 5（按需启用）",
+      "pos": [
+        680,
+        1800
+      ],
+      "size": [
+        600,
+        340
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 20,
       "mode": 2,
       "inputs": [
         {
@@ -914,12 +1287,12 @@
       }
     },
     {
-      "id": 50,
+      "id": 51,
       "type": "ImageScale",
-      "title": "参考图 4 尺寸约束",
+      "title": "参考图 5 尺寸约束",
       "pos": [
         680,
-        2310
+        1870
       ],
       "size": [
         600,
@@ -928,7 +1301,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 15,
+      "order": 21,
       "mode": 2,
       "inputs": [
         {
@@ -994,12 +1367,12 @@
       }
     },
     {
-      "id": 41,
+      "id": 42,
       "type": "LoadImage",
-      "title": "参考图 5（按需启用）",
+      "title": "参考图 6（按需启用）",
       "pos": [
         680,
-        2380
+        1940
       ],
       "size": [
         600,
@@ -1008,7 +1381,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 16,
+      "order": 22,
       "mode": 2,
       "inputs": [
         {
@@ -1048,12 +1421,12 @@
       }
     },
     {
-      "id": 51,
+      "id": 52,
       "type": "ImageScale",
-      "title": "参考图 5 尺寸约束",
+      "title": "参考图 6 尺寸约束",
       "pos": [
         680,
-        2450
+        2010
       ],
       "size": [
         600,
@@ -1062,7 +1435,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 17,
+      "order": 23,
       "mode": 2,
       "inputs": [
         {
@@ -1128,12 +1501,12 @@
       }
     },
     {
-      "id": 42,
+      "id": 43,
       "type": "LoadImage",
-      "title": "参考图 6（按需启用）",
+      "title": "参考图 7（按需启用）",
       "pos": [
         680,
-        2520
+        2080
       ],
       "size": [
         600,
@@ -1142,7 +1515,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 18,
+      "order": 24,
       "mode": 2,
       "inputs": [
         {
@@ -1182,12 +1555,12 @@
       }
     },
     {
-      "id": 52,
+      "id": 53,
       "type": "ImageScale",
-      "title": "参考图 6 尺寸约束",
+      "title": "参考图 7 尺寸约束",
       "pos": [
         680,
-        2590
+        2150
       ],
       "size": [
         600,
@@ -1196,7 +1569,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 19,
+      "order": 25,
       "mode": 2,
       "inputs": [
         {
@@ -1262,12 +1635,12 @@
       }
     },
     {
-      "id": 43,
+      "id": 44,
       "type": "LoadImage",
-      "title": "参考图 7（按需启用）",
+      "title": "参考图 8（按需启用）",
       "pos": [
         680,
-        2660
+        2220
       ],
       "size": [
         600,
@@ -1276,7 +1649,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 20,
+      "order": 26,
       "mode": 2,
       "inputs": [
         {
@@ -1316,12 +1689,12 @@
       }
     },
     {
-      "id": 53,
+      "id": 54,
       "type": "ImageScale",
-      "title": "参考图 7 尺寸约束",
+      "title": "参考图 8 尺寸约束",
       "pos": [
         680,
-        2730
+        2290
       ],
       "size": [
         600,
@@ -1330,7 +1703,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 21,
+      "order": 27,
       "mode": 2,
       "inputs": [
         {
@@ -1396,12 +1769,12 @@
       }
     },
     {
-      "id": 44,
+      "id": 45,
       "type": "LoadImage",
-      "title": "参考图 8（按需启用）",
+      "title": "参考图 9（按需启用）",
       "pos": [
         680,
-        2800
+        2360
       ],
       "size": [
         600,
@@ -1410,7 +1783,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 22,
+      "order": 28,
       "mode": 2,
       "inputs": [
         {
@@ -1450,12 +1823,12 @@
       }
     },
     {
-      "id": 54,
+      "id": 55,
       "type": "ImageScale",
-      "title": "参考图 8 尺寸约束",
+      "title": "参考图 9 尺寸约束",
       "pos": [
         680,
-        2870
+        2430
       ],
       "size": [
         600,
@@ -1464,7 +1837,7 @@
       "flags": {
         "collapsed": true
       },
-      "order": 23,
+      "order": 29,
       "mode": 2,
       "inputs": [
         {
@@ -1530,143 +1903,9 @@
       }
     },
     {
-      "id": 45,
-      "type": "LoadImage",
-      "title": "参考图 9（按需启用）",
-      "pos": [
-        680,
-        2940
-      ],
-      "size": [
-        600,
-        340
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 24,
-      "mode": 2,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "image"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            45
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": [],
-          "slot_index": 1
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "",
-        "image"
-      ],
-      "widgets_values_named": {
-        "image": ""
-      }
-    },
-    {
-      "id": 55,
-      "type": "ImageScale",
-      "title": "参考图 9 尺寸约束",
-      "pos": [
-        680,
-        3010
-      ],
-      "size": [
-        600,
-        240
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 25,
-      "mode": 2,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 45
-        },
-        {
-          "name": "upscale_method",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "upscale_method"
-          }
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "link": null,
-          "widget": {
-            "name": "width"
-          }
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": null,
-          "widget": {
-            "name": "height"
-          }
-        },
-        {
-          "name": "crop",
-          "type": "COMBO",
-          "link": null,
-          "widget": {
-            "name": "crop"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImageScale"
-      },
-      "widgets_values": [
-        "lanczos",
-        768,
-        0,
-        "disabled"
-      ],
-      "widgets_values_named": {
-        "upscale_method": "lanczos",
-        "width": 768,
-        "height": 0,
-        "crop": "disabled"
-      }
-    },
-    {
       "id": 16,
       "type": "MiniMaxH3ReferenceToVideo",
-      "title": "G01 official H3 prompt",
+      "title": "当前片段：H3官方完整Prompt",
       "pos": [
         1360,
         80
@@ -1678,7 +1917,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 26,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -1745,11 +1984,6 @@
           "name": "ref_images.ref_image_1",
           "type": "IMAGE",
           "link": 12
-        },
-        {
-          "name": "ref_images.ref_image_2",
-          "type": "IMAGE",
-          "link": 13
         }
       ],
       "outputs": [
@@ -1757,7 +1991,7 @@
           "name": "positive",
           "type": "CONDITIONING",
           "links": [
-            36
+            35
           ],
           "slot_index": 0
         },
@@ -1765,8 +1999,9 @@
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            20,
-            37
+            19,
+            36,
+            52
           ],
           "slot_index": 1
         }
@@ -1775,14 +2010,14 @@
         "Node name for S&R": "MiniMaxH3ReferenceToVideo"
       },
       "widgets_values": [
-        "subject_definitions:\n<Subject 1> is Shen Zhiwei, the single 18-year-old adult Chinese woman in <Picture 1>. Preserve her softly idealized face, almond eyes, long half-tied black hair with a small white jade hairpin, ivory cross-collar dress, pale-celadon outer robe and sash, and white cloth shoes. Her voice (S1) is clear adult female Mandarin, light, warm and naturally paced.\n<Subject 2> is Xie Linchuan, the single approximately 30-year-old adult Chinese man in <Picture 2>. Preserve his mature clean-shaven face, gentle eyes, long half-tied black hair and silver crown, white inner robe, gray-blue outer robe, dark gray-blue sash and dark boots. His voice (S2) is warm medium-low male Mandarin, calm and softly spoken.\n<Subject 3> is the visibly snowy mountain pavilion terrace in <Picture 3>: rear-left dark wooden pavilion with snow-covered eaves, snow-capped stone balustrade along rear and right, open terrace with a light settled snow layer, snow-laden pine at right and white distant mountain ridges. Preserve the gentle upper-left winter afternoon light and clear visibility. Falling snow is already present from the opening.\nEach character sheet represents three angles of ONE person, used only for identity, costume and the fixed semi-realistic guofeng rendering. Render exactly one woman and one man, mutually affectionate adult companions, in the environment. Do not reproduce the sheets, white background, panels or multiple copies. The environment plate is a spatial and weather reference, not an empty opening frame. No subtitles, written titles or narration.\n\nsummary:\n[reference generation] The woman watches snowflakes melt on her open palm; her companion replies gently and supports her hand. The settled snow and continuous falling snow remain visible.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - retain the character identity, costume, hair and semi-realistic rendering; natural snow dusting is part of the scene.\n<Subject 2> (appears in [Shot 1]): fully_preserved - retain the character identity, costume, hair and semi-realistic rendering; natural snow dusting is part of the scene.\n<Subject 3> (appears in [Shot 1]): fully_preserved - retain the snowy architecture, snow-covered pine and mountains, settled terrace snow and afternoon lighting. Keep visible gentle snowfall throughout.\n\ndetailed_description:\nThe supplied opening guide anchors the actual previous end frame at time zero. Continue without repeating completed actions or dialogue.\nThe target video retains the same semi-realistic guofeng adult characters, soft winter afternoon light, and landscape composition. These ten seconds immediately follow the preceding shot with continuous gentle snowfall.\n[Shot 1] Begin from the supplied actual preceding end frame, preserving the positions of <Subject 1> on the left and <Subject 2> on the right in <Subject 3>. The woman has her anatomical LEFT palm open at lower chest height and her right hand relaxed near her waist. The man's anatomical RIGHT fingers already lightly touch the top of her left wrist, while his left hand stays lowered. Both look down toward her palm. Preserve this existing contact, hand height, spacing, snow dusting and gaze from the actual guide; never reset his right hand to his side or repeat the completed reach. Keep the snow-covered railing across the background, the pavilion edge at left and snow-laden pine toward right. Snowflakes remain visible both in front of the couple and against the dark posts behind them, with the same gentle density and diagonal drift as before.\nDuring the first three seconds, a few naturally falling flakes settle onto the woman's open palm and melt into tiny glints of moisture. She notices this small change with a fond, slightly wistful expression, not distress. Her palm stays open and steady. The camera holds the guide's established closer medium two-shot, still showing both faces and their touching hands; there is no cut to an isolated hand or change of screen side. Her ivory and pale-celadon sleeve hangs below her wrist, retaining its original embroidery.\nFrom second three to six, <Subject 2> (S2) looks at her and replies gently in warm, medium-low adult male Mandarin, <d>[Chinese] 好，我陪你.</d> His lips close at the end of the short sentence. His expression is calm and affectionate. As the reply ends, his anatomical RIGHT fingers slide gently from the top of her left wrist around to support the underside of her open hand. This is a small adjustment of existing contact, not a new reach. Keep his other hand lowered and her right hand separate near her waist.\nDuring seconds six through nine, he gently supports her left hand from underneath with his right palm. She accepts the contact and glances up toward his face, her shoulders relaxing. Their fingers remain anatomically distinct, lightly resting rather than interlocking in a complicated grip. Soft cloth movement accompanies the gesture. Finish with their joined hands supported between them at lower chest height and both faces visible. Neither person repeats the opening request. Snow continues falling throughout, accumulating only subtly on hair and shoulders; the settled snow on architecture does not vanish. Wind and the quiet instrumental theme carry smoothly into the next segment.\n\noverall_soundscape:\nContinuous soft mountain wind and distant pine rustle, with natural cloth movement during gestures. Snow falls quietly; no rain or storm sounds. Continue the preceding ambient bed without restarting it or repeating previous transient effects. Synchronized gesture sounds and any dialogue occur only at their described moments.\n\nnon_diegetic_music:\nContinue a quiet instrumental guqin and airy bamboo-flute theme at approximately 68 BPM, warm and tender, sparse notes, no vocals or percussion. Keep it below dialogue and delicate gesture sounds. Preserve the same musical character and leave the phrase open at the ending; do not add an opening flourish or final cadence.\n",
+        "subject_definitions:\n<Subject 2> is Xie Linchuan, the single adult man around thirty in <Picture 1>, preserving his established face, long half-tied black hair, silver crown, white inner robe and blue-gray flowing embroidered outer robe. He uses one straight silver-gray jian with a plain guard; its dark-blue empty scabbard remains at his left hip when the sword is drawn.\n<Subject 4> is Lu Xingzhou, the single 18-year-old adult male disciple in <Picture 1>, preserving his youthful face, high black ponytail and narrow silver band, charcoal layers, muted burgundy outer robe, dark belt and boots. He uses one slender straight jian in his right hand; the empty dark scabbard and red tassel remain at his left hip. His revised identity has a short rounded face, fuller cheeks, round-open eyes, gently curved brows, a short nose, fuller lips and an asymmetrical side fringe; retain this distinct young adult face.\n<Subject 6> is the snowy practice courtyard surrounding the two men in <Picture 1>: a broad level stone platform with a visible dark rectangular boundary, snow-capped railing, pavilion at the left rear, bamboo entrance to the right, snowy pines and distant mountains in pale afternoon light.\n<Picture 1> is the first frame of [Shot 1], showing Lu on the left and Xie on the right, both holding one drawn sword in their anatomical right hands, with their full bodies and the snowy courtyard visible.\n<Picture 2> is the final frame of [Shot 1], showing the SAME two men after the exchange, balanced a little closer, anatomical right-hand blades separated in low guards and left hands empty.\n\nsummary:\n[keyframe completion + reference generation] A ten-second first-round sparring exchange in <Subject 6>. <Subject 4> initiates a controlled straight thrust; <Subject 2> steps off the attack line and parries it, after which both recover. Begin from <Picture 1> and finish on <Picture 2>, which establishes two distinct adult identities, right-hand drawn swords, empty left-hip scabbards and the fighting space. This is the first representative combat clip, with a visible attack, defense and result.\n\nretention_analysis:\n<Subject 2> (appears in [Shot 1]): fully_preserved - Preserve his identity, clothing, sword design and adult proportions; change the reference resting pose to the described drawn-sword stance and controlled defense.\n<Subject 4> (appears in [Shot 1]): fully_preserved - Preserve his identity, burgundy clothing, sword and scabbard design; introduce the described measured thrust and recovery.\n<Subject 6> (appears in [Shot 1]): fully_preserved - Preserve the open practice platform, visible boundary, surrounding architecture, snow and winter daylight.\n<Picture 1> ([Shot 1] first frame): fully_preserved - Preserve the inspected opening composition, character count, body positions and props, then animate the described response.\n<Picture 2> ([Shot 1] final frame): fully_preserved - Preserve the same identities and setting at the specified later time, matching the finished gesture or recovered guard.\n\ndetailed_description:\nr34l1sm. The target video retains the established semi-realistic Chinese guofeng character style, soft natural skin shading and readable cloth texture, with clear physical swordplay and restrained visual effects.\n[Shot 1] Begin from <Picture 1>. Exactly two people remain visible: <Subject 2> and <Subject 4>; zero passersby or extras. A stable eye-level medium-wide full-body shot establishes <Subject 6>. <Subject 4> stands on screen left facing right, while <Subject 2> stands on screen right facing left, about two steps apart. Both are already inside the clearly visible stone boundary, each holding exactly one drawn straight sword in his anatomical right hand. Empty scabbards stay attached at their left hips. Keep both heads, feet, sword tips and the space between them visible throughout the exchange. The woman and other spectators remain outside the frame. Snow rests on the platform, railings and pavilion roof, and fine flakes continue falling without obscuring the fighters.\nDuring the first two seconds, the men briefly acknowledge one another with a small sword salute, then settle into balanced guards. The younger man's eyes are intent, jaw set and weight slightly forward; the older man's gaze is focused and shoulders relaxed. This short preparation immediately leads into actual action rather than becoming a standing pose for the whole clip. Their boots lightly compress the thin snow; fabric follows their weight shifts.\nFrom two to five seconds, the younger man pushes from his back foot, advances one controlled step and extends his right arm in a straight thrust toward the older man's upper-torso line. Show the sword tip traveling from left to right along a continuous readable path. The older man reacts after the thrust begins: he moves a half-step toward the background, away from the direct line, and brings his own right-hand blade diagonally across to meet and redirect the attacking blade outward. The swords make one visible contact in the open space between them, synchronized with a single sharp metal ring. Neither blade passes through a body or changes hands.\nFrom five to eight seconds, the redirected thrust finishes beside the defender rather than inside him. The younger man bends his elbow, retrieves his blade and shifts weight back to regain balance. The older man releases the pressure and returns to a low controlled guard without adding a second attack. A small spray of powder snow follows their foot placement; robe hems and ponytails settle naturally after the movement. The younger man's expression briefly registers surprise, while the older man remains attentive rather than triumphant.\nFor the final two seconds, both men stand securely about one and a half steps apart, younger man left and older man right, swords separated and held low enough to make the completed exchange clear. Settle into the recovered positions in <Picture 2> and hold them for continuity. The intervening thrust, visible parry contact and recovery must occur before reaching this ending. No spoken lines, slow motion, large magical bursts, blood, extra weapons, body doubling, camera orbit, subtitles or black ending.\n\noverall_soundscape:\nContinuous winter wind and distant pine movement, close boot scrapes and snow crunch, cloth movement and one synchronized metal contact. Breathing is restrained; there is no dialogue, narration, chanting or yelling.\n\nnon_diegetic_music:\nA restrained but energetic instrumental battle motif begins with low drums, clipped pipa notes and rhythmic strings around 96 BPM. Keep a steady pulse under the exchange, briefly leaving sonic space for the blade contact. Avoid vocals and exaggerated heroic swells. Continue the rhythmic phrase into the next combat clip instead of resolving or restarting every ten seconds.\n",
         1280,
         736,
         243,
         "match"
       ],
       "widgets_values_named": {
-        "prompt": "subject_definitions:\n<Subject 1> is Shen Zhiwei, the single 18-year-old adult Chinese woman in <Picture 1>. Preserve her softly idealized face, almond eyes, long half-tied black hair with a small white jade hairpin, ivory cross-collar dress, pale-celadon outer robe and sash, and white cloth shoes. Her voice (S1) is clear adult female Mandarin, light, warm and naturally paced.\n<Subject 2> is Xie Linchuan, the single approximately 30-year-old adult Chinese man in <Picture 2>. Preserve his mature clean-shaven face, gentle eyes, long half-tied black hair and silver crown, white inner robe, gray-blue outer robe, dark gray-blue sash and dark boots. His voice (S2) is warm medium-low male Mandarin, calm and softly spoken.\n<Subject 3> is the visibly snowy mountain pavilion terrace in <Picture 3>: rear-left dark wooden pavilion with snow-covered eaves, snow-capped stone balustrade along rear and right, open terrace with a light settled snow layer, snow-laden pine at right and white distant mountain ridges. Preserve the gentle upper-left winter afternoon light and clear visibility. Falling snow is already present from the opening.\nEach character sheet represents three angles of ONE person, used only for identity, costume and the fixed semi-realistic guofeng rendering. Render exactly one woman and one man, mutually affectionate adult companions, in the environment. Do not reproduce the sheets, white background, panels or multiple copies. The environment plate is a spatial and weather reference, not an empty opening frame. No subtitles, written titles or narration.\n\nsummary:\n[reference generation] The woman watches snowflakes melt on her open palm; her companion replies gently and supports her hand. The settled snow and continuous falling snow remain visible.\n\nretention_analysis:\n<Subject 1> (appears in [Shot 1]): fully_preserved - retain the character identity, costume, hair and semi-realistic rendering; natural snow dusting is part of the scene.\n<Subject 2> (appears in [Shot 1]): fully_preserved - retain the character identity, costume, hair and semi-realistic rendering; natural snow dusting is part of the scene.\n<Subject 3> (appears in [Shot 1]): fully_preserved - retain the snowy architecture, snow-covered pine and mountains, settled terrace snow and afternoon lighting. Keep visible gentle snowfall throughout.\n\ndetailed_description:\nThe supplied opening guide anchors the actual previous end frame at time zero. Continue without repeating completed actions or dialogue.\nThe target video retains the same semi-realistic guofeng adult characters, soft winter afternoon light, and landscape composition. These ten seconds immediately follow the preceding shot with continuous gentle snowfall.\n[Shot 1] Begin from the supplied actual preceding end frame, preserving the positions of <Subject 1> on the left and <Subject 2> on the right in <Subject 3>. The woman has her anatomical LEFT palm open at lower chest height and her right hand relaxed near her waist. The man's anatomical RIGHT fingers already lightly touch the top of her left wrist, while his left hand stays lowered. Both look down toward her palm. Preserve this existing contact, hand height, spacing, snow dusting and gaze from the actual guide; never reset his right hand to his side or repeat the completed reach. Keep the snow-covered railing across the background, the pavilion edge at left and snow-laden pine toward right. Snowflakes remain visible both in front of the couple and against the dark posts behind them, with the same gentle density and diagonal drift as before.\nDuring the first three seconds, a few naturally falling flakes settle onto the woman's open palm and melt into tiny glints of moisture. She notices this small change with a fond, slightly wistful expression, not distress. Her palm stays open and steady. The camera holds the guide's established closer medium two-shot, still showing both faces and their touching hands; there is no cut to an isolated hand or change of screen side. Her ivory and pale-celadon sleeve hangs below her wrist, retaining its original embroidery.\nFrom second three to six, <Subject 2> (S2) looks at her and replies gently in warm, medium-low adult male Mandarin, <d>[Chinese] 好，我陪你.</d> His lips close at the end of the short sentence. His expression is calm and affectionate. As the reply ends, his anatomical RIGHT fingers slide gently from the top of her left wrist around to support the underside of her open hand. This is a small adjustment of existing contact, not a new reach. Keep his other hand lowered and her right hand separate near her waist.\nDuring seconds six through nine, he gently supports her left hand from underneath with his right palm. She accepts the contact and glances up toward his face, her shoulders relaxing. Their fingers remain anatomically distinct, lightly resting rather than interlocking in a complicated grip. Soft cloth movement accompanies the gesture. Finish with their joined hands supported between them at lower chest height and both faces visible. Neither person repeats the opening request. Snow continues falling throughout, accumulating only subtly on hair and shoulders; the settled snow on architecture does not vanish. Wind and the quiet instrumental theme carry smoothly into the next segment.\n\noverall_soundscape:\nContinuous soft mountain wind and distant pine rustle, with natural cloth movement during gestures. Snow falls quietly; no rain or storm sounds. Continue the preceding ambient bed without restarting it or repeating previous transient effects. Synchronized gesture sounds and any dialogue occur only at their described moments.\n\nnon_diegetic_music:\nContinue a quiet instrumental guqin and airy bamboo-flute theme at approximately 68 BPM, warm and tender, sparse notes, no vocals or percussion. Keep it below dialogue and delicate gesture sounds. Preserve the same musical character and leave the phrase open at the ending; do not add an opening flourish or final cadence.\n",
+        "prompt": "subject_definitions:\n<Subject 2> is Xie Linchuan, the single adult man around thirty in <Picture 1>, preserving his established face, long half-tied black hair, silver crown, white inner robe and blue-gray flowing embroidered outer robe. He uses one straight silver-gray jian with a plain guard; its dark-blue empty scabbard remains at his left hip when the sword is drawn.\n<Subject 4> is Lu Xingzhou, the single 18-year-old adult male disciple in <Picture 1>, preserving his youthful face, high black ponytail and narrow silver band, charcoal layers, muted burgundy outer robe, dark belt and boots. He uses one slender straight jian in his right hand; the empty dark scabbard and red tassel remain at his left hip. His revised identity has a short rounded face, fuller cheeks, round-open eyes, gently curved brows, a short nose, fuller lips and an asymmetrical side fringe; retain this distinct young adult face.\n<Subject 6> is the snowy practice courtyard surrounding the two men in <Picture 1>: a broad level stone platform with a visible dark rectangular boundary, snow-capped railing, pavilion at the left rear, bamboo entrance to the right, snowy pines and distant mountains in pale afternoon light.\n<Picture 1> is the first frame of [Shot 1], showing Lu on the left and Xie on the right, both holding one drawn sword in their anatomical right hands, with their full bodies and the snowy courtyard visible.\n<Picture 2> is the final frame of [Shot 1], showing the SAME two men after the exchange, balanced a little closer, anatomical right-hand blades separated in low guards and left hands empty.\n\nsummary:\n[keyframe completion + reference generation] A ten-second first-round sparring exchange in <Subject 6>. <Subject 4> initiates a controlled straight thrust; <Subject 2> steps off the attack line and parries it, after which both recover. Begin from <Picture 1> and finish on <Picture 2>, which establishes two distinct adult identities, right-hand drawn swords, empty left-hip scabbards and the fighting space. This is the first representative combat clip, with a visible attack, defense and result.\n\nretention_analysis:\n<Subject 2> (appears in [Shot 1]): fully_preserved - Preserve his identity, clothing, sword design and adult proportions; change the reference resting pose to the described drawn-sword stance and controlled defense.\n<Subject 4> (appears in [Shot 1]): fully_preserved - Preserve his identity, burgundy clothing, sword and scabbard design; introduce the described measured thrust and recovery.\n<Subject 6> (appears in [Shot 1]): fully_preserved - Preserve the open practice platform, visible boundary, surrounding architecture, snow and winter daylight.\n<Picture 1> ([Shot 1] first frame): fully_preserved - Preserve the inspected opening composition, character count, body positions and props, then animate the described response.\n<Picture 2> ([Shot 1] final frame): fully_preserved - Preserve the same identities and setting at the specified later time, matching the finished gesture or recovered guard.\n\ndetailed_description:\nr34l1sm. The target video retains the established semi-realistic Chinese guofeng character style, soft natural skin shading and readable cloth texture, with clear physical swordplay and restrained visual effects.\n[Shot 1] Begin from <Picture 1>. Exactly two people remain visible: <Subject 2> and <Subject 4>; zero passersby or extras. A stable eye-level medium-wide full-body shot establishes <Subject 6>. <Subject 4> stands on screen left facing right, while <Subject 2> stands on screen right facing left, about two steps apart. Both are already inside the clearly visible stone boundary, each holding exactly one drawn straight sword in his anatomical right hand. Empty scabbards stay attached at their left hips. Keep both heads, feet, sword tips and the space between them visible throughout the exchange. The woman and other spectators remain outside the frame. Snow rests on the platform, railings and pavilion roof, and fine flakes continue falling without obscuring the fighters.\nDuring the first two seconds, the men briefly acknowledge one another with a small sword salute, then settle into balanced guards. The younger man's eyes are intent, jaw set and weight slightly forward; the older man's gaze is focused and shoulders relaxed. This short preparation immediately leads into actual action rather than becoming a standing pose for the whole clip. Their boots lightly compress the thin snow; fabric follows their weight shifts.\nFrom two to five seconds, the younger man pushes from his back foot, advances one controlled step and extends his right arm in a straight thrust toward the older man's upper-torso line. Show the sword tip traveling from left to right along a continuous readable path. The older man reacts after the thrust begins: he moves a half-step toward the background, away from the direct line, and brings his own right-hand blade diagonally across to meet and redirect the attacking blade outward. The swords make one visible contact in the open space between them, synchronized with a single sharp metal ring. Neither blade passes through a body or changes hands.\nFrom five to eight seconds, the redirected thrust finishes beside the defender rather than inside him. The younger man bends his elbow, retrieves his blade and shifts weight back to regain balance. The older man releases the pressure and returns to a low controlled guard without adding a second attack. A small spray of powder snow follows their foot placement; robe hems and ponytails settle naturally after the movement. The younger man's expression briefly registers surprise, while the older man remains attentive rather than triumphant.\nFor the final two seconds, both men stand securely about one and a half steps apart, younger man left and older man right, swords separated and held low enough to make the completed exchange clear. Settle into the recovered positions in <Picture 2> and hold them for continuity. The intervening thrust, visible parry contact and recovery must occur before reaching this ending. No spoken lines, slow motion, large magical bursts, blood, extra weapons, body doubling, camera orbit, subtitles or black ending.\n\noverall_soundscape:\nContinuous winter wind and distant pine movement, close boot scrapes and snow crunch, cloth movement and one synchronized metal contact. Breathing is restrained; there is no dialogue, narration, chanting or yelling.\n\nnon_diegetic_music:\nA restrained but energetic instrumental battle motif begins with low drums, clipped pipa notes and rhythmic strings around 96 BPM. Keep a steady pulse under the exchange, briefly leaving sonic space for the blade contact. Avoid vocals and exaggerated heroic swells. Continue the rhythmic phrase into the next combat clip instead of resolving or restarting every ten seconds.\n",
         "width": 1280,
         "height": 736,
         "length": 243,
@@ -1792,7 +2027,7 @@
     {
       "id": 17,
       "type": "LoadImage",
-      "title": "连续片段：上一段实际末帧（首段不启用）",
+      "title": "首帧或连续性引导图（实际配置绑定）",
       "pos": [
         1360,
         1000
@@ -1804,7 +2039,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 27,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -1821,7 +2056,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            39
+            38
           ],
           "slot_index": 0
         },
@@ -1836,17 +2071,17 @@
         "Node name for S&R": "LoadImage"
       },
       "widgets_values": [
-        "S01_G01_attempt_01_end_00001_.png",
+        "S05_G01_双人持剑开场_v2.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "S01_G01_attempt_01_end_00001_.png"
+        "image": "S05_G01_双人持剑开场_v2.png"
       }
     },
     {
       "id": 18,
       "type": "MiniMaxH3AddGuide",
-      "title": "连续性分支（首段旁路）",
+      "title": "H3 画面引导（当前第0帧）",
       "pos": [
         1360,
         1410
@@ -1858,18 +2093,18 @@
       "flags": {
         "collapsed": false
       },
-      "order": 28,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
           "name": "positive",
           "type": "CONDITIONING",
-          "link": 36
+          "link": 35
         },
         {
           "name": "latent",
           "type": "LATENT",
-          "link": 37
+          "link": 36
         },
         {
           "name": "frame_idx",
@@ -1882,12 +2117,12 @@
         {
           "name": "vae",
           "type": "VAE",
-          "link": 38
+          "link": 37
         },
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 39
+          "link": 38
         }
       ],
       "outputs": [
@@ -1895,8 +2130,7 @@
           "name": "positive",
           "type": "CONDITIONING",
           "links": [
-            14,
-            17
+            51
           ],
           "slot_index": 0
         }
@@ -1909,6 +2143,128 @@
       ],
       "widgets_values_named": {
         "frame_idx": 0
+      }
+    },
+    {
+      "id": 72,
+      "type": "LoadImage",
+      "title": "可选结束关键帧（按片段配置启用）",
+      "pos": [
+        1360,
+        1720
+      ],
+      "size": [
+        600,
+        340
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "COMBO",
+          "link": null,
+          "widget": {
+            "name": "image"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            54
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "S05_G01_试剑收势关键帧_v1.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "S05_G01_试剑收势关键帧_v1.png"
+      }
+    },
+    {
+      "id": 73,
+      "type": "MiniMaxH3AddGuide",
+      "title": "H3 可选结束画面引导",
+      "pos": [
+        1360,
+        2130
+      ],
+      "size": [
+        600,
+        240
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 51
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "link": 52
+        },
+        {
+          "name": "frame_idx",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "frame_idx"
+          }
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 53
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 54
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            13,
+            16
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MiniMaxH3AddGuide"
+      },
+      "widgets_values": [
+        239
+      ],
+      "widgets_values_named": {
+        "frame_idx": 239
       }
     },
     {
@@ -1926,13 +2282,13 @@
       "flags": {
         "collapsed": false
       },
-      "order": 29,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
           "name": "conditioning",
           "type": "CONDITIONING",
-          "link": 14
+          "link": 13
         }
       ],
       "outputs": [
@@ -1940,7 +2296,7 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            18
+            17
           ],
           "slot_index": 0
         }
@@ -1966,7 +2322,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 30,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -1983,7 +2339,7 @@
           "name": "SAMPLER",
           "type": "SAMPLER",
           "links": [
-            21
+            20
           ],
           "slot_index": 0
         }
@@ -2013,13 +2369,13 @@
       "flags": {
         "collapsed": false
       },
-      "order": 31,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 15
+          "link": 14
         },
         {
           "name": "scheduler",
@@ -2051,7 +2407,7 @@
           "name": "SIGMAS",
           "type": "SIGMAS",
           "links": [
-            22
+            21
           ],
           "slot_index": 0
         }
@@ -2085,43 +2441,43 @@
       "flags": {
         "collapsed": false
       },
-      "order": 32,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 16
+          "link": 15
         },
         {
           "name": "positive",
           "type": "CONDITIONING",
-          "link": 17
+          "link": 16
         },
         {
           "name": "negative",
           "type": "CONDITIONING",
-          "link": 18
+          "link": 17
         },
         {
           "name": "vae",
           "type": "VAE",
-          "link": 19
+          "link": 18
         },
         {
           "name": "latent_image",
           "type": "LATENT",
-          "link": 20
+          "link": 19
         },
         {
           "name": "sampler",
           "type": "SAMPLER",
-          "link": 21
+          "link": 20
         },
         {
           "name": "sigmas",
           "type": "SIGMAS",
-          "link": 22
+          "link": 21
         },
         {
           "name": "seed",
@@ -2201,7 +2557,7 @@
           "name": "LATENT",
           "type": "LATENT",
           "links": [
-            23
+            22
           ],
           "slot_index": 0
         }
@@ -2210,7 +2566,7 @@
         "Node name for S&R": "SelfLiftH3Sampler"
       },
       "widgets_values": [
-        2026091932,
+        2026091905,
         "fixed",
         1.0,
         2,
@@ -2222,7 +2578,7 @@
         true
       ],
       "widgets_values_named": {
-        "seed": 2026091932,
+        "seed": 2026091905,
         "control_after_generate": "fixed",
         "cfg": 1.0,
         "transition_step": 2,
@@ -2249,13 +2605,13 @@
       "flags": {
         "collapsed": false
       },
-      "order": 33,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
           "name": "av_latent",
           "type": "LATENT",
-          "link": 23
+          "link": 22
         }
       ],
       "outputs": [
@@ -2263,7 +2619,7 @@
           "name": "video_latent",
           "type": "LATENT",
           "links": [
-            24
+            23
           ],
           "slot_index": 0
         },
@@ -2271,7 +2627,7 @@
           "name": "audio_latent",
           "type": "LATENT",
           "links": [
-            26
+            25
           ],
           "slot_index": 1
         }
@@ -2297,18 +2653,18 @@
       "flags": {
         "collapsed": false
       },
-      "order": 34,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
           "name": "samples",
           "type": "LATENT",
-          "link": 24
+          "link": 23
         },
         {
           "name": "vae",
           "type": "VAE",
-          "link": 25
+          "link": 24
         },
         {
           "name": "tile_size",
@@ -2348,7 +2704,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            28
+            27
           ],
           "slot_index": 0
         }
@@ -2384,18 +2740,18 @@
       "flags": {
         "collapsed": false
       },
-      "order": 35,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
           "name": "samples",
           "type": "LATENT",
-          "link": 26
+          "link": 25
         },
         {
           "name": "vae",
           "type": "VAE",
-          "link": 27
+          "link": 26
         }
       ],
       "outputs": [
@@ -2403,7 +2759,7 @@
           "name": "AUDIO",
           "type": "AUDIO",
           "links": [
-            30
+            29
           ],
           "slot_index": 0
         }
@@ -2429,13 +2785,13 @@
       "flags": {
         "collapsed": false
       },
-      "order": 36,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 28
+          "link": 27
         },
         {
           "name": "batch_index",
@@ -2459,8 +2815,8 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            29,
-            34
+            28,
+            33
           ],
           "slot_index": 0
         }
@@ -2492,13 +2848,13 @@
       "flags": {
         "collapsed": false
       },
-      "order": 37,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 29
+          "link": 28
         },
         {
           "name": "upscale_method",
@@ -2538,7 +2894,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            31
+            30
           ],
           "slot_index": 0
         }
@@ -2574,13 +2930,13 @@
       "flags": {
         "collapsed": false
       },
-      "order": 38,
+      "order": 44,
       "mode": 0,
       "inputs": [
         {
           "name": "audio",
           "type": "AUDIO",
-          "link": 30
+          "link": 29
         },
         {
           "name": "start_index",
@@ -2604,7 +2960,7 @@
           "name": "AUDIO",
           "type": "AUDIO",
           "links": [
-            32
+            31
           ],
           "slot_index": 0
         }
@@ -2636,13 +2992,13 @@
       "flags": {
         "collapsed": false
       },
-      "order": 39,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 31
+          "link": 30
         },
         {
           "name": "fps",
@@ -2655,7 +3011,7 @@
         {
           "name": "audio",
           "type": "AUDIO",
-          "link": 32
+          "link": 31
         },
         {
           "name": "bit_depth",
@@ -2679,7 +3035,7 @@
           "name": "VIDEO",
           "type": "VIDEO",
           "links": [
-            33
+            32
           ],
           "slot_index": 0
         }
@@ -2713,13 +3069,13 @@
       "flags": {
         "collapsed": false
       },
-      "order": 40,
+      "order": 46,
       "mode": 0,
       "inputs": [
         {
           "name": "video",
           "type": "VIDEO",
-          "link": 33
+          "link": 32
         },
         {
           "name": "filename_prefix",
@@ -2758,12 +3114,12 @@
         "Node name for S&R": "SaveVideo"
       },
       "widgets_values": [
-        "borrow_snow_20260919_r03/S01_G02/attempt_02",
+        "borrow_snow_20260919_r03/S05_G01/attempt_01",
         "mp4",
         "h264"
       ],
       "widgets_values_named": {
-        "filename_prefix": "borrow_snow_20260919_r03/S01_G02/attempt_02",
+        "filename_prefix": "borrow_snow_20260919_r03/S05_G01/attempt_01",
         "format": "mp4",
         "format.codec": "h264"
       }
@@ -2783,13 +3139,13 @@
       "flags": {
         "collapsed": false
       },
-      "order": 41,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 34
+          "link": 33
         },
         {
           "name": "batch_index",
@@ -2813,7 +3169,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            35
+            34
           ],
           "slot_index": 0
         }
@@ -2845,13 +3201,13 @@
       "flags": {
         "collapsed": false
       },
-      "order": 42,
+      "order": 48,
       "mode": 0,
       "inputs": [
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 35
+          "link": 34
         },
         {
           "name": "filename_prefix",
@@ -2874,11 +3230,34 @@
         "Node name for S&R": "SaveImage"
       },
       "widgets_values": [
-        "borrow_snow_20260919_r03/guides/S01_G02_attempt_02_end"
+        "borrow_snow_20260919_r03/guides/S05_G01_attempt_01_end"
       ],
       "widgets_values_named": {
-        "filename_prefix": "borrow_snow_20260919_r03/guides/S01_G02_attempt_02_end"
+        "filename_prefix": "borrow_snow_20260919_r03/guides/S05_G01_attempt_01_end"
       }
+    },
+    {
+      "id": 62,
+      "type": "Note",
+      "pos": [
+        0,
+        -360
+      ],
+      "size": [
+        600,
+        300
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "当前预览：S05_G01\n场景类型：action\n主情绪：试探变锋芒\n武戏LoRA：开启\n公共自然肤质LoRA：开启\n已完成片段保留原配置；后续文戏和武戏默认启用自然肤质分支。\n场景配置在project.json，片段覆盖在main/segments.json。LoRA模型/强度及开关可在本主图编辑，执行前同步配置。"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -2892,7 +3271,7 @@
     ],
     [
       2,
-      2,
+      61,
       0,
       3,
       0,
@@ -2980,22 +3359,14 @@
     ],
     [
       13,
-      15,
-      0,
-      16,
-      10,
-      "IMAGE"
-    ],
-    [
-      14,
-      18,
+      73,
       0,
       19,
       0,
       "CONDITIONING"
     ],
     [
-      15,
+      14,
       5,
       0,
       21,
@@ -3003,7 +3374,7 @@
       "MODEL"
     ],
     [
-      16,
+      15,
       5,
       0,
       22,
@@ -3011,15 +3382,15 @@
       "MODEL"
     ],
     [
-      17,
-      18,
+      16,
+      73,
       0,
       22,
       1,
       "CONDITIONING"
     ],
     [
-      18,
+      17,
       19,
       0,
       22,
@@ -3027,7 +3398,7 @@
       "CONDITIONING"
     ],
     [
-      19,
+      18,
       7,
       0,
       22,
@@ -3035,7 +3406,7 @@
       "VAE"
     ],
     [
-      20,
+      19,
       16,
       1,
       22,
@@ -3043,7 +3414,7 @@
       "LATENT"
     ],
     [
-      21,
+      20,
       20,
       0,
       22,
@@ -3051,7 +3422,7 @@
       "SAMPLER"
     ],
     [
-      22,
+      21,
       21,
       0,
       22,
@@ -3059,7 +3430,7 @@
       "SIGMAS"
     ],
     [
-      23,
+      22,
       22,
       0,
       23,
@@ -3067,7 +3438,7 @@
       "LATENT"
     ],
     [
-      24,
+      23,
       23,
       0,
       24,
@@ -3075,7 +3446,7 @@
       "LATENT"
     ],
     [
-      25,
+      24,
       7,
       0,
       24,
@@ -3083,7 +3454,7 @@
       "VAE"
     ],
     [
-      26,
+      25,
       23,
       1,
       25,
@@ -3091,7 +3462,7 @@
       "LATENT"
     ],
     [
-      27,
+      26,
       8,
       0,
       25,
@@ -3099,7 +3470,7 @@
       "VAE"
     ],
     [
-      28,
+      27,
       24,
       0,
       26,
@@ -3107,7 +3478,7 @@
       "IMAGE"
     ],
     [
-      29,
+      28,
       26,
       0,
       27,
@@ -3115,7 +3486,7 @@
       "IMAGE"
     ],
     [
-      30,
+      29,
       25,
       0,
       28,
@@ -3123,7 +3494,7 @@
       "AUDIO"
     ],
     [
-      31,
+      30,
       27,
       0,
       29,
@@ -3131,7 +3502,7 @@
       "IMAGE"
     ],
     [
-      32,
+      31,
       28,
       0,
       29,
@@ -3139,7 +3510,7 @@
       "AUDIO"
     ],
     [
-      33,
+      32,
       29,
       0,
       30,
@@ -3147,7 +3518,7 @@
       "VIDEO"
     ],
     [
-      34,
+      33,
       26,
       0,
       31,
@@ -3155,7 +3526,7 @@
       "IMAGE"
     ],
     [
-      35,
+      34,
       31,
       0,
       32,
@@ -3163,7 +3534,7 @@
       "IMAGE"
     ],
     [
-      36,
+      35,
       16,
       0,
       18,
@@ -3171,7 +3542,7 @@
       "CONDITIONING"
     ],
     [
-      37,
+      36,
       16,
       1,
       18,
@@ -3179,7 +3550,7 @@
       "LATENT"
     ],
     [
-      38,
+      37,
       7,
       0,
       18,
@@ -3187,7 +3558,7 @@
       "VAE"
     ],
     [
-      39,
+      38,
       17,
       0,
       18,
@@ -3195,7 +3566,7 @@
       "IMAGE"
     ],
     [
-      40,
+      39,
       40,
       0,
       50,
@@ -3203,7 +3574,7 @@
       "IMAGE"
     ],
     [
-      41,
+      40,
       41,
       0,
       51,
@@ -3211,7 +3582,7 @@
       "IMAGE"
     ],
     [
-      42,
+      41,
       42,
       0,
       52,
@@ -3219,7 +3590,7 @@
       "IMAGE"
     ],
     [
-      43,
+      42,
       43,
       0,
       53,
@@ -3227,7 +3598,7 @@
       "IMAGE"
     ],
     [
-      44,
+      43,
       44,
       0,
       54,
@@ -3235,22 +3606,102 @@
       "IMAGE"
     ],
     [
-      45,
+      44,
       45,
       0,
       55,
       0,
       "IMAGE"
+    ],
+    [
+      45,
+      71,
+      0,
+      60,
+      0,
+      "MODEL"
+    ],
+    [
+      46,
+      71,
+      0,
+      61,
+      1,
+      "*"
+    ],
+    [
+      47,
+      60,
+      0,
+      61,
+      2,
+      "*"
+    ],
+    [
+      48,
+      2,
+      0,
+      70,
+      0,
+      "MODEL"
+    ],
+    [
+      49,
+      2,
+      0,
+      71,
+      1,
+      "*"
+    ],
+    [
+      50,
+      70,
+      0,
+      71,
+      2,
+      "*"
+    ],
+    [
+      51,
+      18,
+      0,
+      73,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      52,
+      16,
+      1,
+      73,
+      1,
+      "LATENT"
+    ],
+    [
+      53,
+      7,
+      0,
+      73,
+      3,
+      "VAE"
+    ],
+    [
+      54,
+      72,
+      0,
+      73,
+      4,
+      "IMAGE"
     ]
   ],
   "groups": [
     {
-      "title": "模型与加速",
+      "title": "模型、加速与文武戏开关",
       "bounding": [
         -20,
         10,
         640,
-        2580
+        3820
       ],
       "color": "#3f6278",
       "font_size": 24,
@@ -3262,19 +3713,19 @@
         660,
         10,
         640,
-        3100
+        2520
       ],
       "color": "#3f6278",
       "font_size": 24,
       "flags": {}
     },
     {
-      "title": "条件与可选末帧引导",
+      "title": "条件与可选首尾帧引导",
       "bounding": [
         1340,
         10,
         640,
-        1740
+        2460
       ],
       "color": "#3f6278",
       "font_size": 24,
@@ -3314,7 +3765,31 @@
         80
       ]
     },
-    "preview_segment": "S01_G02"
+    "preview_segment": "S05_G01",
+    "scene_strategy": {
+      "scene_type": "action",
+      "main_emotion": "试探变锋芒",
+      "action_lora": {
+        "enabled": true,
+        "model": "H3\\motion\\H3_Combat_V2.safetensors",
+        "strength": 0.5
+      },
+      "appearance_lora": {
+        "enabled": true,
+        "model": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength": 0.6,
+        "trigger": "r34l1sm",
+        "sha256": "acc529601d2da117fb81179e76c56e488a3beab1171659d305f04fa3655b787e",
+        "source": "https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA",
+        "revision": "039cc8579d7aa357a882d7f4111b25da4f72dccc",
+        "validation": "download_sha256_and_tensor_layout_verified_render_unverified",
+        "default_scope": [
+          "drama",
+          "action",
+          "mixed"
+        ]
+      }
+    }
   },
   "version": 0.4
 }

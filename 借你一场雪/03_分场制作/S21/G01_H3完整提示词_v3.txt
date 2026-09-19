@@ -1,0 +1,28 @@
+subject_definitions:
+<Subject 1> is Shen Zhiwei, the established 18-year-old adult woman, preserving her face, half-tied long black hair, white jade pin, ivory dress, pale green outer robe and sash; she carries no weapon, as shown by the single-person portrait <Picture 1>.
+<Subject 2> is Xie Linchuan, the established adult man around thirty, preserving his face, long half-tied black hair, silver crown, white inner robe and blue-gray embroidered outer robe; he carries one straight jian with a dark-blue left-hip scabbard, as shown by the single-person portrait <Picture 2>.
+<Subject 4> is Lu Xingzhou, the established 18-year-old adult male disciple, preserving his youthful face, high black ponytail, silver band, charcoal layers and burgundy robe; he carries one straight jian with a dark left-hip scabbard and red tassel, as shown by the single-person portrait <Picture 3>. His revised identity has a short rounded face, fuller cheeks, round-open eyes, gently curved brows, a short nose, fuller lips and an asymmetrical side fringe; retain this distinct young adult face.
+<Subject 8> is the frozen lake and low ice practice platform with a left approach, safe snowy shore, boulder, bamboo, pine and distant winter mountains, from the empty environment <Picture 4>.
+
+summary:
+[reference generation] The younger disciple leaves with dignity, while the couple quietly reconnects and the story closes in falling snow. Each individual image defines one character; the environment reference defines the winter setting.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+<Subject 2> (appears in [Shot 1]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+<Subject 4> (appears in [Shot 1]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+<Subject 8> (appears in [Shot 1]): fully_preserved - Preserve the defined character identity and clothing or environment while introducing the described action and framing.
+
+detailed_description:
+r34l1sm. Retain the established semi-realistic Chinese guofeng characters, soft natural skin shading and gentle winter light.
+[Shot 1] Exactly three distinct people initially; after the planned departure only the couple remains, with zero extras. An eye-level medium-wide view continues the snowy shore of <Subject 8> after the conversation. <Subject 4> stands on screen left near the path away, while <Subject 1> and <Subject 2> stand together to the right. All three keep their existing faces, hair and clothing. Both men's swords remain sheathed at the left hip. The woman is unarmed. Keep the path, snow-dusted boulder, pine and quiet frozen lake readable in the background, with fine flakes still drifting through the frame.
+During the first three seconds the younger man looks down, uses his empty hands to straighten and secure the dark-red tassel on his own scabbard, then lets his hands fall. This small practical movement shows him gathering himself after disappointment. His mouth stays closed and his expression remains subdued; there is no forced grin or theatrical sobbing. A soft cord and robe rustle accompanies the action. The older man and woman wait quietly rather than making a display of affection in front of him.
+From three to six seconds the younger man turns toward the left-side shore path and walks away at a measured pace. His back and high ponytail remain recognizable as he moves out of frame. Keep his body continuous through the turn, with the scabbard attached to the same hip. Footsteps compress the snow and gradually become softer. The camera holds its axis instead of following him into a new scene, leaving the couple visible on the right.
+From six to eight seconds the woman watches his departure for a brief beat, then reaches her left hand toward the older man's empty right hand at waist height. He gently receives it, keeping his sword sheathed. Show one small natural hand contact, without multiple extra reaches or interlaced fingers changing shape. Her shoulders relax and she turns her eyes toward him. He answers with a quiet, restrained smile.
+For the final two seconds, the couple shares a brief warm glance, then looks toward the snowy landscape with their hands resting together low between them. The younger man has fully left the picture. Hold a calm readable ending; do not reset the shot to a character reference pose. The weather and pale warm afternoon light remain stable. No dialogue, narrator, singing, extra figures, repeated departure, titles, subtitles, watermark or cut to black.
+
+overall_soundscape:
+Soft winter wind and faint pine or bamboo rustle continue with the physical sounds specified in each shot. Only explicitly written dialogue is audible; no unrelated voices or narration.
+
+non_diegetic_music:
+Return to the gentle guqin and bamboo flute theme around 68 BPM, clearly audible but delicate. Let departing footsteps remain audible over the music. Ease the phrase into a soft resolved ending and fade music and ambience gradually during the last second, without adding vocals.

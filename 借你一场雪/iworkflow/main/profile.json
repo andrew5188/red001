@@ -65,5 +65,46 @@
       "sha256": "15dc484924ed2edb835929377738051c4b5fc259cab05b8a567e24ebc86eb3c2",
       "record": "iworkflow/main/patches/patch_record.json"
     }
-  ]
+  ],
+  "scene_strategy": {
+    "default_scene_type": "drama",
+    "action_lora": {
+      "enabled": false,
+      "model": "H3\\motion\\H3_Combat_V2.safetensors",
+      "strength": 0.5
+    },
+    "loader_node": "60",
+    "switch_node": "61",
+    "strength_note": "0.5 is an untested starting candidate; current project keeps branch disabled.",
+    "candidates": [
+      {
+        "model": "H3\\motion\\H3_Combat_V2.safetensors",
+        "base_model": "minimax_h3",
+        "validation": "metadata_checked_render_unverified"
+      },
+      {
+        "model": "H3\\motion\\H3_Motion_BoosterV2.safetensors",
+        "base_model": "minimax_h3",
+        "validation": "metadata_checked_render_unverified"
+      }
+    ],
+    "appearance_lora": {
+      "enabled": true,
+      "model": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+      "strength": 0.6,
+      "trigger": "r34l1sm",
+      "sha256": "acc529601d2da117fb81179e76c56e488a3beab1171659d305f04fa3655b787e",
+      "source": "https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA",
+      "revision": "039cc8579d7aa357a882d7f4111b25da4f72dccc",
+      "validation": "download_sha256_and_tensor_layout_verified_render_unverified",
+      "default_scope": [
+        "drama",
+        "action",
+        "mixed"
+      ]
+    },
+    "appearance_loader_node": "70",
+    "appearance_switch_node": "71"
+  },
+  "lora_directory": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\models\\loras"
 }

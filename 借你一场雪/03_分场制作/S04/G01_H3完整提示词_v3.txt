@@ -1,0 +1,24 @@
+subject_definitions:
+<Subject 1> is Shen Zhiwei, the single 18-year-old adult woman in <Picture 1>, with her established face, long half-tied black hair and white jade pin, ivory cross-collar dress, pale green outer robe and sash. Preserve her semi-realistic guofeng identity and clothing.
+<Subject 5> is the empty winter pavilion-side corridor in <Picture 2>, with timber pillars on the left, snow-dusted paving, snow-capped stone balustrades and pine, distant snowy mountains and pale warm afternoon light.
+
+summary:
+[reference generation] In a ten-second close conversation shot, <Subject 1> sets her own boundary and states the sparring rules, then indicates the nearby snowy practice area. <Subject 5> preserves the current corridor and winter lighting. Only the woman is visible.
+
+retention_analysis:
+<Subject 1> (appears in [Shot 1]): fully_preserved - Keep her established face, hair, outfit and adult proportions while adding the firm spoken response.
+<Subject 5> (appears in [Shot 1]): fully_preserved - Retain the corridor material, snow and afternoon light in a closer framing.
+
+detailed_description:
+r34l1sm. Keep the fixed semi-realistic Chinese guofeng rendering with soft natural skin, gently idealized facial proportions, fine hair and cloth, and restrained winter highlights.
+[Shot 1] Exactly one person remain visible: <Subject 1>; zero passersby or extras. Cut to a stable eye-level medium close-up of <Subject 1> in <Subject 5>. This is a deliberate reaction shot in the same snowy corridor, not an attempt to preserve the preceding three-person frame. Frame her from the waist upward, slightly right of center, with her face turned gently toward screen left where the younger disciple now stands off-screen. Her ivory collar, pale green robe and white jade hair ornament remain recognizable. A timber pillar lies at the left edge, and the background contains the same snow-capped stone railing, softly layered mountains and fine falling flakes. Keep enough depth and background clarity for the winter setting to remain visible without distracting from her face.
+During the first second, she takes one calm breath and settles her shoulders. Her former romantic smile is gone, but her expression is steady rather than angry. Her eyes hold on the off-screen listener. Both hands start together at her lower waist, with no weapon or glowing magic present. A faint sleeve rustle accompanies her small posture adjustment. Do not add the two men to this composition, even as reflections or extra faces in the background.
+From one to four seconds, <Subject 1> (S1), using her established clear warm adult female Mandarin voice with measured resolve, says, <d>[Chinese] 我不是赌注.</d> She lifts her chin only slightly and keeps her lips and eyes easy to read. The line is a personal boundary, delivered without shouting, a teasing smile or exaggerated scorn. Leave a brief pause after the statement, allowing her still gaze to hold its meaning.
+From five to eight seconds, she continues in the same calm firm voice, <d>[Chinese] 三轮试剑, 点到即止.</d> Her mouth follows only these words. Her hands remain quiet during most of the speech so the performance is focused and natural. No man replies off-screen and no narrator explains the rule.
+As the second line ends, she turns her eyes first, then her head a small amount toward the open snowy practice area on screen right. Her right hand rises gently from her waist and indicates that direction with an open palm below shoulder level. The movement is a simple invitation to relocate, not a spell. In the final second her hand settles and her expression remains composed and decisive. Hold the same framing through the end, with snow continuing outside the shelter. Avoid extra dialogue, gestures, text, captions, watermarks, magical effects or a fade to black.
+
+overall_soundscape:
+Soft wind and faint pine rustle persist. A subtle sleeve sound accompanies her final hand indication. Only the specified female dialogue is audible; no other speech, singing or combat noise.
+
+non_diegetic_music:
+Quiet guqin and a sustained low string tone continue below the dialogue. Ease the tension slightly as she establishes the boundary; leave a restrained unresolved ending into the first round, without a loud flourish or lyrics.

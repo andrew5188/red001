@@ -1,0 +1,69 @@
+{
+  "width": 1280,
+  "height": 720,
+  "fps": 24.0,
+  "has_audio": true,
+  "frames": 240,
+  "sampled_times_seconds": [
+    0.0,
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0,
+    8.5,
+    9.0,
+    9.5,
+    9.958333333333334
+  ],
+  "audio_seconds": 10.016,
+  "audio_peak": 0.9416553974151611,
+  "audio_rms_db": -22.476891092396972,
+  "clipped_fraction": 0.0,
+  "technical_pass": true,
+  "visual_review": "passed",
+  "dialogue_and_music_review": "unverified_subjective_audio; waived under first-video-only policy",
+  "visual_evidence": "Inspected 21 half-second samples plus larger frames at 0,4,7,9.96s. Two consistent adult characters, snow-covered roof/railings/pine/mountains and falling flakes throughout, no returning crystal or duplicate people. Final widening reveals low joined hands.",
+  "performance_review": {
+    "status": "passed",
+    "observations": [
+      {
+        "time": "0-0.5s",
+        "observation": "Opening mutual gaze and faint smiles match actual G04 end."
+      },
+      {
+        "time": "1-3s",
+        "observation": "Both briefly turn toward the snowy foreground; this is a small staging deviation from only the woman looking away."
+      },
+      {
+        "time": "3.5-5.5s",
+        "observation": "Mutual attention returns with visible warm smiles and mouth movement. Speaker identity and dialogue cannot be certified from silent frames."
+      },
+      {
+        "time": "6-7.5s",
+        "observation": "Woman lowers eyes and chin with a closed-lip smile; man watches her with relaxed smile."
+      },
+      {
+        "time": "8-9.96s",
+        "observation": "Framing widens, both look outward calmly; waist-level joined hands visible."
+      }
+    ],
+    "deviations": "Early outward glance includes both actors. Emotional direction remains warm and readable; exact small hand squeeze is not independently distinguishable from sampled frames."
+  },
+  "continuity_review": {
+    "status": "passed",
+    "evidence": "Compared G04 frame239 with G05 frame0: matching mutual gaze, faces, shoulder positions, snow and low cropped hands; no reach or crystal reset."
+  },
+  "reviewed_at": "2026-09-19T15:36:31.960996+08:00"
+}

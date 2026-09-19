@@ -1,0 +1,142 @@
+{
+  "status": "success",
+  "content_revision": 3,
+  "content_snapshot": {
+    "revision": 3,
+    "requirements_sha256": "e75669ddfef6e06c4cfe6bc859426aacc97ebfdfdc7f7fd5ca4335c8902847fd",
+    "files": {
+      "00_故事大纲\\选定大纲_v2.md": "94d9cbbaab3f2587d2d17a908769eac109d85a9cb99dac6c026d774a4f9eed3f",
+      "01_完整剧本\\完整剧本_v4.md": "be1c54908ec1441927cb7e938f08e262451b379a44a8ee26cb1668c836459456",
+      "03_分场制作\\S01\\G04_H3完整提示词_v4.txt": "8c4b122965dd5aaf7c80e3a8d03ff6902989878aff63b237e6f922a67e7726f7",
+      "iworkflow\\main\\segments.json": "66379a4e1f9a1fe4493c8c89e8a361bb3dfc8e5e683440f1b55eda82452db5a7",
+      "iworkflow\\main\\profile.json": "703aaf40f279a85119516306fc9c72bf73eec404328e86ab4dd7cd0f0c50ec80",
+      "iworkflow\\main.ui.json": "c034c3c8ef620008acd1129ed4c7eda37618d8fa0fa9674f84c04520c38f36b5",
+      "iworkflow\\main\\main.api.json": "9b4ccd855830fe313d648dfa527fc3e55972cdfc905d7204d3e4c173cf9bd957",
+      "02_角色库\\CH01_沈知微_白底三视图_v2.png": "28edb42ddf618be3668ad490084cda18e57e6f6a347b21a30fff1509401f7335",
+      "02_角色库\\CH02_谢临川_白底三视图_v2.png": "6f136d59863e60d66aeacb06dc3ca2338bff97609bd795b671b8bf32bc22a5d2",
+      "03_分场制作\\S01\\SC01_山亭_雪景无人母图_v2.png": "d55ca25b8e18d1a1373620684601417a5b22e3569c11fd4b6b88bcb760a8cc3d",
+      "03_分场制作\\S01\\G03\\revision_03\\attempt_01\\S01_G03_attempt_01_end_00001_.png": "2826a13589a171597a781224988ac855b267cb15698edf845ddb4142a56c7dd3"
+    },
+    "performance_sha256": "4df5772ceeace4ffbf7d5d7fa230a972fc4ccd000efcc867524676abf4c2c36d",
+    "api_sha256": "e28244c86c5fa9ec606d434eb84bda6958160287b2d3de0a069e240b7a83910f"
+  },
+  "scene": "S01",
+  "group": "G04",
+  "attempt": 1,
+  "template": {
+    "api_sha256": "9b4ccd855830fe313d648dfa527fc3e55972cdfc905d7204d3e4c173cf9bd957",
+    "ui_sha256": "c034c3c8ef620008acd1129ed4c7eda37618d8fa0fa9674f84c04520c38f36b5",
+    "preview_segment": "S01_G04",
+    "template_version": 2,
+    "submitted": false,
+    "frontend": "pending"
+  },
+  "inputs": {
+    "prompt": "03_分场制作/S01/G04_H3完整提示词_v4.txt",
+    "references": [
+      {
+        "image": "CH01_沈知微_白底三视图_v2.png",
+        "source_path": "02_角色库/CH01_沈知微_白底三视图_v2.png",
+        "source_sha256": "28edb42ddf618be3668ad490084cda18e57e6f6a347b21a30fff1509401f7335",
+        "resize_width": 768
+      },
+      {
+        "image": "CH02_谢临川_白底三视图_v2.png",
+        "source_path": "02_角色库/CH02_谢临川_白底三视图_v2.png",
+        "source_sha256": "6f136d59863e60d66aeacb06dc3ca2338bff97609bd795b671b8bf32bc22a5d2",
+        "resize_width": 768
+      },
+      {
+        "image": "SC01_山亭_雪景无人母图_v2.png",
+        "source_path": "03_分场制作/S01/SC01_山亭_雪景无人母图_v2.png",
+        "source_sha256": "d55ca25b8e18d1a1373620684601417a5b22e3569c11fd4b6b88bcb760a8cc3d",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091934,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "previous",
+      "predecessor": "S01_G03"
+    },
+    "content_revision": 3
+  },
+  "profile": {
+    "engine": "h3_ref2va",
+    "output": {
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "directory": "04_全片输出"
+    },
+    "comfy_output_prefix": "borrow_snow_20260919_r03",
+    "reference_slots": [
+      {
+        "load": "10",
+        "resize": "13"
+      },
+      {
+        "load": "11",
+        "resize": "14"
+      },
+      {
+        "load": "12",
+        "resize": "15"
+      },
+      {
+        "load": "40",
+        "resize": "50"
+      },
+      {
+        "load": "41",
+        "resize": "51"
+      },
+      {
+        "load": "42",
+        "resize": "52"
+      },
+      {
+        "load": "43",
+        "resize": "53"
+      },
+      {
+        "load": "44",
+        "resize": "54"
+      },
+      {
+        "load": "45",
+        "resize": "55"
+      }
+    ],
+    "sampler": {
+      "steps": 4,
+      "transition_step": 2,
+      "lowres_scale": 0.75,
+      "cfg": 1.0,
+      "rho": 0.0,
+      "highres_tiling": true
+    },
+    "limits": {
+      "max_references": 9,
+      "min_seconds": 4,
+      "max_seconds": 15
+    },
+    "notes": "Experimental highres tiling: full audio/references, first tile audio prediction retained. Must review video and sound.",
+    "runtime_fixes": [
+      {
+        "target": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui-SelfLift\\h3_tiling.py",
+        "sha256": "15dc484924ed2edb835929377738051c4b5fc259cab05b8a567e24ebc86eb3c2",
+        "record": "iworkflow/main/patches/patch_record.json"
+      }
+    ]
+  },
+  "guide": {
+    "predecessor": "S01_G03",
+    "file": "03_分场制作\\S01\\G03\\revision_03\\attempt_01\\S01_G03_attempt_01_end_00001_.png",
+    "sha256": "2826a13589a171597a781224988ac855b267cb15698edf845ddb4142a56c7dd3",
+    "input_name": "S01_G03_attempt_01_end_00001_.png"
+  },
+  "prompt_id": "ea3228d5-464c-4a80-b82c-bf990c05cd8a",
+  "outputs": [],
+  "submitted_at": "2026-09-19T14:37:33.969268+08:00"
+}

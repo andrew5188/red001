@@ -1,0 +1,222 @@
+{
+  "status": "success",
+  "content_revision": 3,
+  "content_snapshot": {
+    "revision": 3,
+    "requirements_sha256": "e168dc61441d4da61d2aa7f28e634a8a64beb31e61539ef5be9d24bd1ff98c42",
+    "files": {
+      "00_故事大纲\\续篇20场大纲_已确认_v3.md": "fa848863d0b3771fb98c0205484a263703634e05b882dad2d4cc17e9f657c02b",
+      "01_完整剧本\\续篇完整剧本_v8.md": "f8e94ad926840b5674e3c1bf862906e4a1aa646ec0e2018967c1e3a5610f103e",
+      "03_分场制作\\S03\\G01_H3完整提示词_v7.txt": "206c0d0b0f89e5bca93a994df0f3c486b0d40b8d3eca571cf7646b1f022af681",
+      "iworkflow\\main\\segments.json": "a1b7975cdc30f15d76505bda92c11c957a77b241ac8aeb32fb70b959c7ffd6dc",
+      "iworkflow\\main\\profile.json": "70916c57041499fc83633371db89feec0250087f7be1e6a3a1c8a907dff7a35f",
+      "iworkflow\\main.ui.json": "f77bc1ad479912d70ffeaaa75f8328cfada162d8e8a6272517c16015ef7d839b",
+      "iworkflow\\main\\main.api.json": "51397c6191aaab253c0225698cf458ae68fd5dfb636b027c8fbe80661b4d265f",
+      "03_分场制作\\S03\\关键帧\\S03_G01_三人开场引导_v2.png": "2670c6737dadd6aca7ff41c0290809a875ddd33aae4d8b804b945de256cc6a7a",
+      "03_分场制作\\S03\\关键帧\\S03_G01_三人结束关键帧_v1.png": "35dd081db38506a8357bc0fbc139ce050964bfa967af5d2270fba1db5eab701e"
+    },
+    "performance_sha256": "1c86609c329e8f220b6a037f0f42bd8a131c64e4af7a65d3d245514256c466e1",
+    "music_sha256": "190edced92d6e6222a222e6eba0d47e3d106a325fe6de7f515514070834139b7",
+    "cast_sha256": "16d0345eaa5b296c9eb7513671d719e58e6a5fedefe6811c30af8dea2fe964f7",
+    "scene_strategy_sha256": "d3face9b4a87ed0d34eaac9d8f126b59b8a350e7a791f850b6850d6fb4a81ccf",
+    "api_sha256": "b8359c66b56d7941f7d0f5eab316ac93a0c40367204dc37d09582f0347dd76a0"
+  },
+  "scene": "S03",
+  "group": "G01",
+  "attempt": 1,
+  "template": {
+    "api_sha256": "51397c6191aaab253c0225698cf458ae68fd5dfb636b027c8fbe80661b4d265f",
+    "ui_sha256": "f77bc1ad479912d70ffeaaa75f8328cfada162d8e8a6272517c16015ef7d839b",
+    "preview_segment": "S03_G01",
+    "template_version": 6,
+    "submitted": false,
+    "frontend": "pending"
+  },
+  "inputs": {
+    "prompt": "03_分场制作\\S03\\G01_H3完整提示词_v7.txt",
+    "references": [
+      {
+        "image": "S03_G01_三人开场引导_v2.png",
+        "source_path": "03_分场制作/S03/关键帧/S03_G01_三人开场引导_v2.png",
+        "source_sha256": "2670c6737dadd6aca7ff41c0290809a875ddd33aae4d8b804b945de256cc6a7a",
+        "resize_width": 864
+      },
+      {
+        "image": "S03_G01_三人结束关键帧_v1.png",
+        "source_path": "03_分场制作/S03/关键帧/S03_G01_三人结束关键帧_v1.png",
+        "source_sha256": "35dd081db38506a8357bc0fbc139ce050964bfa967af5d2270fba1db5eab701e",
+        "resize_width": 864
+      }
+    ],
+    "seed": 2026091903,
+    "duration_seconds": 10,
+    "continuity": {
+      "mode": "opening_frame",
+      "predecessor": null,
+      "source_path": "03_分场制作/S03/关键帧/S03_G01_三人开场引导_v2.png",
+      "source_sha256": "2670c6737dadd6aca7ff41c0290809a875ddd33aae4d8b804b945de256cc6a7a",
+      "image": "S03_G01_三人开场引导_v2.png",
+      "review_status": "passed",
+      "review_evidence": "Actual candidate viewed, three distinct characters; compared with accepted S02 end: Lu left, rightward tense gaze, right hand at left-waist tassel. Cut reveals standing couple, preserving same setting/time."
+    },
+    "content_revision": 3,
+    "asset_status": "ready",
+    "end_frame": {
+      "enabled": true,
+      "source_path": "03_分场制作/S03/关键帧/S03_G01_三人结束关键帧_v1.png",
+      "source_sha256": "35dd081db38506a8357bc0fbc139ce050964bfa967af5d2270fba1db5eab701e",
+      "image": "S03_G01_三人结束关键帧_v1.png",
+      "review_status": "passed"
+    },
+    "scene_strategy": {
+      "scene_type": "drama",
+      "main_emotion": "逞强与克制",
+      "action_lora": {
+        "enabled": false,
+        "model": "H3\\motion\\H3_Combat_V2.safetensors",
+        "strength": 0.5
+      },
+      "appearance_lora": {
+        "enabled": true,
+        "model": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength": 0.6,
+        "trigger": "r34l1sm",
+        "sha256": "acc529601d2da117fb81179e76c56e488a3beab1171659d305f04fa3655b787e",
+        "source": "https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA",
+        "revision": "039cc8579d7aa357a882d7f4111b25da4f72dccc",
+        "validation": "download_sha256_and_tensor_layout_verified_render_unverified",
+        "default_scope": [
+          "drama",
+          "action",
+          "mixed"
+        ]
+      }
+    }
+  },
+  "profile": {
+    "engine": "h3_ref2va",
+    "output": {
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "directory": "04_全片输出"
+    },
+    "comfy_output_prefix": "borrow_snow_20260919_r03",
+    "reference_slots": [
+      {
+        "load": "10",
+        "resize": "13"
+      },
+      {
+        "load": "11",
+        "resize": "14"
+      },
+      {
+        "load": "12",
+        "resize": "15"
+      },
+      {
+        "load": "40",
+        "resize": "50"
+      },
+      {
+        "load": "41",
+        "resize": "51"
+      },
+      {
+        "load": "42",
+        "resize": "52"
+      },
+      {
+        "load": "43",
+        "resize": "53"
+      },
+      {
+        "load": "44",
+        "resize": "54"
+      },
+      {
+        "load": "45",
+        "resize": "55"
+      }
+    ],
+    "sampler": {
+      "steps": 4,
+      "transition_step": 2,
+      "lowres_scale": 0.75,
+      "cfg": 1.0,
+      "rho": 0.0,
+      "highres_tiling": true
+    },
+    "limits": {
+      "max_references": 9,
+      "min_seconds": 4,
+      "max_seconds": 15
+    },
+    "notes": "Experimental highres tiling: full audio/references, first tile audio prediction retained. Must review video and sound.",
+    "runtime_fixes": [
+      {
+        "target": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\custom_nodes\\comfyui-SelfLift\\h3_tiling.py",
+        "sha256": "15dc484924ed2edb835929377738051c4b5fc259cab05b8a567e24ebc86eb3c2",
+        "record": "iworkflow/main/patches/patch_record.json"
+      }
+    ],
+    "scene_strategy": {
+      "default_scene_type": "drama",
+      "action_lora": {
+        "enabled": false,
+        "model": "H3\\motion\\H3_Combat_V2.safetensors",
+        "strength": 0.5
+      },
+      "loader_node": "60",
+      "switch_node": "61",
+      "strength_note": "0.5 is an untested starting candidate; current project keeps branch disabled.",
+      "candidates": [
+        {
+          "model": "H3\\motion\\H3_Combat_V2.safetensors",
+          "base_model": "minimax_h3",
+          "validation": "metadata_checked_render_unverified"
+        },
+        {
+          "model": "H3\\motion\\H3_Motion_BoosterV2.safetensors",
+          "base_model": "minimax_h3",
+          "validation": "metadata_checked_render_unverified"
+        }
+      ],
+      "appearance_lora": {
+        "enabled": true,
+        "model": "H3\\realism\\h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength": 0.6,
+        "trigger": "r34l1sm",
+        "sha256": "acc529601d2da117fb81179e76c56e488a3beab1171659d305f04fa3655b787e",
+        "source": "https://huggingface.co/fal/MiniMax-H3-Realism-People-LoRA",
+        "revision": "039cc8579d7aa357a882d7f4111b25da4f72dccc",
+        "validation": "download_sha256_and_tensor_layout_verified_render_unverified",
+        "default_scope": [
+          "drama",
+          "action",
+          "mixed"
+        ]
+      },
+      "appearance_loader_node": "70",
+      "appearance_switch_node": "71"
+    },
+    "lora_directory": "E:\\ai\\ComfyUI_windows_portable\\ComfyUI\\models\\loras"
+  },
+  "guide": {
+    "kind": "authored_opening_frame",
+    "file": "03_分场制作/S03/关键帧/S03_G01_三人开场引导_v2.png",
+    "sha256": "2670c6737dadd6aca7ff41c0290809a875ddd33aae4d8b804b945de256cc6a7a",
+    "input_name": "S03_G01_三人开场引导_v2.png",
+    "frame_idx": 0,
+    "end_frame": {
+      "file": "03_分场制作/S03/关键帧/S03_G01_三人结束关键帧_v1.png",
+      "sha256": "35dd081db38506a8357bc0fbc139ce050964bfa967af5d2270fba1db5eab701e",
+      "input_name": "S03_G01_三人结束关键帧_v1.png",
+      "frame_idx": 239
+    }
+  },
+  "prompt_id": "f59da8b5-b176-47fa-b2f5-b5426dbf97af",
+  "outputs": [],
+  "submitted_at": "2026-09-19T19:01:06.720610+08:00"
+}

@@ -1,0 +1,28 @@
+subject_definitions:
+<Subject 4> is Lu Xingzhou, the single 18-year-old adult male disciple in <Picture 1>, with a shorter rounded clean-shaven face, fuller cheeks, large round-open brown eyes, gently curved brows, short nose, fuller lips, asymmetrical side fringe and black high ponytail with a narrow silver band, charcoal inner layers, muted burgundy outer robe and dark belt. His single straight sword is sheathed at his anatomical left hip with a dark-red tassel.
+<Subject 5> is the snowy pavilion-side corridor surrounding him in <Picture 1>, with dark timber pillars on the left, snow-capped stone railing, pine and distant snowy mountains in pale warm afternoon light.
+<Picture 1> is the opening frame of [Shot 1], fixing the composition with exactly one visible person, <Subject 4>, and empty winter scenery around him.
+<Picture 2> is the final frame of [Shot 1], showing the SAME single <Subject 4> in the same medium composition, with his right hand visibly gripping the red tassel at his left waist and a contained jealous expression.
+
+summary:
+[keyframe completion + reference generation] Begin from <Picture 1> and end on <Picture 2>. These two images depict the same person at different times. In one ten-second shot, <Subject 4> takes two slow steps beside the pillar in <Subject 5>, notices an emotionally painful sight outside the right edge, stops and grips his sword tassel as anticipation becomes contained jealousy. He remains the only visible person throughout.
+
+retention_analysis:
+<Subject 4> (appears in [Shot 1]): fully_preserved - Preserve the single young man's identity, hair, clothes and sheathed sword while animating his restrained reaction.
+<Subject 5> (appears in [Shot 1]): fully_preserved - Preserve the snowy corridor, empty terrace, timber and stone, mountain setting and warm winter lighting.
+<Picture 1> ([Shot 1] first frame): fully_preserved - Preserve the opening composition and its one-person cast, then continue the described movement.
+<Picture 2> ([Shot 1] final frame): fully_preserved - Match the final identity, medium framing, waist-level red-tassel grip and restrained expression.
+
+detailed_description:
+r34l1sm. Keep the established semi-realistic Chinese guofeng character style, gently idealized facial proportions, natural soft skin shading and restrained highlights, with tangible fabric and hair. Preserve the young man's identity and the winter atmosphere of the supplied frame.
+[Shot 1] Begin directly from <Picture 1> in an eye-level medium shot. <Subject 4> stands slightly left of center beside the near timber pillar of <Subject 5>, seen from the upper thighs upward in a gentle three-quarter view toward screen right. His face and both lowered hands are readable. His burgundy sleeves hang naturally, and the single sword remains fully sheathed at his anatomical left waist with its dark-red tassel beside the belt. The stone railing, snow-laden pine and distant white mountains fill the open space to his right.
+During the first two seconds, he completes two small, measured steps along the corridor without passing behind the pillar. The camera remains locked at this medium distance, preserving the same screen direction, both hands and the left waist; there is no push-in, zoom, close-up or reframing. His relaxed eyebrows and almost-smiling lips suggest quiet expectation. Soft bootfalls on a thin layer of snow and a short robe rustle accompany these steps. Fine flakes drift through the exposed background and across his outer shoulder.
+Between two and four seconds, his eyes catch a point beyond the right edge. He stops and holds that gaze. After a short recognition pause, the corners of his mouth settle and the inner brows tighten slightly. His jaw firms while his shoulders remain controlled. Keep this gradual change visible without an exaggerated grimace. The unseen cause stays outside the image; the camera never reveals another person.
+From four to seven seconds, his right hand moves diagonally DOWN across his lower abdomen to the dark-red tassel beside the sword scabbard at his LEFT WAIST. His fingers close around the hanging cord at belt height and pull it gently taut; the hand never rises to his chest or collar. The left hand stays lowered. The sword does not leave its scabbard or change hips. A small cloth and cord sound follows the grip, with a restrained breath beneath the wind. Keep his face, both hands, belt and red tassel together in the unchanged medium frame, including during the final hold.
+During the last three seconds, hold his rightward gaze and tightened grip. Expectation has become contained hurt and jealousy, with closed lips and no vocal performance. Exactly one human body, one head and one pair of arms belong to him throughout. There are zero passersby or extras: behind him, beside the pillars and at the frame edges, only the empty architecture and winter scenery remain. The final frame matches <Picture 2>: the same young face, hand at the left belt and visible red tassel, with unchanged medium distance, lighting and snowy setting. No text, cut or fade.
+
+overall_soundscape:
+Soft outdoor wind and faint pine movement continue through the sheltered corridor. Close bootfalls stop when he stops; robe and tassel handling produce small synchronized rustles. No dialogue, narration, additional voices or combat sounds.
+
+non_diegetic_music:
+A clearly audible but restrained instrumental guqin phrase and low sustained strings at approximately 68 BPM carry the established gentle theme into restrained tension. Introduce the lower note gradually as his smile disappears, without a loud sting, vocals or a triumphant melody. Leave room for the wind and close physical sounds, and keep the final note unresolved for the next scene.
